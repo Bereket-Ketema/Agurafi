@@ -1,5 +1,7 @@
 # Agurafi Company — Official Landing Page
 
+---
+
 A modern, high-performance corporate landing page built for **Agurafi Company**, showcasing its core services, solutions, and brand identity through a clean and responsive user interface.
 
 ---
@@ -12,32 +14,32 @@ A modern, high-performance corporate landing page built for **Agurafi Company**,
   <img src="images/website-preview-mobile.png" alt="Agurafi Company Mobile Preview" width="320"/>
 </p>
 
-*Responsive desktop and mobile previews of the Agurafi Company landing page.*
+_Responsive desktop and mobile previews of the Agurafi Company landing page._
 
 ---
 
 ## ✨ Project Highlights
 
-* **Modern UI/UX** — Clean layouts, polished typography, and smooth interactions.
-* **TypeScript** — Fully typed React components for maintainable code.
-* **Tailwind CSS** — Utility-first styling for a consistent and responsive design.
-* **Responsive Design** — Optimized for mobile, tablet, and desktop screens.
+- **Modern UI/UX** — Clean layouts, polished typography, and smooth interactions.
+- **TypeScript** — Fully typed React components for maintainable code.
+- **Tailwind CSS** — Utility-first styling for a consistent and responsive design.
+- **Responsive Design** — Optimized for mobile, tablet, and desktop screens.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Framework:** Next.js (React)
-* **Language:** TypeScript
-* **Styling:** Tailwind CSS
-* **Icons:** Lucide React
+- **Framework:** Next.js (React)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
 
 ---
 
 ## 👨‍💻 Developed By
 
 **Bereket Ketema**
-*Lead Front-End Developer*
+_Lead Front-End Developer_
 
 ---
 
