@@ -1,6 +1,6 @@
-# Agurafi Company - Official Landing Page
+# Agurafi Company — Official Landing Page
 
-A modern, high-performance corporate landing page designed and built for **Agurafi Company**. This website showcases the company's core services, solutions, and brand identity with a sleek, responsive user interface.
+A modern, high-performance corporate landing page built for **Agurafi Company**, showcasing its core services, solutions, and brand identity through a clean and responsive user interface.
 
 ---
 
@@ -12,35 +12,36 @@ A modern, high-performance corporate landing page designed and built for **Agura
   <img src="images/website-preview-mobile.png" alt="Agurafi Company Mobile Preview" width="320"/>
 </p>
 
-*Above: Live preview of the Agurafi Company landing page interface on desktop and mobile displays.*
+*Responsive desktop and mobile previews of the Agurafi Company landing page.*
 
 ---
 
 ## ✨ Project Highlights
 
-- **Modern UI/UX**: Designed with sleek layout structures, smooth hover interactions, and polished typography.
-- **TypeScript Architecture**: Fully typed React components providing robust code structure and maintainability.
-- **Tailwind CSS Styling**: Utility-first CSS architecture for clean layout hierarchy and performance.
-- **Fully Responsive**: Engineered for effortless responsiveness across mobile, tablet, and high-resolution screens.
+* **Modern UI/UX** — Clean layouts, polished typography, and smooth interactions.
+* **TypeScript** — Fully typed React components for maintainable code.
+* **Tailwind CSS** — Utility-first styling for a consistent and responsive design.
+* **Responsive Design** — Optimized for mobile, tablet, and desktop screens.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js (React)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
+* **Framework:** Next.js (React)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **Icons:** Lucide React
 
 ---
 
 ## 👨‍💻 Developed By
 
-**Bereket Ketema**  
+**Bereket Ketema**
 *Lead Front-End Developer*
 
 ---
 
 ## 📄 License & Rights
 
-© Agurafi Company. All rights reserved. Built and designed by Bereket Ketema.
+© Agurafi Company. All rights reserved.
+Built and designed by **Bereket Ketema**.
