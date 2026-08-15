@@ -8,10 +8,10 @@ A modern, high-performance corporate landing page built for **Agurafi Company**,
 
 ## 📸 Website Preview
 
-![Agurafi Company Desktop Preview](images/website-preview-desktop.png)
+![Agurafi Company Desktop Preview](public/images/website-preview-desktop.png)
 
 <p align="center">
-  <img src="images/website-preview-mobile.png" alt="Agurafi Company Mobile Preview" width="320"/>
+  <img src="public/images/website-preview-mobile.png" alt="Agurafi Company Mobile Preview" width="320"/>
 </p>
 
 _Responsive desktop and mobile previews of the Agurafi Company landing page._
