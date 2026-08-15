@@ -1,98 +1,46 @@
-```markdown
 # Agurafi Company - Official Landing Page
 
-A modern, high-performance corporate landing page designed and built for **Agurafi Company**. This website showcases the company's core services, brand identity, and team with a sleek, responsive user interface.
+A modern, high-performance corporate landing page designed and built for **Agurafi Company**. This website showcases the company's core services, solutions, and brand identity with a sleek, responsive user interface.
 
 ---
 
-## 📸 Preview
+## 📸 Website Preview
 
 ![Agurafi Company Desktop Preview](images/website-preview-desktop.png)
 
 <p align="center">
-  <img src="images/website-preview-mobile.png" alt="Agurafi Company Mobile Preview" width="300"/>
+  <img src="images/website-preview-mobile.png" alt="Agurafi Company Mobile Preview" width="320"/>
 </p>
 
-> *Note: Place your website preview screenshots in the `images/` directory.*
+*Above: Live preview of the Agurafi Company landing page interface on desktop and mobile displays.*
 
 ---
 
-## ✨ Key Features
+## ✨ Project Highlights
 
-- **Modern Tech Stack**: Built with Next.js, TypeScript, and Tailwind CSS for optimal performance and developer experience.
-- **Fully Responsive**: Optimized for seamless viewing across desktop, tablet, and mobile devices.
-- **Interactive UI**: Micro-interactions, smooth hover transitions, and custom component styling.
-- **Clean Architecture**: Modular TypeScript components engineered for easy updates and scalability.
+- **Modern UI/UX**: Designed with sleek layout structures, smooth hover interactions, and polished typography.
+- **TypeScript Architecture**: Fully typed React components providing robust code structure and maintainability.
+- **Tailwind CSS Styling**: Utility-first CSS architecture for clean layout hierarchy and performance.
+- **Fully Responsive**: Engineered for effortless responsiveness across mobile, tablet, and high-resolution screens.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js
+- **Framework**: Next.js (React)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
 
 ---
 
-## 🚀 Getting Started
+## 👨‍💻 Developed By
 
-### Prerequisites
-
-Make sure you have Node.js (v18+) and npm/yarn installed.
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/your-username/agurafi-company-website.git](https://github.com/your-username/agurafi-company-website.git)
-   cd agurafi-company-website
-
-```
-
-2. **Install dependencies**
-```bash
-npm install
-
-```
-
-
-3. **Run the development server**
-```bash
-npm run dev
-
-```
-
-
-4. **View in browser**
-Open [http://localhost:3000](http://localhost:3000) to view the project live.
+**Bereket Ketema**  
+*Lead Front-End Developer*
 
 ---
 
-## 📁 Project Structure
+## 📄 License & Rights
 
-```text
-├── public/
-│   └── images/              # Assets, company images, and preview screenshots
-├── src/
-│   ├── components/          # Reusable React/TypeScript components
-│   │   ├── Header.tsx
-│   │   ├── Hero.tsx
-│   │   ├── Services.tsx
-│   │   ├── Team.tsx
-│   │   └── Footer.tsx
-│   └── app/                 # Next.js App Router pages
-├── README.md
-└── package.json
-
-```
-
----
-
-## 📄 License
-
-This project was built for **Agurafi Company**. All rights reserved.
-
-```
-
-```
+© Agurafi Company. All rights reserved. Built and designed by Bereket Ketema.
