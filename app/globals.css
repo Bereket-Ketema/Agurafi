@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #04201c;
+  --color-foreground: #f4f7f5;
+
+  --color-surface: #0c433b;
+  --color-surface-2: #105248;
+
+  --color-primary: #e4ac23;
+  --color-primary-foreground: #08201b;
+
+  --color-muted: #b8c9c3;
+  --color-muted-foreground: #8fa39c;
+
+  --color-border: rgba(255, 255, 255, 0.1);
+
+  --color-card: rgba(255, 255, 255, 0.05);
+  --color-card-foreground: #f4f7f5;
+
+  --color-accent: #f5c94a;
+
+  --color-cream: #eef3f1;
+  --color-ink: #083731;
+
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--color-primary-foreground);
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(100deg, #e4ac23, #f5c94a 60%, #fbe3a3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background: var(--color-card);
+    border: 1px solid var(--color-border);
+    backdrop-filter: blur(16px) saturate(150%);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  .reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 24px rgba(228, 172, 35, 0.35), 0 8px 24px rgba(228, 172, 35, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 44px rgba(228, 172, 35, 0.6), 0 8px 24px rgba(228, 172, 35, 0.4);
+  }
+}
+
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.6s ease-in-out infinite;
+}
