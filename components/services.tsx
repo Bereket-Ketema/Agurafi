@@ -14,41 +14,6 @@ export function Services() {
           <div className="grid items-center gap-16 lg:grid-cols-2 lg:gap-20">
             <div className="order-2 lg:order-1">
               <div className="overflow-hidden rounded-2xl bg-[#0a2b25] shadow-[0_40px_90px_rgba(8,55,49,0.35)]">
-                <div className="flex gap-2 bg-[#082019] px-4 py-3">
-                  <span className="size-2.5 rounded-full bg-[#ff5f57]" />
-                  <span className="size-2.5 rounded-full bg-[#febc2e]" />
-                  <span className="size-2.5 rounded-full bg-[#28c840]" />
-                </div>
-                <div className="bg-gradient-to-br from-[#0a2b25] to-[#082019] p-6">
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1.3fr_1fr]">
-                    <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                      <div className="mb-2.5 text-[11px] uppercase tracking-wide text-muted">Traffic Overview</div>
-                      <svg viewBox="0 0 200 70" preserveAspectRatio="none" className="h-[70px] w-full">
-                        <polyline
-                          points="0,55 25,40 50,48 75,25 100,35 125,15 150,28 175,10 200,20"
-                          fill="none"
-                          stroke="#E4AC23"
-                          strokeWidth="3"
-                        />
-                      </svg>
-                    </div>
-                    <div className="rounded-xl border border-white/10 bg-white/5 p-4">
-                      <div className="mb-2.5 text-[11px] uppercase tracking-wide text-muted">SEO Score</div>
-                      <h4 className="font-heading text-2xl font-bold text-accent">94/100</h4>
-                      <span className="text-xs text-muted-foreground">Top 3% in industry</span>
-                    </div>
-                  </div>
-                  <div className="mt-4 flex gap-4">
-                    {[Smartphone, Laptop, BarChart2].map((Icon, i) => (
-                      <div
-                        key={i}
-                        className="flex flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 py-6"
-                      >
-                        <Icon className="size-6 text-accent/80" />
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </div>
 
