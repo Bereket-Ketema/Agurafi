@@ -53,10 +53,7 @@ export function Services() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h2 className="text-balance font-heading text-[28px] font-extrabold leading-tight text-ink lg:text-[36px]">
-                Services Built to Move Every Growth Lever
-              </h2>
-              <div className="mt-8 flex flex-col gap-1">
+              <div className="flex flex-col gap-1">
                 {services.map((service) => (
                   <div
                     key={service.title}
