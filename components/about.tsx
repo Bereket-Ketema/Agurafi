@@ -1,4 +1,3 @@
-import { BarChart3, Users } from "lucide-react"
 import { aboutStats } from "@/lib/data"
 import { Reveal } from "@/components/reveal"
 
@@ -33,34 +32,6 @@ export function About() {
           </div>
         </Reveal>
 
-        <Reveal delay={150}>
-          <div className="rounded-[20px] border border-border bg-gradient-to-br from-surface-2 to-surface p-8 shadow-[0_30px_80px_rgba(0,0,0,0.5)]">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="row-span-2 flex h-[230px] items-center justify-center rounded-2xl border border-border bg-white/5">
-                <div className="flex -space-x-2.5">
-                  {[0, 1, 2].map((i) => (
-                    <span
-                      key={i}
-                      className="flex size-11 items-center justify-center rounded-full border-2 border-surface-2 bg-gradient-to-br from-accent to-primary text-primary-foreground"
-                    >
-                      <Users className="size-4" />
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="flex h-[107px] items-center justify-center rounded-2xl border border-border bg-white/5">
-                <div className="flex h-[60%] items-end gap-1.5">
-                  {[40, 70, 55, 90].map((h, i) => (
-                    <span key={i} className="w-2 rounded-sm bg-primary/85" style={{ height: `${h}%` }} />
-                  ))}
-                </div>
-              </div>
-              <div className="flex h-[107px] items-center justify-center rounded-2xl border border-border bg-white/5">
-                <BarChart3 className="size-8 text-accent/80" />
-              </div>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   )
