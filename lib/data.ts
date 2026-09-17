@@ -75,7 +75,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Abubeker",
     role: "Video Editor & Graphic Designer",
-    imageSrc: "/images/Abubeker_graphics_designer.jpg",
+    imageSrc: "/images/Abubeker_graphics.jpg",
   },
 ]
 

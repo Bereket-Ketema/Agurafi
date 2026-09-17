@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { Linkedin, Instagram, Twitter } from "lucide-react"
 import { teamMembers } from "@/lib/data"
 import { Reveal } from "@/components/reveal"
 
@@ -39,18 +38,6 @@ export function Team() {
                 <span className="mt-1.5 inline-block rounded-full bg-primary/12 px-3 py-1 text-xs font-semibold text-accent">
                   {member.role}
                 </span>
-                <div className="mt-5 flex items-center justify-center gap-2.5">
-                  {[Linkedin, Instagram, Twitter].map((Icon, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      aria-label={`${member.name} on social media`}
-                      className="flex size-9 items-center justify-center rounded-lg border border-border bg-white/5 text-muted transition-colors hover:border-primary/40 hover:text-accent"
-                    >
-                      <Icon className="size-4" />
-                    </a>
-                  ))}
-                </div>
               </div>
             </Reveal>
           ))}

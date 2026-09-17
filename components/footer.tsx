@@ -1,12 +1,20 @@
 import Image from "next/image"
-import { Linkedin, Instagram, Twitter, Music2 } from "lucide-react"
+import { Mail } from "lucide-react"
+import { FaInstagram, FaTiktok } from "react-icons/fa6"
 import { navLinks } from "@/lib/data"
 
 const socialLinks = [
-  { icon: Linkedin, label: "LinkedIn", href: "#" },
-  { icon: Instagram, label: "Instagram", href: "#" },
-  { icon: Twitter, label: "X (Twitter)", href: "#" },
-  { icon: Music2, label: "TikTok", href: "https://tiktok.com/@heni_tech19" },
+  { icon: Mail, label: "Mail", href: "mailto:Agurafidigitals@gmail.com" },
+  {
+    icon: FaInstagram,
+    label: "Instagram",
+    href: "https://www.instagram.com/agurafi_digitalmarketing?igsh=anh5ZHY4ZGxiMmpt&igsi=anh5ZHY4ZGxiMmpt",
+  },
+  {
+    icon: FaTiktok,
+    label: "TikTok",
+    href: "https://www.tiktok.com/@agurafidigitalmarketing?_r=1&_t=ZS-98vgRwyQPXs",
+  },
 ]
 
 const serviceLinks = ["Paid Advertising", "Social Media Management", "Branding & Identity", "SEO"]
@@ -24,9 +32,11 @@ export function Footer() {
               height={56}
               className="h-12 w-auto rounded-md"
             />
+
             <p className="mt-5 max-w-xs text-[14.5px] leading-relaxed text-muted">
               A digital marketing agency helping brands grow through creative, data-driven marketing strategy.
             </p>
+
             <div className="mt-6 flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -46,7 +56,10 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="text-[14.5px] text-muted transition-colors hover:text-primary">
+                  <a
+                    href={link.href}
+                    className="text-[14.5px] text-muted transition-colors hover:text-primary"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -59,7 +72,10 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               {serviceLinks.map((service) => (
                 <li key={service}>
-                  <a href="#services" className="text-[14.5px] text-muted transition-colors hover:text-primary">
+                  <a
+                    href="#services"
+                    className="text-[14.5px] text-muted transition-colors hover:text-primary"
+                  >
                     {service}
                   </a>
                 </li>
@@ -79,11 +95,14 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-3 pt-8 text-[13.5px] text-muted sm:flex-row">
           <span>&copy; 2026 Agurafi Digital Marketing. All rights reserved.</span>
+
           <span className="flex gap-2">
             <a href="#" className="transition-colors hover:text-primary">
               Privacy Policy
             </a>
+
             <span aria-hidden="true">&middot;</span>
+
             <a href="#" className="transition-colors hover:text-primary">
               Terms
             </a>
