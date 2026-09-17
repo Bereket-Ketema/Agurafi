@@ -14,13 +14,11 @@ export function Reveal({ children, className, delay = 0 }: RevealProps) {
 
   useEffect(() => {
     const node = ref.current
-    console.log("[v0] Reveal effect mounted", node)
     if (!node) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          console.log("[v0] Reveal intersecting", entry.isIntersecting)
           if (entry.isIntersecting) {
             setIsVisible(true)
             observer.unobserve(entry.target)
