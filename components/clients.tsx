@@ -31,7 +31,7 @@ export function Clients() {
                   alt={client.name}
                   width={100}
                   height={48}
-                  className="h-auto max-h-12 w-auto max-w-full object-contain opacity-90 grayscale transition-all group-hover:grayscale-0"
+                  className="h-auto max-h-12 w-auto max-w-full object-contain"
                 />
               </div>
             ))}
