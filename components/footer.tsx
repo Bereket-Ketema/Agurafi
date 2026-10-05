@@ -87,8 +87,8 @@ export function Footer() {
             <h5 className="mb-5 text-sm font-bold">Contact</h5>
             <ul className="flex flex-col gap-3 text-[14.5px] text-muted">
               <li>agurafidigitals@gmail.com</li>
-              <li>+251 94 019 5438</li>
-              <li>Addis Ababa, Bole Olompiyad</li>
+              <li>+251 95 346 4729</li>
+              <li>Addis Ababa, Bole Olympia</li>
             </ul>
           </div>
         </div>
