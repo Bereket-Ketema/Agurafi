@@ -69,7 +69,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Abubeker Semeru",
-    role: "Graphic Designer & Video Editor",
+    role: "Creative Cameraman",
     imageSrc: "/images/Abubeker2.jpg",
   },
   {
