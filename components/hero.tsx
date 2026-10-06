@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pb-24 pt-40 lg:pb-36 lg:pt-56">
+    <section id="home" className="relative overflow-hidden pb-16 pt-40 lg:pb-20 lg:pt-56">
       <div
         className="absolute inset-0 -z-20"
         style={{
@@ -25,10 +25,6 @@ export function Hero() {
           <span className="size-1.5 rounded-full bg-primary shadow-[0_0_10px_var(--color-primary)]" />
           Full Digital Marketing Service
         </div>
-
-        <h1 className="mx-auto mb-6 max-w-3xl text-balance font-heading text-[42px] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[68px]">
-          Increase Your <span className="text-gradient-gold">Reach,</span> Elevate Your Brand, and Drive More Sales
-        </h1>
 
         <p className="mx-auto mb-10 max-w-lg text-pretty text-lg leading-relaxed text-muted">
           Agurafi empowers brands to grow through creative visuals, strategic marketing, and data-driven solutions
