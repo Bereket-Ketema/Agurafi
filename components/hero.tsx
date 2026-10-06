@@ -26,6 +26,10 @@ export function Hero() {
           Full Digital Marketing Service
         </div>
 
+        <h1 className="mx-auto mb-6 text-balance font-heading text-[34px] font-extrabold leading-[1.15] tracking-tight sm:text-5xl lg:text-[58px]">
+          Increase Your <span className="text-gradient-gold">Reach,</span> Elevate Your Brand, and Drive More Sales
+        </h1>
+
         <p className="mx-auto mb-10 max-w-lg text-pretty text-lg leading-relaxed text-muted">
           Agurafi empowers brands to grow through creative visuals, strategic marketing, and data-driven solutions
           that deliver measurable results.
