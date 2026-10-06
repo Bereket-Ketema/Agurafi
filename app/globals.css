@@ -23,7 +23,7 @@
 
   --color-accent: #f5c94a;
 
-  --color-cream: #eef3f1;
+  --color-cream: #dfe8e3;
   --color-ink: #083731;
 
   --radius-lg: 20px;
@@ -99,21 +99,3 @@ body {
   animation: pulse-glow 2.6s ease-in-out infinite;
 }
 
-@keyframes marquee-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee-left 36s linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-marquee {
-    animation-play-state: paused;
-  }
-}

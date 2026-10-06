@@ -3,7 +3,7 @@ import { Reveal } from "@/components/reveal"
 
 export function CtaBanner() {
   return (
-    <section id="insights" className="px-4 pb-24 lg:px-10 lg:pb-36">
+    <section id="insights" className="px-6 pb-24 lg:px-16 lg:pb-36">
       <Reveal>
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-6 py-20 text-center sm:rounded-[40px] lg:px-16 lg:py-28">
           <div
