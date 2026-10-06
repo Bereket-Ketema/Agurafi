@@ -151,7 +151,4 @@ export const partnerLogos: ClientLogo[] = [
   { name: "Partner", imageSrc: "/logo/photo_3_2026-07-27_08-17-16.jpg" },
   { name: "Rotech", imageSrc: "/logo/rotech.png" },
   { name: "Pice", imageSrc: "/logo/pice.png" },
-  { name: "Mela", imageSrc: "/logo/mela.png" },
-  { name: "Eye", imageSrc: "/logo/eye.png" },
-  { name: "Visa", imageSrc: "/logo/visa.png" },
 ]
