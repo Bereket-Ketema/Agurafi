@@ -17,7 +17,7 @@ const socialLinks = [
   },
 ]
 
-const serviceLinks = ["Paid Advertising", "Social Media Management", "Branding & Identity", "SEO"]
+const serviceLinks = ["Paid Advertising", "Social Media Management", "Branding & Identity","Web app design and development", "Content Creation", "SEO"]
 
 export function Footer() {
   return (
@@ -86,7 +86,7 @@ export function Footer() {
           <div>
             <h5 className="mb-5 text-sm font-bold">Contact</h5>
             <ul className="flex flex-col gap-3 text-[14.5px] text-muted">
-              <li>agurafidigitals@gmail.com</li>
+              <li>Agurafidigitalmarketing@gmail.com</li>
               <li>+251 95 346 4729</li>
               <li>Addis Ababa, Bole Olympia</li>
             </ul>
