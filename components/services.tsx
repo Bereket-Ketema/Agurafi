@@ -7,12 +7,12 @@ export function Services() {
       <Reveal>
         <div className="mx-auto max-w-7xl rounded-[32px] bg-cream px-6 py-16 text-ink sm:rounded-[48px] lg:px-16 lg:py-24">
           <div className="mx-auto mb-12 max-w-2xl text-center">
-            <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-[#b5820d]">
+            <h2 className="mb-3 text-balance font-heading text-[34px] font-extrabold leading-tight text-ink lg:text-[44px]">
               What We Do
-            </span>
-            <h2 className="text-balance font-heading text-[30px] font-extrabold leading-tight text-ink lg:text-[38px]">
-              Full-service digital marketing &amp; development
             </h2>
+            <p className="text-balance text-[15px] font-semibold uppercase tracking-[0.08em] text-[#b5820d] lg:text-[16px]">
+              Full-service digital marketing &amp; development
+            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
