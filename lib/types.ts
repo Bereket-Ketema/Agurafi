@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react"
+
 export interface NavLink {
   label: string
   href: string
@@ -6,6 +8,7 @@ export interface NavLink {
 export interface Service {
   title: string
   description: string
+  icon: LucideIcon
 }
 
 export interface TeamMember {
@@ -22,4 +25,10 @@ export interface ClientLogo {
 export interface Stat {
   value: string
   label: string
+}
+
+export interface Highlight {
+  title: string
+  description: string
+  icon: LucideIcon
 }

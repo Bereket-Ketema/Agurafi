@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section id="home" className="relative overflow-hidden pb-24 pt-40 lg:pb-36 lg:pt-56">
+    <section id="home" className="relative overflow-hidden pb-16 pt-40 lg:pb-20 lg:pt-56">
       <div
         className="absolute inset-0 -z-20"
         style={{
@@ -26,7 +26,7 @@ export function Hero() {
           Full Digital Marketing Service
         </div>
 
-        <h1 className="mx-auto mb-6 max-w-3xl text-balance font-heading text-[42px] font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[68px]">
+        <h1 className="mx-auto mb-6 text-balance font-heading text-[34px] font-extrabold leading-[1.15] tracking-tight sm:text-5xl lg:text-[58px]">
           Increase Your <span className="text-gradient-gold">Reach,</span> Elevate Your Brand, and Drive More Sales
         </h1>
 

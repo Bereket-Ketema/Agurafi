@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal"
 
 export function Team() {
   return (
-    <section id="team" className="px-6 py-24 lg:px-16 lg:py-36">
+    <section id="team" className="px-6 pb-20 pt-16 lg:px-16 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-7xl">
         <Reveal className="mx-auto mb-16 max-w-2xl text-center">
           <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
@@ -19,7 +19,7 @@ export function Team() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {teamMembers.map((member, index) => (
             <Reveal key={`${member.name}-${index}`} delay={index * 100}>
               <div className="group h-full rounded-[20px] border border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 hover:bg-white/[0.07]">

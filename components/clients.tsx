@@ -1,11 +1,13 @@
 import Image from "next/image"
-import { clientLogos } from "@/lib/data"
+import { partnerLogos } from "@/lib/data"
 import { Reveal } from "@/components/reveal"
 
 export function Clients() {
+  const marqueeLogos = [...partnerLogos, ...partnerLogos]
+
   return (
-    <section id="portfolio" className="px-6 py-24 text-center lg:px-16 lg:py-36">
-      <div className="mx-auto max-w-7xl">
+    <section id="portfolio" className="py-20 text-center lg:py-28">
+      <div className="mx-auto max-w-7xl px-6 lg:px-16">
         <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
           Our Partners
         </span>
@@ -18,26 +20,25 @@ export function Clients() {
             awareness.
           </p>
         </Reveal>
+      </div>
 
-        <Reveal delay={150}>
-          <div className="mt-14 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
-            {clientLogos.map((client) => (
-              <div
-                key={client.name}
-                className="glass flex h-28 items-center justify-center rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/40 hover:bg-primary/[0.06]"
-              >
+      <Reveal delay={150}>
+        <div className="group relative mt-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+          <div className="flex w-max animate-marquee items-center gap-14 group-hover:[animation-play-state:paused] motion-reduce:animate-none">
+            {marqueeLogos.map((logo, index) => (
+              <div key={`${logo.name}-${index}`} className="flex h-16 w-28 shrink-0 items-center justify-center sm:h-20 sm:w-36">
                 <Image
-                  src={client.imageSrc || "/placeholder.svg"}
-                  alt={client.name}
-                  width={100}
-                  height={48}
-                  className="h-auto max-h-12 w-auto max-w-full object-contain opacity-90 grayscale transition-all group-hover:grayscale-0"
+                  src={logo.imageSrc || "/placeholder.svg"}
+                  alt={logo.name}
+                  width={140}
+                  height={80}
+                  className="h-full w-auto max-h-16 object-contain opacity-100 grayscale-0 transition-all duration-300 hover:scale-105 hover:opacity-75 hover:grayscale sm:max-h-20"
                 />
               </div>
             ))}
           </div>
-        </Reveal>
-      </div>
+        </div>
+      </Reveal>
     </section>
   )
 }
