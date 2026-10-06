@@ -3,11 +3,9 @@ import { partnerLogos } from "@/lib/data"
 import { Reveal } from "@/components/reveal"
 
 export function Clients() {
-  const marqueeLogos = [...partnerLogos, ...partnerLogos]
-
   return (
-    <section id="portfolio" className="py-20 text-center lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-16">
+    <section id="portfolio" className="px-6 py-20 text-center lg:px-16 lg:py-28">
+      <div className="mx-auto max-w-7xl">
         <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
           Our Partners
         </span>
@@ -20,25 +18,27 @@ export function Clients() {
             awareness.
           </p>
         </Reveal>
-      </div>
 
-      <Reveal delay={150}>
-        <div className="group relative mt-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
-          <div className="flex w-max animate-marquee items-center gap-14 group-hover:[animation-play-state:paused] motion-reduce:animate-none">
-            {marqueeLogos.map((logo, index) => (
-              <div key={`${logo.name}-${index}`} className="flex h-16 w-28 shrink-0 items-center justify-center sm:h-20 sm:w-36">
+        <Reveal delay={150}>
+          <ul className="mt-14 flex flex-wrap justify-center gap-3 sm:gap-4">
+            {partnerLogos.map((logo) => (
+              <li
+                key={logo.imageSrc}
+                className="flex h-28 w-[calc(50%-0.375rem)] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white p-3 sm:h-32 sm:w-[calc(33.333%-0.675rem)] lg:w-[calc(25%-0.75rem)]"
+              >
                 <Image
-                  src={logo.imageSrc || "/placeholder.svg"}
+                  src={logo.imageSrc}
                   alt={logo.name}
-                  width={140}
-                  height={80}
-                  className="h-full w-auto max-h-16 object-contain opacity-100 grayscale-0 transition-all duration-300 hover:scale-105 hover:opacity-75 hover:grayscale sm:max-h-20"
+                  width={320}
+                  height={160}
+                  sizes="(min-width: 1024px) 280px, (min-width: 640px) 30vw, 45vw"
+                  className="h-auto max-h-full w-auto max-w-full object-contain"
                 />
-              </div>
+              </li>
             ))}
-          </div>
-        </div>
-      </Reveal>
+          </ul>
+        </Reveal>
+      </div>
     </section>
   )
 }
