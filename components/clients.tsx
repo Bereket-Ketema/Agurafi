@@ -32,7 +32,7 @@ export function Clients() {
                   alt={logo.name}
                   width={140}
                   height={80}
-                  className="h-full w-auto max-h-16 object-contain opacity-75 grayscale transition-all duration-300 hover:scale-105 hover:opacity-100 hover:grayscale-0 sm:max-h-20"
+                  className="h-full w-auto max-h-16 object-contain opacity-100 grayscale-0 transition-all duration-300 hover:scale-105 hover:opacity-75 hover:grayscale sm:max-h-20"
                 />
               </div>
             ))}

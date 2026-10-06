@@ -144,7 +144,6 @@ export const partnerLogos: ClientLogo[] = [
   { name: "Partner", imageSrc: "/logo/-2147483648_-216836.jpg" },
   { name: "Partner", imageSrc: "/logo/IMG_20260921_144333_260.jpg" },
   { name: "Partner", imageSrc: "/logo/IMG_2278.PNG" },
-  { name: "Partner", imageSrc: "/logo/IMG_2986.JPG" },
   { name: "Partner", imageSrc: "/logo/file_00000000467c822f89e2751afd43dd0c.png" },
   { name: "Partner", imageSrc: "/logo/file_000000009504821193699a47cc13c0c1.png" },
   { name: "Partner", imageSrc: "/logo/file_000000009ab88208b2ea47e20855e464.png" },
