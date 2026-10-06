@@ -144,7 +144,6 @@ export const partnerLogos: ClientLogo[] = [
   { name: "Partner", imageSrc: "/logo/-2147483648_-216836.jpg" },
   { name: "Partner", imageSrc: "/logo/IMG_20260921_144333_260.jpg" },
   { name: "Partner", imageSrc: "/logo/IMG_2278.PNG" },
-  { name: "Partner", imageSrc: "/logo/IMG_2986.JPG" },
   { name: "Partner", imageSrc: "/logo/file_00000000467c822f89e2751afd43dd0c.png" },
   { name: "Partner", imageSrc: "/logo/file_000000009504821193699a47cc13c0c1.png" },
   { name: "Partner", imageSrc: "/logo/file_000000009ab88208b2ea47e20855e464.png" },
@@ -152,4 +151,7 @@ export const partnerLogos: ClientLogo[] = [
   { name: "Partner", imageSrc: "/logo/photo_3_2026-07-27_08-17-16.jpg" },
   { name: "Rotech", imageSrc: "/logo/rotech.png" },
   { name: "Pice", imageSrc: "/logo/pice.png" },
+  { name: "Mela", imageSrc: "/logo/mela.png" },
+  { name: "Eye", imageSrc: "/logo/eye.png" },
+  { name: "Visa", imageSrc: "/logo/visa.png" },
 ]
