@@ -3,9 +3,9 @@ import { Reveal } from "@/components/reveal"
 
 export function Services() {
   return (
-    <section id="services" className="px-6 pb-16 lg:px-16 lg:pb-24">
+    <section id="services" className="px-4 pb-16 sm:px-6 lg:px-8 lg:pb-24">
       <Reveal>
-        <div className="mx-auto max-w-7xl rounded-[32px] bg-cream px-6 py-16 text-ink sm:rounded-[48px] lg:px-16 lg:py-24">
+        <div className="mx-auto max-w-7xl rounded-[32px] bg-cream px-5 py-14 text-ink sm:rounded-[48px] sm:px-8 lg:px-12 lg:py-20">
           <div className="mx-auto mb-12 max-w-2xl text-center">
             <h2 className="mb-3 text-balance font-heading text-[34px] font-extrabold leading-tight text-ink lg:text-[44px]">
               What We Do

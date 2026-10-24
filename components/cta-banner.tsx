@@ -3,9 +3,9 @@ import { Reveal } from "@/components/reveal"
 
 export function CtaBanner() {
   return (
-    <section id="insights" className="px-6 pb-24 lg:px-16 lg:pb-36">
+    <section id="insights" className="px-4 pb-24 sm:px-6 lg:px-8 lg:pb-36">
       <Reveal>
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-6 py-20 text-center sm:rounded-[40px] lg:px-16 lg:py-28">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-5 py-16 text-center sm:rounded-[40px] sm:px-8 lg:px-12 lg:py-24">
           <div
             className="absolute left-1/2 top-[-250px] -z-0 size-[600px] -translate-x-1/2 rounded-full"
             style={{ background: "radial-gradient(circle, rgba(228,172,35,0.22), transparent 65%)" }}

@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal"
 
 export function Clients() {
   return (
-    <section id="portfolio" className="px-6 py-20 text-center lg:px-16 lg:py-28">
+    <section id="portfolio" className="px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
         <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
           Our Partners

@@ -4,7 +4,7 @@ import { Reveal } from "@/components/reveal"
 
 export function Team() {
   return (
-    <section id="team" className="px-6 pb-20 pt-16 lg:px-16 lg:pb-28 lg:pt-20">
+    <section id="team" className="px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
       <div className="mx-auto max-w-7xl">
         <Reveal className="mx-auto mb-16 max-w-2xl text-center">
           <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">

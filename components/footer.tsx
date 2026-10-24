@@ -21,7 +21,7 @@ const serviceLinks = ["Paid Advertising", "Social Media Management", "Branding &
 
 export function Footer() {
   return (
-    <footer id="contact" className="px-6 pb-10 pt-24 lg:px-16 lg:pt-32">
+    <footer id="contact" className="px-4 pb-10 pt-24 sm:px-6 lg:px-8 lg:pt-32">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 border-b border-border pb-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-16">
           <div>
@@ -30,6 +30,7 @@ export function Footer() {
               alt="AGURAFI Digital Marketing"
               width={160}
               height={56}
+              style={{ width: "auto" }}
               className="h-12 w-auto rounded-md"
             />
 

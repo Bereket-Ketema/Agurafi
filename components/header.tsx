@@ -30,13 +30,14 @@ export function Header() {
         scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border shadow-lg" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-16">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="#home" className="shrink-0" onClick={() => setMenuOpen(false)}>
           <Image
             src="/images/agurafi-logo.jpg"
             alt="AGURAFI Digital Marketing"
             width={160}
             height={56}
+            style={{ width: "auto" }}
             className="h-12 w-auto rounded-md lg:h-14"
             priority
           />

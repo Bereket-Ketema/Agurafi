@@ -1,9 +1,9 @@
-import { aboutHighlights, aboutStats } from "@/lib/data"
+import { aboutHighlights } from "@/lib/data"
 import { Reveal } from "@/components/reveal"
 
 export function About() {
   return (
-    <section id="about" className="px-6 pb-20 pt-10 lg:px-16 lg:pb-28 lg:pt-14">
+    <section id="about" className="px-4 pb-20 pt-10 sm:px-6 lg:px-8 lg:pb-28 lg:pt-14">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2 lg:gap-20">
         <Reveal>
           <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
@@ -21,15 +21,6 @@ export function About() {
             audience through modern digital solutions. Our services include social media content creation, video
             editing, graphic design, logo and brand identity design, digital advertising, and Meta Ads management.
           </p>
-
-          <div className="mt-10 flex flex-wrap gap-8 sm:gap-10">
-            {aboutStats.map((stat) => (
-              <div key={stat.label}>
-                <h3 className="font-heading text-3xl font-extrabold text-accent">{stat.value}</h3>
-                <span className="text-[13px] text-muted">{stat.label}</span>
-              </div>
-            ))}
-          </div>
         </Reveal>
 
         <Reveal delay={150}>

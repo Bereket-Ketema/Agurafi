@@ -72,20 +72,24 @@ body {
 }
 
 @keyframes float-y {
+
   0%,
   100% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-14px);
   }
 }
 
 @keyframes pulse-glow {
+
   0%,
   100% {
     box-shadow: 0 0 24px rgba(228, 172, 35, 0.35), 0 8px 24px rgba(228, 172, 35, 0.3);
   }
+
   50% {
     box-shadow: 0 0 44px rgba(228, 172, 35, 0.6), 0 8px 24px rgba(228, 172, 35, 0.4);
   }
@@ -99,3 +103,54 @@ body {
   animation: pulse-glow 2.6s ease-in-out infinite;
 }
 
+@keyframes float-1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-2.5px) translateX(1px);
+  }
+}
+
+@keyframes float-3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-3.5px) translateX(-1px);
+  }
+}
+
+@keyframes float-4 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-2.5px) translateX(1px);
+  }
+}
+
+.animate-float-1 {
+  animation: float-1 7.5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-2 8.5s ease-in-out infinite;
+}
+
+.animate-float-3 {
+  animation: float-3 7s ease-in-out infinite;
+}
+
+.animate-float-4 {
+  animation: float-4 9s ease-in-out infinite;
+}
