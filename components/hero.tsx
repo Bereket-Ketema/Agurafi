@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { partnerLogos, aboutStats } from "@/lib/data"
+import { CurvedDivider } from "@/components/curved-divider"
 
 // Floating animation configurations with varied delays for organic, calm floating
 const floatConfigs = [
@@ -209,6 +210,9 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Sweeping Curvature Transition into Next Section */}
+      <CurvedDivider position="bottom" variant="swoop" fillColor="#04201c" showGlow={true} />
     </section>
   )
 }

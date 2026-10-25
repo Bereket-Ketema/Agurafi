@@ -4,13 +4,21 @@ import { Reveal } from "@/components/reveal"
 
 export function FinalCta() {
   return (
-    <section id="final-cta" className="relative px-4 pb-24 pt-10 sm:px-6 lg:px-8 lg:pb-36 lg:pt-14">
+    <section id="final-cta" className="relative px-4 pb-24 pt-10 sm:px-6 lg:px-8 lg:pb-36 lg:pt-14 overflow-hidden">
       <Reveal>
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-6 py-16 text-center sm:rounded-[40px] sm:px-10 lg:px-16 lg:py-24 shadow-[0_30px_90px_rgba(0,0,0,0.5)]">
-          {/* Radial ambient glow */}
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[36px] border border-white/15 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#041f1b] px-6 py-16 text-center sm:rounded-[52px] sm:px-10 lg:px-16 lg:py-24 shadow-[0_30px_90px_rgba(0,0,0,0.5)]">
+          {/* Multi-Color Ambient Curvature Glow Ribbons (Gold, Electric Blue & Coral) */}
           <div
-            className="pointer-events-none absolute left-1/2 top-[-200px] size-[600px] -translate-x-1/2 rounded-full"
+            className="pointer-events-none absolute left-1/2 top-[-220px] size-[600px] -translate-x-1/2 rounded-full"
             style={{ background: "radial-gradient(circle, rgba(228,172,35,0.22), transparent 65%)" }}
+          />
+          <div
+            className="pointer-events-none absolute -bottom-32 -left-32 size-[450px] rounded-full opacity-25 blur-[90px]"
+            style={{ background: "radial-gradient(circle, #3b82f6, transparent 65%)" }}
+          />
+          <div
+            className="pointer-events-none absolute -top-32 -right-32 size-[450px] rounded-full opacity-22 blur-[90px]"
+            style={{ background: "radial-gradient(circle, #ff6b4a, transparent 65%)" }}
           />
 
           <div className="relative z-10">

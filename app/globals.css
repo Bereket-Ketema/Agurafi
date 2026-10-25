@@ -22,6 +22,10 @@
   --color-card-foreground: #f4f7f5;
 
   --color-accent: #f5c94a;
+  --color-electric: #3b82f6;
+  --color-electric-glow: rgba(59, 130, 246, 0.35);
+  --color-coral: #ff6b4a;
+  --color-coral-glow: rgba(255, 107, 74, 0.35);
 
   --color-cream: #dfe8e3;
   --color-ink: #083731;
@@ -48,6 +52,27 @@ body {
 @layer utilities {
   .text-gradient-gold {
     background: linear-gradient(100deg, #e4ac23, #f5c94a 60%, #fbe3a3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-electric {
+    background: linear-gradient(110deg, #93c5fd, #3b82f6 65%, #1d4ed8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-coral {
+    background: linear-gradient(110deg, #fdba74, #ff6b4a 60%, #ea580c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-trio {
+    background: linear-gradient(110deg, #e4ac23 0%, #3b82f6 50%, #ff6b4a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

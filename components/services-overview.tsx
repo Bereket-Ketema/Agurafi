@@ -3,10 +3,20 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { services } from "@/lib/data"
 import { Reveal } from "@/components/reveal"
+import { CurvedDivider } from "@/components/curved-divider"
 
 export function ServicesOverview() {
   return (
-    <section id="services-overview" className="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-22">
+    <section id="services-overview" className="relative px-4 pt-16 pb-24 sm:px-6 lg:px-8 lg:pt-20 lg:pb-32 overflow-hidden">
+      {/* Ambient Curvature Glow Ribbons (Electric Blue & Sunset Coral) */}
+      <div
+        className="pointer-events-none absolute -top-24 -left-24 size-[500px] rounded-full opacity-20 blur-[100px]"
+        style={{ background: "radial-gradient(circle, #3b82f6, transparent 70%)" }}
+      />
+      <div
+        className="pointer-events-none absolute top-1/2 -right-24 size-[500px] rounded-full opacity-18 blur-[100px]"
+        style={{ background: "radial-gradient(circle, #ff6b4a, transparent 70%)" }}
+      />
       <div className="mx-auto max-w-7xl">
         <Reveal className="mx-auto mb-12 max-w-2xl text-center">
           <span className="mb-2.5 inline-block rounded-full border border-primary/25 bg-primary/10 px-3.5 py-0.5 text-xs font-bold uppercase tracking-[0.14em] text-accent">
@@ -84,6 +94,9 @@ export function ServicesOverview() {
           </Link>
         </div>
       </div>
+
+      {/* Sweeping Curvature Transition */}
+      <CurvedDivider position="bottom" variant="parabolic" fillColor="#04201c" showGlow={true} />
     </section>
   )
 }
