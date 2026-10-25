@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { partnerLogos, aboutStats } from "@/lib/data"
 
@@ -22,6 +23,20 @@ const floatConfigs = [
   { animation: "animate-float-3", delay: "-3.1s" },
 ]
 
+// Real industry / capability badges to make the brand cards informative and engaging
+const partnerTags: Record<string, string> = {
+  "Yegna Trading": "Logistics & Trade",
+  "Zephyr Auto Spare Parts": "Automotive",
+  "Mela Express Delivery": "Express Logistics",
+  "Willy": "Commercial Retail",
+  "Mela Packers & Movers": "Moving Services",
+  "Mela Cleaning Service": "Corporate Cleaning",
+  "Gedion Advertising": "Media & Marketing",
+  "Simple": "Consumer Brand",
+  "Spark Edge Advertising and Trading": "Trade & Media",
+  "Prime Real Estate": "Luxury Properties",
+}
+
 export function Hero() {
   const [activePartnerIndex, setActivePartnerIndex] = useState<number | null>(null)
   const [hoveredPartnerIndex, setHoveredPartnerIndex] = useState<number | null>(null)
@@ -36,6 +51,57 @@ export function Hero() {
 
   const handleCardClick = (index: number) => {
     setActivePartnerIndex((prev) => (prev === index ? null : index))
+  }
+
+  const renderCard = (partner: (typeof heroPartners)[0], index: number, heightClass: string) => {
+    const config = floatConfigs[index]
+    const isActive = inspectedIndex === index
+    const tag = partnerTags[partner.name] || "Client Partner"
+
+    return (
+      <div
+        key={partner.imageSrc}
+        onClick={() => handleCardClick(index)}
+        onTouchStart={() => handleCardClick(index)}
+        onMouseEnter={() => setHoveredPartnerIndex(index)}
+        onMouseLeave={() => setHoveredPartnerIndex(null)}
+        style={{
+          animationPlayState: isActive ? "paused" : "running",
+          animationDelay: config.delay,
+        }}
+        className={`group relative flex ${heightClass} cursor-pointer select-none items-center justify-center rounded-2xl border p-2.5 sm:p-4 transition-all duration-300 ${
+          config.animation
+        } ${
+          isActive
+            ? "border-primary/80 ring-2 ring-primary/40 bg-gradient-to-b from-white via-white to-amber-50/50 shadow-[0_20px_45px_rgba(228,172,35,0.32)] scale-[1.05] -translate-y-1.5 z-30"
+            : "border-white/50 bg-gradient-to-b from-white via-white/95 to-[#f4f7f5] shadow-[0_8px_24px_rgba(0,0,0,0.2)] hover:border-primary/60 hover:shadow-[0_16px_36px_rgba(228,172,35,0.22)] hover:scale-[1.03] hover:-translate-y-0.5 z-10"
+        }`}
+      >
+        {/* Subtle Light Sheen on Hover */}
+        <div className="pointer-events-none absolute inset-0 -translate-x-full overflow-hidden rounded-2xl bg-gradient-to-r from-transparent via-primary/15 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+        {/* Category Pill Tag shown on hover & active */}
+        <div
+          className={`pointer-events-none absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-primary/40 bg-[#062822] px-2 py-0.5 text-[9px] font-bold text-accent shadow-md backdrop-blur-md transition-all duration-200 z-30 ${
+            isActive ? "opacity-100 scale-100" : "opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
+          }`}
+        >
+          {tag}
+        </div>
+
+        {/* Logo Image */}
+        <div className="relative flex size-full items-center justify-center">
+          <Image
+            src={partner.imageSrc}
+            alt={partner.name}
+            width={280}
+            height={140}
+            sizes="(min-width: 1280px) 240px, (min-width: 640px) 180px, 110px"
+            className="h-auto max-h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -76,150 +142,49 @@ export function Hero() {
 
             {/* Bottom buttons aligned to the exact bottom margin level */}
             <div className="mt-8 flex flex-wrap items-center gap-4 lg:mt-10">
-              <a
-                href="#services"
+              <Link
+                href="/services"
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-7 py-3.5 text-[14.5px] font-semibold text-primary-foreground shadow-[0_8px_24px_rgba(228,172,35,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(228,172,35,0.5)] active:scale-95"
               >
                 View Our Services
                 <ArrowRight className="size-4" />
-              </a>
-              <a
-                href="#contact"
+              </Link>
+              <Link
+                href="/contact"
                 className="glass inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[14.5px] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10 active:scale-95"
               >
                 Contact Us
-              </a>
+              </Link>
             </div>
           </div>
 
-          {/* Right Column: Enlarged 4-3-3 Staggered Floating Logo Showcase + Side Stats */}
+          {/* Right Column: 4-3-3 Staggered Floating Logo Showcase + Side Stats */}
           <div className="relative flex flex-col justify-between items-center pt-1 sm:pt-1.5 lg:pt-2 lg:col-span-7 xl:col-span-7">
             {/* Ambient Backlight */}
             <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-[100px]" />
             <div className="pointer-events-none absolute left-1/3 top-1/4 -z-10 size-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-400/10 blur-[90px]" />
 
-            {/* Enlarged 4-3-3 Floating Brand Grid */}
+            {/* 4-3-3 Floating Brand Grid with Live Verified Badges */}
             <div className="flex w-full max-w-[750px] flex-col gap-3 sm:gap-3.5">
-              {/* Row 1: 4 Cards (Enlarged size) */}
+              {/* Row 1: 4 Cards */}
               <div className="grid grid-cols-4 gap-2.5 sm:gap-3.5">
-                {row1Partners.map((partner, index) => {
-                  const config = floatConfigs[index]
-                  const isActive = inspectedIndex === index
-
-                  return (
-                    <div
-                      key={partner.imageSrc}
-                      onClick={() => handleCardClick(index)}
-                      onTouchStart={() => handleCardClick(index)}
-                      onMouseEnter={() => setHoveredPartnerIndex(index)}
-                      onMouseLeave={() => setHoveredPartnerIndex(null)}
-                      style={{
-                        animationPlayState: isActive ? "paused" : "running",
-                        animationDelay: config.delay,
-                      }}
-                      className={`group relative flex h-22 sm:h-26 lg:h-28 xl:h-30 cursor-pointer select-none items-center justify-center rounded-2xl border bg-white p-2.5 sm:p-4 transition-all duration-300 ${
-                        config.animation
-                      } ${
-                        isActive
-                          ? "border-primary/45 ring-1 ring-primary/35 shadow-[0_18px_36px_rgba(0,0,0,0.25),0_0_20px_rgba(228,172,35,0.12)] scale-[1.04] -translate-y-1 z-20"
-                          : "border-white/30 shadow-[0_6px_18px_rgba(0,0,0,0.14)] hover:border-white/60 hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5 z-10"
-                      }`}
-                    >
-                      <div className="relative flex size-full items-center justify-center">
-                        <Image
-                          src={partner.imageSrc}
-                          alt={partner.name}
-                          width={260}
-                          height={130}
-                          sizes="(min-width: 1280px) 200px, (min-width: 640px) 150px, 90px"
-                          className="h-auto max-h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    </div>
-                  )
-                })}
+                {row1Partners.map((partner, index) =>
+                  renderCard(partner, index, "h-22 sm:h-26 lg:h-28 xl:h-30")
+                )}
               </div>
 
               {/* Row 2: 3 Cards (Centered & Enlarged) */}
               <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 px-3 sm:px-6">
-                {row2Partners.map((partner, i) => {
-                  const index = 4 + i
-                  const config = floatConfigs[index]
-                  const isActive = inspectedIndex === index
-
-                  return (
-                    <div
-                      key={partner.imageSrc}
-                      onClick={() => handleCardClick(index)}
-                      onTouchStart={() => handleCardClick(index)}
-                      onMouseEnter={() => setHoveredPartnerIndex(index)}
-                      onMouseLeave={() => setHoveredPartnerIndex(null)}
-                      style={{
-                        animationPlayState: isActive ? "paused" : "running",
-                        animationDelay: config.delay,
-                      }}
-                      className={`group relative flex h-24 sm:h-28 lg:h-30 xl:h-32 cursor-pointer select-none items-center justify-center rounded-2xl border bg-white p-3 sm:p-4 transition-all duration-300 ${
-                        config.animation
-                      } ${
-                        isActive
-                          ? "border-primary/45 ring-1 ring-primary/35 shadow-[0_18px_36px_rgba(0,0,0,0.25),0_0_20px_rgba(228,172,35,0.12)] scale-[1.04] -translate-y-1 z-20"
-                          : "border-white/30 shadow-[0_6px_18px_rgba(0,0,0,0.14)] hover:border-white/60 hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5 z-10"
-                      }`}
-                    >
-                      <div className="relative flex size-full items-center justify-center">
-                        <Image
-                          src={partner.imageSrc}
-                          alt={partner.name}
-                          width={280}
-                          height={140}
-                          sizes="(min-width: 1280px) 240px, (min-width: 640px) 190px, 120px"
-                          className="h-auto max-h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    </div>
-                  )
-                })}
+                {row2Partners.map((partner, i) =>
+                  renderCard(partner, 4 + i, "h-24 sm:h-28 lg:h-30 xl:h-32")
+                )}
               </div>
 
               {/* Row 3: 3 Cards (Centered & Enlarged) */}
               <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 px-3 sm:px-6">
-                {row3Partners.map((partner, i) => {
-                  const index = 7 + i
-                  const config = floatConfigs[index]
-                  const isActive = inspectedIndex === index
-
-                  return (
-                    <div
-                      key={partner.imageSrc}
-                      onClick={() => handleCardClick(index)}
-                      onTouchStart={() => handleCardClick(index)}
-                      onMouseEnter={() => setHoveredPartnerIndex(index)}
-                      onMouseLeave={() => setHoveredPartnerIndex(null)}
-                      style={{
-                        animationPlayState: isActive ? "paused" : "running",
-                        animationDelay: config.delay,
-                      }}
-                      className={`group relative flex h-24 sm:h-28 lg:h-30 xl:h-32 cursor-pointer select-none items-center justify-center rounded-2xl border bg-white p-3 sm:p-4 transition-all duration-300 ${
-                        config.animation
-                      } ${
-                        isActive
-                          ? "border-primary/45 ring-1 ring-primary/35 shadow-[0_18px_36px_rgba(0,0,0,0.25),0_0_20px_rgba(228,172,35,0.12)] scale-[1.04] -translate-y-1 z-20"
-                          : "border-white/30 shadow-[0_6px_18px_rgba(0,0,0,0.14)] hover:border-white/60 hover:shadow-xl hover:scale-[1.03] hover:-translate-y-0.5 z-10"
-                      }`}
-                    >
-                      <div className="relative flex size-full items-center justify-center">
-                        <Image
-                          src={partner.imageSrc}
-                          alt={partner.name}
-                          width={280}
-                          height={140}
-                          sizes="(min-width: 1280px) 240px, (min-width: 640px) 190px, 120px"
-                          className="h-auto max-h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                    </div>
-                  )
-                })}
+                {row3Partners.map((partner, i) =>
+                  renderCard(partner, 7 + i, "h-24 sm:h-28 lg:h-30 xl:h-32")
+                )}
               </div>
             </div>
 

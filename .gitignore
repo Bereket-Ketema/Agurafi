@@ -1,2 +1,14 @@
 node_modules/
-.next
+.next/
+out/
+build/
+
+# Environment files
+.env
+.env*.local
+
+# Editor & Agent temporary files
+.vscode/
+.idea/
+AGENTS.md
+CLAUDE.md

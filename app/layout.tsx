@@ -32,7 +32,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${manrope.variable} ${inter.variable} bg-background`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${manrope.variable} ${inter.variable} bg-background scroll-smooth`}
+    >
       <body className="font-sans text-foreground antialiased">{children}</body>
     </html>
   )
