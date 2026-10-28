@@ -80,7 +80,7 @@ export const services: Service[] = [
     title: "Paid Advertising (TikTok, Google & Meta Ads)",
     description: "Creating and managing performance campaigns to increase reach, leads, and sales.",
     icon: Megaphone,
-    imageSrc: "/images/services/paid-ads.jpg",
+    imageSrc: "/images/services/paid.jpeg",
     problem: "Businesses often spend ad budgets without seeing qualified inquiries or profitable return on investment.",
     solution: "We build targeted audience funnels, compelling ad creative, and continuous campaign optimization across TikTok, Google, and Meta Ads to maximize reach and drive high-intent leads.",
     deliverables: [
@@ -95,7 +95,7 @@ export const services: Service[] = [
     title: "Social Media Management",
     description: "Content calendars, community management, and platform-native creative.",
     icon: Share2,
-    imageSrc: "/images/services/social-media-management.jpg",
+    imageSrc: "/images/services/social-media-management.jpeg",
     problem: "Maintaining an active, high-standard social presence requires consistent creative production and daily community interaction that busy founders rarely have time for.",
     solution: "We handle end-to-end social media operations—from strategic monthly calendars to community engagement—ensuring your brand maintains an authoritative, polished presence.",
     deliverables: [
@@ -110,7 +110,7 @@ export const services: Service[] = [
     title: "Social Media Marketing",
     description: "Creating and managing engaging content to grow your online presence and reach your audience.",
     icon: Sparkles,
-    imageSrc: "/images/services/social-marketing.jpg",
+    imageSrc: "/images/services/social-marketing.jpeg",
     problem: "Generic posts fail to capture consumer attention in crowded feeds, leading to stagnant follower growth and zero conversion.",
     solution: "We devise organic viral campaigns, trend-responsive concepts, and value-led content that sparks authentic conversations and builds a loyal audience around your brand.",
     deliverables: [
@@ -125,7 +125,7 @@ export const services: Service[] = [
     title: "Branding & Brand Identity",
     description: "Strong brand strategies, logos, visual identities, and designs that help businesses stand out.",
     icon: Palette,
-    imageSrc: "/images/services/branding.jpg",
+    imageSrc: "/images/services/brandings.jpg",
     problem: "Inconsistent visual assets, generic logos, and weak branding dilute market credibility and make your business forgettable.",
     solution: "We build timeless, distinctive visual identities that reflect your company's core values, resonate with target clients, and build enduring market trust.",
     deliverables: [
@@ -140,7 +140,7 @@ export const services: Service[] = [
     title: "Video Editing & Motion Design",
     description: "Editing high-quality promotional videos, advertisements, and social media content.",
     icon: Clapperboard,
-    imageSrc: "/images/services/video-editing.jpg",
+    imageSrc: "/images/services/video-editing.jpeg",
     problem: "Video is the highest-converting digital format, but poorly edited or low-energy videos harm brand perception and get skipped instantly.",
     solution: "Our dedicated in-house video editors craft dynamic, high-retention video content, kinetic typography, and motion graphics tailored for TikTok, Reels, and commercials.",
     deliverables: [
@@ -155,7 +155,7 @@ export const services: Service[] = [
     title: "Graphic Design",
     description: "Designing posters, marketing materials, social media posts, and other visual assets.",
     icon: PenTool,
-    imageSrc: "/images/services/graphic-design.jpg",
+    imageSrc: "/images/services/graphics-design.jpeg",
     problem: "Cluttered or amateur graphics cause potential customers to question product quality and choose competitors with cleaner presentation.",
     solution: "We produce clean, modern, and impactful graphics that communicate your message quickly and maintain visual excellence across every digital and print touchpoint.",
     deliverables: [
@@ -170,7 +170,7 @@ export const services: Service[] = [
     title: "Search Engine Optimization (SEO)",
     description: "Technical, content, and authority-building strategies that compound organic visibility.",
     icon: Search,
-    imageSrc: "/images/services/seo.jpg",
+    imageSrc: "/images/services/seo.jpeg",
     problem: "Relying solely on paid ads can be unsustainable; without SEO, your website remains invisible to users actively searching for your solutions on Google.",
     solution: "We execute on-page technical fixes, semantic search optimizations, and content blueprints that establish search engine trust and drive long-term organic traffic.",
     deliverables: [
@@ -185,7 +185,7 @@ export const services: Service[] = [
     title: "Marketing Strategy & Growth Solutions",
     description: "Data-driven strategies to improve brand awareness, customer engagement, and business growth.",
     icon: TrendingUp,
-    imageSrc: "/images/services/strategy.jpg",
+    imageSrc: "/images/services/strategy.jpeg",
     problem: "Scattered marketing tactics without an overarching plan lead to wasted budgets, disjointed messaging, and unpredictable results.",
     solution: "We craft integrated, multi-phase marketing roadmaps that align your creative output, distribution channels, and sales processes with concrete business milestones.",
     deliverables: [
@@ -200,7 +200,7 @@ export const services: Service[] = [
     title: "Full-Stack Website & Mobile Application Development",
     description: "Building fast, modern websites and mobile apps that turn your digital presence into a growth engine.",
     icon: Code2,
-    imageSrc: "/images/services/web-dev.jpg",
+    imageSrc: "/images/services/web-dev.jpeg",
     problem: "Slow, broken, or outdated websites fail to convert visitors, damage search rankings, and limit business automation.",
     solution: "We build modern, blazing-fast, and responsive web and mobile applications using modern frameworks that provide seamless user experiences and drive conversions.",
     deliverables: [
