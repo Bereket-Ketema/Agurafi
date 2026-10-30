@@ -55,9 +55,6 @@ export default function AboutPage() {
 
           <div className="mx-auto max-w-7xl">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <span className="mb-4 inline-block rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                Who We Are
-              </span>
               <h1 className="text-balance font-heading text-4xl font-extrabold leading-tight sm:text-5xl lg:text-[56px]">
                 Empowering Brands Through <span className="text-gradient-gold">Creative Strategy &amp; Technology</span>
               </h1>
@@ -158,9 +155,6 @@ export default function AboutPage() {
         <section className="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-              <span className="mb-4 inline-block rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                Our Foundation
-              </span>
               <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px]">
                 Core Values &amp; Working Philosophy
               </h2>
@@ -191,9 +185,6 @@ export default function AboutPage() {
             <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-surface to-surface-2 p-8 sm:p-12 lg:p-16">
               <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-7">
-                  <span className="mb-3 inline-block rounded-full border border-primary/25 bg-primary/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-accent">
-                    Methodology
-                  </span>
                   <h2 className="font-heading text-3xl font-extrabold sm:text-4xl">
                     How We Approach Client Challenges
                   </h2>
@@ -244,9 +235,6 @@ export default function AboutPage() {
         <section className="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-7xl">
             <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-              <span className="mb-4 inline-block rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                Leadership
-              </span>
               <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px]">
                 Meet The Specialists Behind Agurafi
               </h2>

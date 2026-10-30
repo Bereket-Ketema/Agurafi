@@ -6,9 +6,6 @@ export function Clients() {
   return (
     <section id="portfolio" className="px-4 py-20 text-center sm:px-6 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
-        <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
-          Our Partners
-        </span>
         <Reveal>
           <h2 className="text-balance font-heading text-[32px] font-extrabold leading-tight lg:text-[42px]">
             Trusted by Industry Leaders

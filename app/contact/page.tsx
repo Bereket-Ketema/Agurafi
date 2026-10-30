@@ -71,9 +71,6 @@ export default function ContactPage() {
 
           <div className="mx-auto max-w-7xl">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <span className="mb-3 inline-block rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                Start the Conversation
-              </span>
               <h1 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
                 Let&apos;s Build Your Brand&apos;s <span className="text-gradient-gold">Growth Engine</span>
               </h1>

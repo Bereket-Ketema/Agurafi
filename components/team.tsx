@@ -4,12 +4,9 @@ import { Reveal } from "@/components/reveal"
 
 export function Team() {
   return (
-    <section id="team" className="relative px-4 py-20 sm:px-6 lg:px-8 lg:py-28 overflow-hidden bg-white/[0.01]">
-      <div className="mx-auto max-w-7xl">
+    <section id="team" className="relative py-20 lg:py-28 overflow-hidden bg-white/[0.01]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-          <span className="mb-3 inline-block rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-            Leadership &amp; Talent
-          </span>
           <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px] text-foreground">
             The People Behind <span className="text-gradient-gold">Agurafi</span>
           </h2>
@@ -21,9 +18,9 @@ export function Team() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 sm:gap-5">
           {teamMembers.map((member, index) => (
             <Reveal key={member.name} delay={index * 60}>
-              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)]">
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-lg border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)]">
                 
-                {/* Team Portrait Container */}
+                {/* Team Portrait Container with standard rounded-t-lg */}
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/40">
                   <Image
                     src={member.imageSrc}

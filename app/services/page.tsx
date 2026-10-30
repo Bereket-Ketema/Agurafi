@@ -27,9 +27,6 @@ export default function ServicesPage() {
 
           <div className="mx-auto max-w-7xl">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <span className="mb-3 inline-block rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                Our Capabilities
-              </span>
               <h1 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
                 Services Built to <span className="text-gradient-gold">Elevate &amp; Scale Your Brand</span>
               </h1>

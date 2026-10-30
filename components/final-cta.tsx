@@ -1,12 +1,13 @@
 import Link from "next/link"
-import { ArrowRight, MessageSquareQuote } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
 export function FinalCta() {
   return (
-    <section id="final-cta" className="relative px-4 py-20 sm:px-6 lg:px-8 lg:py-28 overflow-hidden">
-      <Reveal>
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-[#09352e] via-[#062a24] to-[#041f1b] px-6 py-16 text-center sm:rounded-[40px] sm:px-12 lg:px-16 lg:py-24 shadow-2xl">
+    <section id="final-cta" className="relative py-20 lg:py-28 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-xl border border-white/15 bg-gradient-to-b from-[#09352e] via-[#062a24] to-[#041f1b] px-6 py-16 text-center sm:px-12 lg:px-16 lg:py-24 shadow-2xl">
           
           {/* Subtle warm gold ambient radiance */}
           <div
@@ -15,11 +16,6 @@ export function FinalCta() {
           />
 
           <div className="relative z-10 mx-auto max-w-3xl">
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
-              <MessageSquareQuote className="size-3.5" />
-              <span>Let&apos;s Connect</span>
-            </span>
-
             <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl text-foreground leading-[1.15]">
               Ready to Build Something <span className="text-gradient-gold">Great Together?</span>
             </h2>
@@ -53,6 +49,7 @@ export function FinalCta() {
 
         </div>
       </Reveal>
+      </div>
     </section>
   )
 }

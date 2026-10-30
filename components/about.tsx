@@ -6,9 +6,6 @@ export function About() {
     <section id="about" className="px-4 pb-20 pt-10 sm:px-6 lg:px-8 lg:pb-28 lg:pt-14">
       <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2 lg:gap-20">
         <Reveal>
-          <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
-            About Agurafi
-          </span>
           <h2 className="mb-6 text-balance font-heading text-[32px] font-extrabold leading-tight lg:text-[42px]">
             Data-driven growth through strategic branding
           </h2>
@@ -30,9 +27,6 @@ export function About() {
               style={{ background: "radial-gradient(circle, rgba(228,172,35,0.22), transparent 65%)" }}
             />
             <div className="relative">
-              <span className="mb-2 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
-                Why Agurafi
-              </span>
               <h3 className="mb-8 font-heading text-2xl font-extrabold leading-tight lg:text-[28px]">
                 Built on strategy, technology, and scalability
               </h3>
