@@ -5,6 +5,7 @@ import { ArrowRight, Compass, Target, Lightbulb, Users, CheckCircle2, ShieldChec
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Reveal } from "@/components/reveal"
+import { VideoShowcase } from "@/components/video-showcase"
 import { aboutStats, aboutHighlights, teamMembers } from "@/lib/data"
 
 export const metadata: Metadata = {
@@ -230,6 +231,9 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        {/* Real Work in Motion / Production Showcase */}
+        <VideoShowcase />
 
         {/* Team Showcase */}
         <section className="relative py-16 lg:py-24">

@@ -93,6 +93,7 @@ export function Hero() {
                       alt={partner.name}
                       width={120}
                       height={40}
+                      style={{ width: "auto" }}
                       className="max-h-7 sm:max-h-8 w-auto max-w-full object-contain"
                     />
                   </div>

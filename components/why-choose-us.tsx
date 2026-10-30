@@ -36,8 +36,9 @@ export function WhyChooseUs() {
                   <Image
                     src="/images/agurafi-logo.jpg"
                     alt="Agurafi Digital Marketing"
-                    width={220}
-                    height={80}
+                    width={3508}
+                    height={2480}
+                    style={{ width: "auto" }}
                     className="h-16 sm:h-20 lg:h-22 w-auto rounded-lg object-contain shadow-lg transition-transform duration-300 group-hover:scale-105"
                   />
                   <span className="mt-2.5 font-heading text-xs sm:text-sm font-extrabold tracking-widest uppercase text-accent">

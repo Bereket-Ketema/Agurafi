@@ -39,8 +39,8 @@ export function Footer() {
               <Image
                 src="/images/agurafi-logo.jpg"
                 alt="AGURAFI Digital Marketing"
-                width={160}
-                height={56}
+                width={3508}
+                height={2480}
                 style={{ width: "auto" }}
                 className="h-11 w-auto rounded-md"
               />

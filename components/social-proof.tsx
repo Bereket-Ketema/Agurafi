@@ -29,6 +29,7 @@ export function SocialProof() {
                     alt={partner.name}
                     width={220}
                     height={100}
+                    style={{ width: "auto" }}
                     sizes="(min-width: 1024px) 200px, (min-width: 640px) 160px, 140px"
                     className="max-h-16 sm:max-h-20 w-auto max-w-[88%] object-contain transition-transform duration-300 group-hover:scale-105"
                   />
