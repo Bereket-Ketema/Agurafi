@@ -1,218 +1,235 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
-import { partnerLogos, aboutStats } from "@/lib/data"
-import { CurvedDivider } from "@/components/curved-divider"
+import { ArrowRight, Sparkles, CheckCircle2, Palette, Share2, Clapperboard } from "lucide-react"
+import { partnerLogos } from "@/lib/data"
 
-// Floating animation configurations with varied delays for organic, calm floating
-const floatConfigs = [
-  // Row 1 (4 cards)
-  { animation: "animate-float-1", delay: "0s" },
-  { animation: "animate-float-2", delay: "-1.5s" },
-  { animation: "animate-float-3", delay: "-2.8s" },
-  { animation: "animate-float-4", delay: "-0.8s" },
-  // Row 2 (3 cards)
-  { animation: "animate-float-2", delay: "-3.4s" },
-  { animation: "animate-float-1", delay: "-1.9s" },
-  { animation: "animate-float-3", delay: "-2.2s" },
-  // Row 3 (3 cards)
-  { animation: "animate-float-4", delay: "-0.5s" },
-  { animation: "animate-float-2", delay: "-1.2s" },
-  { animation: "animate-float-3", delay: "-3.1s" },
+// Selected 5 trusted brands for the hero social proof strip
+const heroTrustedLogos = [
+  partnerLogos[0], // Yegna Trading
+  partnerLogos[3], // Willy
+  partnerLogos[6], // Gedion Advertising
+  partnerLogos[9], // Prime Real Estate
+  partnerLogos[11], // Rotech
 ]
 
-// Real industry / capability badges to make the brand cards informative and engaging
-const partnerTags: Record<string, string> = {
-  "Yegna Trading": "Logistics & Trade",
-  "Zephyr Auto Spare Parts": "Automotive",
-  "Mela Express Delivery": "Express Logistics",
-  "Willy": "Commercial Retail",
-  "Mela Packers & Movers": "Moving Services",
-  "Mela Cleaning Service": "Corporate Cleaning",
-  "Gedion Advertising": "Media & Marketing",
-  "Simple": "Consumer Brand",
-  "Spark Edge Advertising and Trading": "Trade & Media",
-  "Prime Real Estate": "Luxury Properties",
-}
+// Updated Hero Statistics as explicitly requested
+const heroDisplayStats = [
+  { value: "3+", label: "Years of Experience" },
+  { value: "10+", label: "Specialists on Team" },
+  { value: "60+", label: "Industries Served" },
+]
 
 export function Hero() {
-  const [activePartnerIndex, setActivePartnerIndex] = useState<number | null>(null)
-  const [hoveredPartnerIndex, setHoveredPartnerIndex] = useState<number | null>(null)
-
-  // 10 partners structured in 4 - 3 - 3
-  const heroPartners = partnerLogos.slice(0, 10)
-  const row1Partners = heroPartners.slice(0, 4)
-  const row2Partners = heroPartners.slice(4, 7)
-  const row3Partners = heroPartners.slice(7, 10)
-
-  const inspectedIndex = hoveredPartnerIndex ?? activePartnerIndex
-
-  const handleCardClick = (index: number) => {
-    setActivePartnerIndex((prev) => (prev === index ? null : index))
-  }
-
-  const renderCard = (partner: (typeof heroPartners)[0], index: number, heightClass: string) => {
-    const config = floatConfigs[index]
-    const isActive = inspectedIndex === index
-    const tag = partnerTags[partner.name] || "Client Partner"
-
-    return (
-      <div
-        key={partner.imageSrc}
-        onClick={() => handleCardClick(index)}
-        onTouchStart={() => handleCardClick(index)}
-        onMouseEnter={() => setHoveredPartnerIndex(index)}
-        onMouseLeave={() => setHoveredPartnerIndex(null)}
-        style={{
-          animationPlayState: isActive ? "paused" : "running",
-          animationDelay: config.delay,
-        }}
-        className={`group relative flex ${heightClass} cursor-pointer select-none items-center justify-center rounded-2xl border p-2.5 sm:p-4 transition-all duration-300 ${
-          config.animation
-        } ${
-          isActive
-            ? "border-primary/80 ring-2 ring-primary/40 bg-gradient-to-b from-white via-white to-amber-50/50 shadow-[0_20px_45px_rgba(228,172,35,0.32)] scale-[1.05] -translate-y-1.5 z-30"
-            : "border-white/50 bg-gradient-to-b from-white via-white/95 to-[#f4f7f5] shadow-[0_8px_24px_rgba(0,0,0,0.2)] hover:border-primary/60 hover:shadow-[0_16px_36px_rgba(228,172,35,0.22)] hover:scale-[1.03] hover:-translate-y-0.5 z-10"
-        }`}
-      >
-        {/* Subtle Light Sheen on Hover */}
-        <div className="pointer-events-none absolute inset-0 -translate-x-full overflow-hidden rounded-2xl bg-gradient-to-r from-transparent via-primary/15 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-
-        {/* Category Pill Tag shown on hover & active */}
-        <div
-          className={`pointer-events-none absolute -top-2.5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-primary/40 bg-[#062822] px-2 py-0.5 text-[9px] font-bold text-accent shadow-md backdrop-blur-md transition-all duration-200 z-30 ${
-            isActive ? "opacity-100 scale-100" : "opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100"
-          }`}
-        >
-          {tag}
-        </div>
-
-        {/* Logo Image */}
-        <div className="relative flex size-full items-center justify-center">
-          <Image
-            src={partner.imageSrc}
-            alt={partner.name}
-            width={280}
-            height={140}
-            sizes="(min-width: 1280px) 240px, (min-width: 640px) 180px, 110px"
-            className="h-auto max-h-full w-auto max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-          />
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <section id="home" className="relative overflow-hidden pb-16 pt-24 sm:pt-28 lg:pb-20 lg:pt-32">
-      {/* Background gradients */}
+    <section id="home" className="relative overflow-hidden pt-32 pb-16 sm:pt-36 sm:pb-20 lg:pt-40 lg:pb-24">
+      {/* Subtle atmospheric ambient lighting */}
       <div
-        className="absolute inset-0 -z-20"
+        className="pointer-events-none absolute inset-0 -z-20"
         style={{
           background:
-            "radial-gradient(1100px 700px at 75% 25%, rgba(228,172,35,0.18), transparent 60%), radial-gradient(700px 500px at 15% 85%, rgba(228,172,35,0.08), transparent 60%), linear-gradient(180deg, #083731 0%, #062a25 60%, #04201c 100%)",
+            "radial-gradient(900px 600px at 75% 20%, rgba(228,172,35,0.12), transparent 60%), radial-gradient(700px 500px at 15% 85%, rgba(10,53,47,0.5), transparent 60%), linear-gradient(180deg, #062622 0%, #04201c 100%)",
         }}
       />
       <div
-        className="absolute inset-0 -z-10 opacity-30"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-20"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-          maskImage: "radial-gradient(circle at 70% 30%, black 0%, transparent 65%)",
+            "radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px)",
+          backgroundSize: "32px 32px",
+          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 75%)",
         }}
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* lg:items-stretch ensures top alignment and bottom margin alignment between buttons and cards/stats */}
-        <div className="grid gap-10 lg:grid-cols-12 lg:items-stretch lg:gap-8 xl:gap-12">
-          {/* Left Column: Heading, description & Action buttons pinned at bottom */}
-          <div className="flex flex-col justify-between pt-0 text-left lg:col-span-5 xl:col-span-5">
-            <div>
-              <h1 className="mt-0 mb-6 text-balance font-heading text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[66px]">
-                Increase Your <span className="text-gradient-gold">Reach,</span> Elevate Your Brand, and Drive More Sales
-              </h1>
-
-              <p className="max-w-xl text-pretty text-base leading-relaxed text-muted sm:text-lg">
-                Agurafi empowers brands to grow through creative visuals, strategic marketing, and data-driven solutions
-                that deliver measurable results.
-              </p>
+        <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-8 xl:gap-12">
+          
+          {/* Left Column: Core Value Proposition & Primary Actions */}
+          <div className="flex flex-col text-left lg:col-span-7">
+            {/* Agency Badge */}
+            <div className="mb-5 inline-flex items-center gap-2 self-start rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1 text-xs font-semibold text-accent backdrop-blur-sm">
+              <span className="size-1.5 rounded-full bg-accent animate-pulse" />
+              <span>Full-Service Digital Marketing Agency</span>
             </div>
 
-            {/* Bottom buttons aligned to the exact bottom margin level */}
-            <div className="mt-8 flex flex-wrap items-center gap-4 lg:mt-10">
+            {/* Main Headline */}
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-[52px] xl:text-[60px] font-extrabold tracking-tight leading-[1.1] text-foreground text-balance">
+              Increase Your <span className="text-gradient-gold">Reach,</span> Elevate Your Brand, and Drive More Sales
+            </h1>
+
+            {/* Supporting Message */}
+            <p className="mt-5 max-w-2xl text-base sm:text-lg text-muted leading-relaxed text-pretty">
+              Agurafi empowers brands to grow through creative visuals, strategic marketing, and data-driven solutions
+              that deliver measurable results.
+            </p>
+
+            {/* Actions: Primary & Secondary CTAs */}
+            <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-5">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-7 py-3.5 text-[14.5px] font-semibold text-primary-foreground shadow-[0_8px_24px_rgba(228,172,35,0.35)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_32px_rgba(228,172,35,0.5)] active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#c99116] px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[0_8px_24px_rgba(228,172,35,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(228,172,35,0.45)] active:translate-y-0"
               >
-                View Our Services
+                <span>View Our Services</span>
                 <ArrowRight className="size-4" />
               </Link>
               <Link
                 href="/contact"
-                className="glass inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-[14.5px] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10 active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-7 py-3.5 text-sm font-semibold text-foreground backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/[0.09] hover:border-white/25 active:translate-y-0"
               >
-                Contact Us
+                <span>Contact Us</span>
               </Link>
             </div>
-          </div>
 
-          {/* Right Column: 4-3-3 Staggered Floating Logo Showcase + Side Stats */}
-          <div className="relative flex flex-col justify-between items-center pt-1 sm:pt-1.5 lg:pt-2 lg:col-span-7 xl:col-span-7">
-            {/* Ambient Backlight */}
-            <div className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-[100px]" />
-            <div className="pointer-events-none absolute left-1/3 top-1/4 -z-10 size-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-400/10 blur-[90px]" />
-
-            {/* 4-3-3 Floating Brand Grid with Live Verified Badges */}
-            <div className="flex w-full max-w-[750px] flex-col gap-3 sm:gap-3.5">
-              {/* Row 1: 4 Cards */}
-              <div className="grid grid-cols-4 gap-2.5 sm:gap-3.5">
-                {row1Partners.map((partner, index) =>
-                  renderCard(partner, index, "h-22 sm:h-26 lg:h-28 xl:h-30")
-                )}
-              </div>
-
-              {/* Row 2: 3 Cards (Centered & Enlarged) */}
-              <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 px-3 sm:px-6">
-                {row2Partners.map((partner, i) =>
-                  renderCard(partner, 4 + i, "h-24 sm:h-28 lg:h-30 xl:h-32")
-                )}
-              </div>
-
-              {/* Row 3: 3 Cards (Centered & Enlarged) */}
-              <div className="grid grid-cols-3 gap-2.5 sm:gap-3.5 px-3 sm:px-6">
-                {row3Partners.map((partner, i) =>
-                  renderCard(partner, 7 + i, "h-24 sm:h-28 lg:h-30 xl:h-32")
-                )}
+            {/* Hero Social Proof: Compact, Balanced Client Logos */}
+            <div className="mt-12 pt-8 border-t border-white/10">
+              <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-muted-foreground">
+                Trusted by Businesses Across Industries
+              </p>
+              
+              <div className="mt-4 flex flex-wrap items-center gap-2.5 sm:gap-4">
+                {heroTrustedLogos.map((partner) => (
+                  <div
+                    key={partner.name}
+                    title={partner.name}
+                    className="flex h-10 sm:h-11 w-[calc(33.333%-0.5rem)] sm:w-28 items-center justify-center rounded-xl border border-white/10 bg-white/95 px-2.5 py-1.5 shadow-sm transition-all duration-200 hover:border-primary/50 hover:shadow-md hover:scale-[1.03]"
+                  >
+                    <Image
+                      src={partner.imageSrc}
+                      alt={partner.name}
+                      width={120}
+                      height={40}
+                      className="max-h-7 sm:max-h-8 w-auto max-w-full object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
+          </div>
 
-            {/* "3+ Years of Experience", "10+ Specialists on Team", "60+ Industries Served" on the side of cards, aligned at bottom */}
-            <div className="mt-5 grid w-full max-w-[750px] grid-cols-3 gap-2 sm:gap-4 rounded-2xl border border-white/10 bg-white/[0.05] p-3.5 sm:p-4 backdrop-blur-md shadow-lg">
-              {aboutStats.map((stat, i) => (
-                <div
-                  key={stat.label}
-                  className={`flex flex-col text-center sm:text-left ${
-                    i > 0 ? "border-l border-white/10 pl-2 sm:pl-4" : "sm:pl-3"
-                  }`}
-                >
-                  <span className="font-heading text-xl sm:text-2xl lg:text-3xl font-extrabold text-accent">
-                    {stat.value}
-                  </span>
-                  <span className="mt-0.5 text-[11px] sm:text-xs text-muted leading-tight">
-                    {stat.label}
-                  </span>
+          {/* Right Column: Creative Agency Overlapping Visual Showcase */}
+          <div className="relative w-full lg:col-span-5">
+            {/* Ambient Backlight Glow */}
+            <div className="pointer-events-none absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-tr from-primary/15 via-emerald-500/10 to-transparent blur-2xl" />
+
+            {/* Main Showcase Container */}
+            <div className="relative w-full overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-surface/85 to-[#052621]/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
+              
+              {/* Showcase Top Bar */}
+              <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
+                <div className="flex items-center gap-2">
+                  <span className="flex size-2 rounded-full bg-emerald-400 animate-ping" />
+                  <span className="text-xs font-semibold text-foreground">Creative &amp; Marketing Suite</span>
                 </div>
-              ))}
+                <span className="rounded-full bg-primary/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent border border-primary/30">
+                  Agurafi Studio
+                </span>
+              </div>
+
+              {/* Overlapping Triple Visual Stage: Video Editing, Graphics Design, Social Media Marketing */}
+              <div className="relative w-full pt-2 pb-3">
+                
+                {/* 1. Main Background Visual: Video Editing & Production */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/15 bg-black/50 shadow-lg">
+                  <Image
+                    src="/images/services/video-editing.jpeg"
+                    alt="Agurafi Video Editing & Motion Design"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 460px, 100vw"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                  
+                  {/* Bottom Main Card Label */}
+                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
+                    <span className="flex size-6 items-center justify-center rounded-lg bg-black/60 border border-white/20 text-accent">
+                      <Clapperboard className="size-3.5" />
+                    </span>
+                    <div>
+                      <span className="text-[10px] font-semibold uppercase tracking-wider text-accent">Video Editing</span>
+                      <p className="text-xs font-bold text-white">Cinematic Content &amp; Motion</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. Overlapping Card Top-Right: Graphic Design */}
+                <div className="absolute top-0 right-0 sm:top-1 sm:right-1 z-20 w-[42%] max-w-[200px] overflow-hidden rounded-xl border border-white/20 bg-[#062621]/95 p-1.5 shadow-[0_12px_28px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-primary/50">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                    <Image
+                      src="/images/services/graphics-design.jpeg"
+                      alt="Agurafi Graphic Design"
+                      fill
+                      sizes="180px"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-1.5 left-1.5 flex items-center gap-1.5 text-white">
+                      <span className="flex size-4.5 items-center justify-center rounded bg-primary/90 text-primary-foreground">
+                        <Palette className="size-2.5" />
+                      </span>
+                      <span className="text-[9.5px] font-bold leading-tight">Graphic Design</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 3. Overlapping Card Bottom-Right: Social Media Marketing */}
+                <div className="absolute bottom-0 right-0 sm:bottom-1 sm:right-1 z-20 w-[44%] max-w-[210px] overflow-hidden rounded-xl border border-white/20 bg-[#062621]/95 p-1.5 shadow-[0_12px_28px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-primary/50">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                    <Image
+                      src="/images/services/social-media-management.jpeg"
+                      alt="Agurafi Social Media Marketing"
+                      fill
+                      sizes="190px"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-1.5 left-1.5 flex items-center gap-1.5 text-white">
+                      <span className="flex size-4.5 items-center justify-center rounded bg-accent text-[#08201b]">
+                        <Share2 className="size-2.5" />
+                      </span>
+                      <span className="text-[9.5px] font-bold leading-tight">Social Marketing</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Verified Agency Statistics: 3+ Years of Experience, 10+ Specialists on Team, 60+ Industries Served */}
+              <div className="mt-4 grid grid-cols-3 gap-2.5">
+                {heroDisplayStats.map((stat, i) => (
+                  <div
+                    key={stat.label}
+                    className="flex flex-col rounded-xl border border-white/5 bg-white/[0.03] p-2.5 sm:p-3 text-center sm:text-left transition-colors hover:bg-white/[0.06]"
+                  >
+                    <span className="font-heading text-lg sm:text-xl font-extrabold text-accent">
+                      {stat.value}
+                    </span>
+                    <span className="mt-0.5 text-[11px] leading-tight text-muted">
+                      {stat.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Bottom Agency Capabilities Pill List */}
+              <div className="mt-3.5 flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/10">
+                {["Video Editing", "Graphic Design", "Social Marketing", "Targeted Paid Ads"].map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center gap-1 rounded-md bg-white/[0.05] px-2 py-0.5 text-[10.5px] font-medium text-muted-foreground"
+                  >
+                    <CheckCircle2 className="size-3 text-primary" />
+                    {item}
+                  </span>
+                ))}
+              </div>
+
             </div>
           </div>
+
         </div>
       </div>
-
-      {/* Sweeping Curvature Transition into Next Section */}
-      <CurvedDivider position="bottom" variant="swoop" fillColor="#04201c" showGlow={true} />
     </section>
   )
 }

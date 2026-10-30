@@ -26,6 +26,8 @@ export function Header() {
     }
   }, [menuOpen])
 
+  const headerNavLinks = navLinks.filter((link) => link.href !== "/contact")
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
@@ -46,7 +48,7 @@ export function Header() {
         </Link>
 
         <nav className="hidden items-center gap-10 lg:flex" aria-label="Main Navigation">
-          {navLinks.map((link) => {
+          {headerNavLinks.map((link) => {
             const isActive = pathname === link.href
             return (
               <Link
@@ -93,7 +95,7 @@ export function Header() {
         }`}
       >
         <nav className="flex flex-col gap-1 px-6 py-6" aria-label="Mobile Navigation">
-          {navLinks.map((link) => {
+          {headerNavLinks.map((link) => {
             const isActive = pathname === link.href
             return (
               <Link

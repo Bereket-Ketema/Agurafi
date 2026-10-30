@@ -4,55 +4,53 @@ import { Reveal } from "@/components/reveal"
 
 export function FinalCta() {
   return (
-    <section id="final-cta" className="relative px-4 pb-24 pt-10 sm:px-6 lg:px-8 lg:pb-36 lg:pt-14 overflow-hidden">
+    <section id="final-cta" className="relative px-4 py-20 sm:px-6 lg:px-8 lg:py-28 overflow-hidden">
       <Reveal>
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[36px] border border-white/15 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#041f1b] px-6 py-16 text-center sm:rounded-[52px] sm:px-10 lg:px-16 lg:py-24 shadow-[0_30px_90px_rgba(0,0,0,0.5)]">
-          {/* Multi-Color Ambient Curvature Glow Ribbons (Gold, Electric Blue & Coral) */}
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-[#09352e] via-[#062a24] to-[#041f1b] px-6 py-16 text-center sm:rounded-[40px] sm:px-12 lg:px-16 lg:py-24 shadow-2xl">
+          
+          {/* Subtle warm gold ambient radiance */}
           <div
-            className="pointer-events-none absolute left-1/2 top-[-220px] size-[600px] -translate-x-1/2 rounded-full"
-            style={{ background: "radial-gradient(circle, rgba(228,172,35,0.22), transparent 65%)" }}
-          />
-          <div
-            className="pointer-events-none absolute -bottom-32 -left-32 size-[450px] rounded-full opacity-25 blur-[90px]"
-            style={{ background: "radial-gradient(circle, #3b82f6, transparent 65%)" }}
-          />
-          <div
-            className="pointer-events-none absolute -top-32 -right-32 size-[450px] rounded-full opacity-22 blur-[90px]"
-            style={{ background: "radial-gradient(circle, #ff6b4a, transparent 65%)" }}
+            className="pointer-events-none absolute left-1/2 top-0 size-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 blur-[100px]"
+            style={{ background: "radial-gradient(circle, #e4ac23, transparent 70%)" }}
           />
 
-          <div className="relative z-10">
+          <div className="relative z-10 mx-auto max-w-3xl">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
               <MessageSquareQuote className="size-3.5" />
-              Let&apos;s Connect
+              <span>Let&apos;s Connect</span>
             </span>
 
-            <h2 className="mx-auto max-w-3xl text-balance font-heading text-3xl font-extrabold leading-tight sm:text-4xl lg:text-[46px]">
+            <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl text-foreground leading-[1.15]">
               Ready to Build Something <span className="text-gradient-gold">Great Together?</span>
             </h2>
 
-            <p className="mx-auto mt-5 max-w-xl text-pretty text-base leading-relaxed text-muted sm:text-lg">
+            <p className="mt-5 text-pretty text-base sm:text-lg leading-relaxed text-muted">
               Tell us your business goals, target audience, and challenges. We will prepare a clear, strategic roadmap
               to help your brand elevate its reach and drive measurable sales.
             </p>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-4 sm:gap-5">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-10 py-4 text-base font-semibold text-primary-foreground shadow-[0_10px_28px_rgba(228,172,35,0.38)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(228,172,35,0.55)] active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#c99116] px-8 py-4 text-sm font-semibold text-primary-foreground shadow-[0_8px_24px_rgba(228,172,35,0.3)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(228,172,35,0.45)] active:translate-y-0"
               >
-                Contact Us
+                <span>Contact Us</span>
                 <ArrowRight className="size-4" />
               </Link>
 
               <Link
                 href="/services"
-                className="glass inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/10 active:scale-95"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-8 py-4 text-sm font-semibold text-foreground backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/[0.1] hover:border-white/25 active:translate-y-0"
               >
-                Explore Services
+                <span>Explore Services</span>
               </Link>
             </div>
+
+            <p className="mt-8 text-xs text-muted-foreground">
+              Direct consultation with senior strategists &bull; Clear roadmaps &bull; No obligation
+            </p>
           </div>
+
         </div>
       </Reveal>
     </section>

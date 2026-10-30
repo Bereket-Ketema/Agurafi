@@ -427,7 +427,7 @@ export const teamMembers: TeamMember[] = [
   },
   {
     name: "Henok Fasika",
-    role: "Website Developer & Digital Marketer",
+    role: "Software developer and Digital Marketer",
     imageSrc: "/images/Henok_Fasika.jpg",
   },
   {

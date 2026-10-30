@@ -4,40 +4,49 @@ import { Reveal } from "@/components/reveal"
 
 export function Team() {
   return (
-    <section id="team" className="px-4 pb-20 pt-16 sm:px-6 lg:px-8 lg:pb-28 lg:pt-20">
+    <section id="team" className="relative px-4 py-20 sm:px-6 lg:px-8 lg:py-28 overflow-hidden bg-white/[0.01]">
       <div className="mx-auto max-w-7xl">
         <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-          <span className="mb-4 block text-[13px] font-bold uppercase tracking-[0.12em] text-primary">
-            Leadership
+          <span className="mb-3 inline-block rounded-full border border-primary/25 bg-primary/10 px-4 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent">
+            Leadership &amp; Talent
           </span>
-          <h2 className="text-balance font-heading text-[32px] font-extrabold leading-tight lg:text-[42px]">
-            The People Behind Agurafi
+          <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px] text-foreground">
+            The People Behind <span className="text-gradient-gold">Agurafi</span>
           </h2>
-          <p className="mt-4 text-pretty text-[16.5px] leading-relaxed text-muted">
-            A small, senior team of strategists and creatives dedicated to turning your brand vision into
-            measurable growth.
+          <p className="mt-4 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+            A dedicated team of creative directors, engineers, videographers, and strategists committed to elevating your brand.
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 sm:gap-5">
           {teamMembers.map((member, index) => (
-            <Reveal key={`${member.name}-${index}`} delay={index * 100}>
-              <div className="group h-full rounded-[20px] border border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-2 hover:border-primary/40 hover:bg-white/[0.07]">
-                <div className="relative mx-auto mb-5 size-28 overflow-hidden rounded-full border-2 border-primary/30 p-1">
-                  <div className="relative size-full overflow-hidden rounded-full">
-                    <Image
-                      src={member.imageSrc || "/placeholder.svg"}
-                      alt={member.name}
-                      fill
-                      sizes="112px"
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
+            <Reveal key={member.name} delay={index * 60}>
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-transparent backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_16px_36px_rgba(0,0,0,0.3)]">
+                
+                {/* Team Portrait Container */}
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-black/40">
+                  <Image
+                    src={member.imageSrc}
+                    alt={member.name}
+                    fill
+                    sizes="(min-width: 1024px) 240px, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#04201c] via-black/20 to-transparent" />
+                </div>
+
+                {/* Member Details */}
+                <div className="flex flex-1 flex-col justify-between p-5 text-center">
+                  <div>
+                    <h3 className="font-heading text-lg font-bold text-foreground transition-colors group-hover:text-accent">
+                      {member.name}
+                    </h3>
+                    <p className="mt-1.5 text-xs font-medium leading-snug text-muted">
+                      {member.role}
+                    </p>
                   </div>
                 </div>
-                <h3 className="font-heading text-lg font-bold">{member.name}</h3>
-                <span className="mt-1.5 inline-block rounded-full bg-primary/12 px-3 py-1 text-xs font-semibold text-accent">
-                  {member.role}
-                </span>
+
               </div>
             </Reveal>
           ))}
