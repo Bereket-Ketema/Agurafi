@@ -19,18 +19,18 @@ export default function ServicesPage() {
       <Header />
       <main className="overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Services Page Hero */}
-        <section className="relative px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pb-14">
+        <section className="relative pb-10 pt-8 lg:pb-14">
           <div
             className="pointer-events-none absolute left-1/2 top-0 -z-10 size-[650px] -translate-x-1/2 rounded-full"
             style={{ background: "radial-gradient(circle, rgba(228,172,35,0.15), transparent 65%)" }}
           />
 
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <h1 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+              <h1 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[40px] font-extrabold leading-tight">
                 Services Built to <span className="text-gradient-gold">Elevate &amp; Scale Your Brand</span>
               </h1>
-              <p className="mt-4 text-pretty text-sm text-muted sm:text-base">
+              <p className="mt-3 text-pretty text-xs sm:text-sm text-muted">
                 Creative visual production, high-ROI media buying, and scalable digital engineering.
               </p>
             </Reveal>
@@ -61,8 +61,8 @@ export default function ServicesPage() {
         </section>
 
         {/* Detailed Service Cards with Image on the Left Side */}
-        <section className="relative px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
-          <div className="mx-auto max-w-7xl space-y-8 lg:space-y-12">
+        <section className="relative py-8 lg:py-12">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 lg:space-y-12">
             {services.map((service, index) => (
               <div
                 key={service.id}
@@ -72,9 +72,22 @@ export default function ServicesPage() {
                 <Reveal delay={index % 2 === 0 ? 0 : 50}>
                   <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-card transition-all duration-300 hover:border-primary/40 hover:shadow-xl">
                     <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
-                      {/* Left Side: Suitable Visual Image */}
-                      <div className="relative min-h-[220px] sm:min-h-[260px] lg:min-h-full lg:col-span-4 overflow-hidden bg-black/40">
-                        {service.imageSrc && (
+                      {/* Left Side: Suitable Visual Image or Real Production Video */}
+                      <div className="relative min-h-[240px] sm:min-h-[280px] lg:min-h-full lg:col-span-4 overflow-hidden bg-black/60">
+                        {service.videoSrc ? (
+                          <div className="relative size-full min-h-[280px] flex items-center justify-center bg-black">
+                            <video
+                              src={service.videoSrc}
+                              poster={service.videoPoster}
+                              controls
+                              playsInline
+                              loop
+                              muted
+                              preload="metadata"
+                              className="size-full max-h-[380px] lg:max-h-full object-contain bg-black"
+                            />
+                          </div>
+                        ) : service.imageSrc && (
                           <Image
                             src={service.imageSrc}
                             alt={service.title}
@@ -83,7 +96,7 @@ export default function ServicesPage() {
                             className="object-cover transition-transform duration-700 group-hover:scale-105"
                           />
                         )}
-                        <div className="absolute inset-0 bg-gradient-to-t from-card via-black/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/20 lg:to-card" />
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-black/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-black/10 lg:to-card" />
                         
                         {/* Overlay Category Tag & Icon */}
                         <div className="absolute top-4 left-4 flex items-center gap-2">
@@ -183,8 +196,8 @@ export default function ServicesPage() {
         </section>
 
         {/* Final CTA Banner */}
-        <section className="px-4 pb-20 pt-8 sm:px-6 lg:px-8 lg:pb-28">
-          <div className="mx-auto max-w-7xl">
+        <section className="pb-20 pt-8 lg:pb-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-6 py-12 text-center sm:px-10 sm:py-16">
               <h2 className="font-heading text-2xl font-extrabold sm:text-3xl">
                 Ready to Discuss Your Brand&apos;s Objectives?

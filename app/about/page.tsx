@@ -46,19 +46,19 @@ export default function AboutPage() {
       <Header />
       <main className="overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* About Hero Section */}
-        <section className="relative px-4 pb-16 pt-8 sm:px-6 lg:px-8 lg:pb-24">
+        <section className="relative pb-16 pt-8 lg:pb-24">
           {/* Ambient Glow */}
           <div
             className="pointer-events-none absolute left-1/2 top-0 -z-10 size-[650px] -translate-x-1/2 rounded-full"
             style={{ background: "radial-gradient(circle, rgba(228,172,35,0.15), transparent 65%)" }}
           />
 
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <h1 className="text-balance font-heading text-4xl font-extrabold leading-tight sm:text-5xl lg:text-[56px]">
+              <h1 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[40px] font-extrabold leading-tight">
                 Empowering Brands Through <span className="text-gradient-gold">Creative Strategy &amp; Technology</span>
               </h1>
-              <p className="mt-6 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+              <p className="mt-4 text-pretty text-sm sm:text-base leading-relaxed text-muted">
                 Agurafi is a modern digital marketing and development agency based in Addis Ababa. We partner with
                 ambitious businesses to build memorable brand identities, launch high-performing ad campaigns, and
                 engineer custom digital platforms that accelerate growth.
@@ -87,8 +87,8 @@ export default function AboutPage() {
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative py-16 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
               <Reveal>
                 <div className="flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-card p-8 sm:p-10 transition-all duration-300 hover:border-primary/40">
@@ -152,8 +152,8 @@ export default function AboutPage() {
         </section>
 
         {/* Core Values Section */}
-        <section className="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative py-16 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto mb-16 max-w-2xl text-center">
               <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px]">
                 Core Values &amp; Working Philosophy
@@ -180,8 +180,8 @@ export default function AboutPage() {
         </section>
 
         {/* How We Approach Client Challenges */}
-        <section className="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative py-16 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-surface to-surface-2 p-8 sm:p-12 lg:p-16">
               <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-7">
@@ -232,8 +232,8 @@ export default function AboutPage() {
         </section>
 
         {/* Team Showcase */}
-        <section className="relative px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative py-16 lg:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto mb-16 max-w-2xl text-center">
               <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px]">
                 Meet The Specialists Behind Agurafi
@@ -271,8 +271,8 @@ export default function AboutPage() {
         </section>
 
         {/* Final CTA Banner */}
-        <section className="px-4 pb-24 pt-8 sm:px-6 lg:px-8 lg:pb-32">
-          <div className="mx-auto max-w-7xl">
+        <section className="pb-24 pt-8 lg:pb-32">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="rounded-[32px] border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-6 py-14 text-center sm:px-12 sm:py-20">
               <h2 className="font-heading text-3xl font-extrabold sm:text-4xl">
                 Ready to Discuss Your Brand&apos;s Next Chapter?

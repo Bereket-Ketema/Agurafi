@@ -19,18 +19,18 @@ export default function ProductsPage() {
       <Header />
       <main className="overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Products Hero */}
-        <section className="relative px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pb-16">
+        <section className="relative pb-12 pt-8 lg:pb-16">
           <div
             className="pointer-events-none absolute left-1/2 top-0 -z-10 size-[650px] -translate-x-1/2 rounded-full"
             style={{ background: "radial-gradient(circle, rgba(228,172,35,0.15), transparent 65%)" }}
           />
 
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <h1 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+              <h1 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[40px] font-extrabold leading-tight">
                 Curated Products &amp; <span className="text-gradient-gold">Growth Packages</span>
               </h1>
-              <p className="mt-4 text-pretty text-sm text-muted sm:text-base">
+              <p className="mt-3 text-pretty text-xs sm:text-sm text-muted">
                 Pre-engineered creative and technical deliverables designed to launch fast, look exceptional, and
                 drive measurable business outcomes.
               </p>
@@ -39,8 +39,8 @@ export default function ProductsPage() {
         </section>
 
         {/* Product Cards Grid */}
-        <section className="relative px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative pb-20 lg:pb-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {productsData.map((product, index) => (
                 <Reveal key={product.id} delay={index * 60}>
@@ -131,8 +131,8 @@ export default function ProductsPage() {
         </section>
 
         {/* Custom Scope / Questions Banner */}
-        <section className="px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
-          <div className="mx-auto max-w-7xl">
+        <section className="pb-20 lg:pb-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-6 py-12 text-center sm:px-10 sm:py-16">
               <h2 className="font-heading text-2xl font-extrabold sm:text-3xl">
                 Need a Custom Package or Retainer?

@@ -12,11 +12,11 @@ export function WhyChooseUs() {
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mb-14 max-w-2xl text-left">
-          <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px] text-foreground">
+        <Reveal className="mb-12 max-w-2xl text-left">
+          <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-foreground">
             Why Partner With <span className="text-gradient-gold">Agurafi</span>
           </h2>
-          <p className="mt-3 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-2.5 text-pretty text-sm sm:text-base leading-relaxed text-muted">
             Creative ambition paired with engineering and performance discipline. We treat your growth as our mandate.
           </p>
         </Reveal>
@@ -83,12 +83,12 @@ export function WhyChooseUs() {
                   {/* Card Content */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <item.icon className="size-4.5 text-primary shrink-0" />
-                      <h3 className="font-heading text-base sm:text-lg font-bold uppercase tracking-wider text-foreground transition-colors group-hover:text-accent">
+                      <item.icon className="size-4 text-primary shrink-0" />
+                      <h3 className="font-heading text-sm sm:text-base font-bold uppercase tracking-wider text-foreground transition-colors group-hover:text-accent">
                         {item.title}
                       </h3>
                     </div>
-                    <p className="mt-2 text-xs sm:text-sm leading-relaxed text-muted">
+                    <p className="mt-1.5 text-xs sm:text-[13px] leading-relaxed text-muted">
                       {item.description}
                     </p>
                   </div>

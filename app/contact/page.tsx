@@ -63,18 +63,18 @@ export default function ContactPage() {
       <Header />
       <main className="overflow-hidden pt-24 sm:pt-28 lg:pt-32">
         {/* Contact Page Hero */}
-        <section className="relative px-4 pb-10 pt-8 sm:px-6 lg:px-8 lg:pb-14">
+        <section className="relative pb-10 pt-8 lg:pb-14">
           <div
             className="pointer-events-none absolute left-1/2 top-0 -z-10 size-[650px] -translate-x-1/2 rounded-full"
             style={{ background: "radial-gradient(circle, rgba(228,172,35,0.15), transparent 65%)" }}
           />
 
-          <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <h1 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl">
+              <h1 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[40px] font-extrabold leading-tight">
                 Let&apos;s Build Your Brand&apos;s <span className="text-gradient-gold">Growth Engine</span>
               </h1>
-              <p className="mt-4 text-pretty text-sm text-muted sm:text-base">
+              <p className="mt-3 text-pretty text-xs sm:text-sm text-muted">
                 Whether you need performance advertising, a brand overhaul, video production, or a modern website, we
                 are ready to discuss your goals.
               </p>
@@ -83,8 +83,8 @@ export default function ContactPage() {
         </section>
 
         {/* Form and Contact Information Section */}
-        <section className="relative px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative pb-12 lg:pb-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
               {/* Left Column: Direct Info & What to Expect */}
               <div className="space-y-6 lg:col-span-5">
@@ -208,8 +208,8 @@ export default function ContactPage() {
         </section>
 
         {/* Embedded Google Map Section */}
-        <section className="relative px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
-          <div className="mx-auto max-w-7xl">
+        <section className="relative pb-20 lg:pb-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal delay={120}>
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-card p-4 sm:p-6 backdrop-blur-md shadow-2xl">
                 <div className="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">

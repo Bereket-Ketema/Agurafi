@@ -8,11 +8,11 @@ export function ServicesOverview() {
   return (
     <section id="services-overview" className="relative py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[44px] text-foreground">
+        <Reveal className="mx-auto mb-14 max-w-2xl text-center">
+          <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-foreground">
             What We <span className="text-gradient-gold">Do</span>
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted">
             End-to-end digital capabilities designed to generate reach, authority, and sustainable revenue.
           </p>
         </Reveal>
@@ -44,12 +44,12 @@ export function ServicesOverview() {
                 </div>
 
                 {/* Card Content */}
-                <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
+                <div className="flex flex-1 flex-col justify-between p-5 sm:p-5.5">
                   <div>
-                    <h3 className="font-heading text-lg font-bold leading-snug text-foreground transition-colors group-hover:text-accent">
+                    <h3 className="font-heading text-base sm:text-[17px] font-bold leading-snug text-foreground transition-colors group-hover:text-accent">
                       {service.title}
                     </h3>
-                    <p className="mt-2.5 text-sm leading-relaxed text-muted">
+                    <p className="mt-2 text-xs sm:text-[13px] leading-relaxed text-muted">
                       {service.description}
                     </p>
                   </div>

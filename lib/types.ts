@@ -11,6 +11,8 @@ export interface Service {
   description: string
   icon: LucideIcon
   imageSrc?: string
+  videoSrc?: string
+  videoPoster?: string
   problem?: string
   solution?: string
   deliverables?: string[]

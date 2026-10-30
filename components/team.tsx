@@ -6,11 +6,11 @@ export function Team() {
   return (
     <section id="team" className="relative py-20 lg:py-28 overflow-hidden bg-white/[0.01]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-          <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px] text-foreground">
+        <Reveal className="mx-auto mb-14 max-w-2xl text-center">
+          <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-foreground">
             The People Behind <span className="text-gradient-gold">Agurafi</span>
           </h2>
-          <p className="mt-4 text-pretty text-base leading-relaxed text-muted sm:text-lg">
+          <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted">
             A dedicated team of creative directors, engineers, videographers, and strategists committed to elevating your brand.
           </p>
         </Reveal>

@@ -16,11 +16,11 @@ export function FinalCta() {
           />
 
           <div className="relative z-10 mx-auto max-w-3xl">
-            <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-5xl text-foreground leading-[1.15]">
+            <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[40px] font-extrabold text-foreground leading-[1.2]">
               Ready to Build Something <span className="text-gradient-gold">Great Together?</span>
             </h2>
 
-            <p className="mt-5 text-pretty text-base sm:text-lg leading-relaxed text-muted">
+            <p className="mt-4 text-pretty text-sm sm:text-base leading-relaxed text-muted">
               Tell us your business goals, target audience, and challenges. We will prepare a clear, strategic roadmap
               to help your brand elevate its reach and drive measurable sales.
             </p>

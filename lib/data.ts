@@ -96,6 +96,8 @@ export const services: Service[] = [
     description: "Content calendars, community management, and platform-native creative.",
     icon: Share2,
     imageSrc: "/images/services/social-media-management.jpeg",
+    videoSrc: "/video/AGM C31.mp4",
+    videoPoster: "/video/c31-poster.jpg",
     problem: "Maintaining an active, high-standard social presence requires consistent creative production and daily community interaction that busy founders rarely have time for.",
     solution: "We handle end-to-end social media operations—from strategic monthly calendars to community engagement—ensuring your brand maintains an authoritative, polished presence.",
     deliverables: [
@@ -141,6 +143,8 @@ export const services: Service[] = [
     description: "Editing high-quality promotional videos, advertisements, and social media content.",
     icon: Clapperboard,
     imageSrc: "/images/services/video-editing.jpeg",
+    videoSrc: "/video/AGM C30.mp4",
+    videoPoster: "/video/c30-poster.jpg",
     problem: "Video is the highest-converting digital format, but poorly edited or low-energy videos harm brand perception and get skipped instantly.",
     solution: "Our dedicated in-house video editors craft dynamic, high-retention video content, kinetic typography, and motion graphics tailored for TikTok, Reels, and commercials.",
     deliverables: [

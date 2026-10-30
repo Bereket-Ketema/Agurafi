@@ -2,6 +2,7 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Solutions } from "@/components/solutions"
 import { ServicesOverview } from "@/components/services-overview"
+import { VideoShowcase } from "@/components/video-showcase"
 import { SocialProof } from "@/components/social-proof"
 import { Challenges } from "@/components/challenges"
 import { WhyChooseUs } from "@/components/why-choose-us"
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Solutions />
         <ServicesOverview />
+        <VideoShowcase />
         <SocialProof />
         <Challenges />
         <WhyChooseUs />
