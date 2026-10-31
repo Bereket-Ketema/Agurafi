@@ -1,18 +1,39 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Compass, Target, Lightbulb, Users, CheckCircle2, ShieldCheck, Zap } from "lucide-react"
+import { ArrowRight, Compass, Target, Lightbulb, Users, CheckCircle2, ShieldCheck, Zap, Award, Briefcase } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Reveal } from "@/components/reveal"
 import { VideoShowcase } from "@/components/video-showcase"
-import { aboutStats, aboutHighlights, teamMembers } from "@/lib/data"
+import { aboutHighlights, teamMembers } from "@/lib/data"
 
 export const metadata: Metadata = {
   title: "About Us | AGURAFI Digital Marketing",
   description:
     "Learn about Agurafi Digital Marketing—our mission, vision, core values, and the multidisciplinary team dedicated to scaling your brand.",
 }
+
+const aboutMetricCards = [
+  {
+    icon: Award,
+    value: "3+",
+    label: "Years of Experience",
+    detail: "Proven track record in brand growth",
+  },
+  {
+    icon: Users,
+    value: "10+",
+    label: "Specialists on Team",
+    detail: "Cross-functional creative & tech talent",
+  },
+  {
+    icon: Briefcase,
+    value: "60+",
+    label: "Industries Served",
+    detail: "Tailored strategies across diverse sectors",
+  },
+]
 
 const coreValues = [
   {
@@ -66,20 +87,30 @@ export default function AboutPage() {
               </p>
             </Reveal>
 
-            {/* Key Agency Statistics */}
-            <Reveal delay={150} className="mt-14">
-              <div className="grid grid-cols-1 gap-4 rounded-3xl border border-white/10 bg-surface/60 p-6 backdrop-blur-md sm:grid-cols-3 sm:p-8">
-                {aboutStats.map((stat, index) => (
+            {/* Key Agency Statistics - Refined, Proportional Metric Cards */}
+            <Reveal delay={150} className="mt-10 sm:mt-12">
+              <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-3 sm:gap-4 max-w-4xl mx-auto">
+                {aboutMetricCards.map((stat) => (
                   <div
                     key={stat.label}
-                    className={`flex flex-col items-center justify-center text-center ${
-                      index > 0 ? "sm:border-l sm:border-white/10" : ""
-                    }`}
+                    className="group relative flex items-center gap-3.5 rounded-2xl border border-white/10 bg-gradient-to-b from-surface/80 to-[#04201c]/90 p-4 sm:p-5 backdrop-blur-md shadow-lg transition-all duration-300 hover:border-primary/40 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(0,0,0,0.35)]"
                   >
-                    <span className="font-heading text-3xl font-extrabold text-accent sm:text-4xl lg:text-5xl">
-                      {stat.value}
-                    </span>
-                    <span className="mt-2 text-sm font-medium text-muted">{stat.label}</span>
+                    <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-primary/25 bg-primary/10 text-accent transition-transform duration-300 group-hover:scale-105">
+                      <stat.icon className="size-5" />
+                    </div>
+                    <div>
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-accent">
+                          {stat.value}
+                        </span>
+                      </div>
+                      <p className="text-xs sm:text-sm font-semibold text-foreground/95 leading-tight">
+                        {stat.label}
+                      </p>
+                      <p className="mt-0.5 text-[11px] text-muted">
+                        {stat.detail}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

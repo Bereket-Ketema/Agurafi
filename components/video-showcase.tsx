@@ -142,13 +142,39 @@ export function VideoShowcase() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8 max-w-4xl mx-auto">
-          {/* Video 1: Real On-Site Event Videography & Production */}
-          <Reveal delay={60}>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6 max-w-7xl mx-auto">
+          {/* Video 1: New Essential Video 1 (AGM C11) */}
+          <Reveal delay={40}>
+            <VideoCard
+              src="/video/AGM C11.mp4"
+              poster="/video/c11-poster.jpg"
+              tag="Commercial Production"
+              title="Brand Story & Visual Campaign"
+              description="High-impact brand commercial with cinematic color grading, sound design, and rhythm-matched motion pacing."
+              clientContext="Signature Brand Commercial & Visual Campaign"
+              icon={Clapperboard}
+            />
+          </Reveal>
+
+          {/* Video 2: New Essential Video 2 (AGM C12) */}
+          <Reveal delay={80}>
+            <VideoCard
+              src="/video/AGM C12.mp4"
+              poster="/video/c12-poster.jpg"
+              tag="Creative Direction"
+              title="High-Energy Digital Promo"
+              description="Engaging commercial spot engineered for social-first audience retention with dynamic typography and punchy transitions."
+              clientContext="Promotional Commercial & Social Rollout"
+              icon={Sparkles}
+            />
+          </Reveal>
+
+          {/* Video 3: Former Video 1 (AGM C30) */}
+          <Reveal delay={120}>
             <VideoCard
               src="/video/AGM C30.mp4"
               poster="/video/c30-poster.jpg"
-              tag="Commercial & Event Production"
+              tag="Event & Broadcast"
               title="On-Site Production & Event Filming"
               description="Live multi-camera broadcast coverage and high-energy stage videography executed on-location by the Agurafi production team."
               clientContext="Live Corporate Summit & Brand Activation Coverage"
@@ -156,12 +182,12 @@ export function VideoShowcase() {
             />
           </Reveal>
 
-          {/* Video 2: Real TikTok / Reel Viral Creator Campaign */}
-          <Reveal delay={120}>
+          {/* Video 4: Former Video 2 (AGM C31) */}
+          <Reveal delay={160}>
             <VideoCard
               src="/video/AGM C31.mp4"
               poster="/video/c31-poster.jpg"
-              tag="Social Media & Creator Campaign"
+              tag="Social & Creator"
               title="Viral Short-Form & Creator Content"
               description="Platform-native TikTok and Instagram Reels engineered with creator chemistry, conversational hooks, and dynamic Ethiopian captions."
               clientContext="Organic Social Campaign: 'POV: We Handle Your Social Media'"

@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Sparkles, CheckCircle2, Palette, Share2, Clapperboard, Code2 } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 import { partnerLogos } from "@/lib/data"
 
 // Selected 5 trusted brands for the hero social proof strip
@@ -102,106 +102,95 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Column: Creative Agency Overlapping Visual Showcase */}
+          {/* Right Column: Creative Agency Visual Showcase */}
           <div className="relative w-full lg:col-span-5">
             {/* Ambient Backlight Glow */}
             <div className="pointer-events-none absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-tr from-primary/15 via-emerald-500/10 to-transparent blur-2xl" />
 
             {/* Main Showcase Container */}
-            <div className="relative w-full overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-surface/85 to-[#052621]/95 p-4 sm:p-6 shadow-2xl backdrop-blur-xl">
+            <div className="group relative w-full overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-b from-surface/90 to-[#041d19]/95 p-4 sm:p-5 shadow-2xl backdrop-blur-xl">
               
-              {/* Showcase Top Bar */}
+              {/* Studio Canvas Header with window controls */}
               <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
                 <div className="flex items-center gap-2">
-                  <span className="flex size-2 rounded-full bg-emerald-400 animate-ping" />
-                  <span className="text-xs font-semibold text-foreground">Creative &amp; Marketing Suite</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="size-2.5 rounded-full bg-rose-500/70" />
+                    <span className="size-2.5 rounded-full bg-amber-400/70" />
+                    <span className="size-2.5 rounded-full bg-emerald-400/70" />
+                  </div>
+                  <span className="ml-1 text-xs font-semibold text-foreground/90">Agurafi Creative Studio</span>
                 </div>
-                <span className="rounded-full bg-primary/15 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent border border-primary/30">
-                  Agurafi Studio
-                </span>
+                <div className="flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-2.5 py-0.5 text-[10.5px] font-semibold text-accent">
+                  <Sparkles className="size-3" />
+                  <span>Featured Works</span>
+                </div>
               </div>
 
-              {/* Overlapping Triple Visual Stage: Video Editing, Graphics Design, Social Media Marketing */}
-              <div className="relative w-full pt-2 pb-3">
+              {/* Multi-Layered Visual Canvas */}
+              <div className="relative w-full pt-1 pb-2">
                 
-                {/* 1. Main Background Visual: Video Editing & Production */}
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/15 bg-black/50 shadow-lg">
+                {/* 1. Primary Master Showcase Visual (Video & Motion Production) */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/15 ring-1 ring-primary/20 bg-black/60 shadow-xl transition-all duration-500 group-hover:border-primary/40">
                   <Image
                     src="/images/services/video-editing.jpeg"
-                    alt="Agurafi Video Editing & Motion Design"
+                    alt="Agurafi Video Production & Motion"
                     fill
                     priority
                     sizes="(min-width: 1024px) 460px, 100vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-                  
-                  {/* Floating Software Development Badge inside overlapping visuals */}
-                  <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5 rounded-lg border border-primary/30 bg-[#041d19]/85 px-2.5 py-1 backdrop-blur-md shadow-md">
-                    <Code2 className="size-3 text-accent" />
-                    <span className="text-[10px] font-bold text-white tracking-wide">Software Development</span>
-                  </div>
+                  {/* Subtle Cinematic Vignette */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
 
-                  {/* Bottom Main Card Label */}
-                  <div className="absolute bottom-3 left-3 flex items-center gap-2 text-white">
-                    <span className="flex size-6 items-center justify-center rounded-lg bg-black/60 border border-white/20 text-accent">
-                      <Clapperboard className="size-3.5" />
-                    </span>
-                    <div>
-                      <span className="text-[10px] font-semibold uppercase tracking-wider text-accent">Video Editing</span>
-                      <p className="text-xs font-bold text-white">Cinematic Content &amp; Motion</p>
+                  {/* Minimalist Viewfinder Framing Brackets */}
+                  <div className="pointer-events-none absolute inset-2.5 flex flex-col justify-between opacity-50 transition-opacity duration-300 group-hover:opacity-80">
+                    <div className="flex justify-between">
+                      <span className="size-2 border-t-2 border-l-2 border-primary/70" />
+                      <span className="size-2 border-t-2 border-r-2 border-primary/70" />
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="size-2 border-b-2 border-l-2 border-primary/70" />
+                      <span className="size-2 border-b-2 border-r-2 border-primary/70" />
                     </div>
                   </div>
                 </div>
 
-                {/* 2. Overlapping Card Top-Right: Graphic Design */}
-                <div className="absolute top-0 right-0 sm:top-1 sm:right-1 z-20 w-[42%] max-w-[200px] overflow-hidden rounded-xl border border-white/20 bg-[#062621]/95 p-1.5 shadow-[0_12px_28px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-primary/50">
+                {/* 2. Overlapping Satellite Visual Top-Right (Graphic Design Artwork) */}
+                <div className="absolute -top-1.5 right-0 sm:top-0 sm:right-0 z-20 w-[42%] max-w-[195px] overflow-hidden rounded-xl border border-white/20 bg-[#041d19]/90 p-1 shadow-[0_16px_36px_rgba(0,0,0,0.65)] ring-1 ring-black/50 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:border-primary/50">
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
                     <Image
                       src="/images/services/graphics-design.jpeg"
-                      alt="Agurafi Graphic Design"
+                      alt="Agurafi Graphic Design Creative"
                       fill
                       sizes="180px"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-1.5 left-1.5 flex items-center gap-1.5 text-white">
-                      <span className="flex size-4.5 items-center justify-center rounded bg-primary/90 text-primary-foreground">
-                        <Palette className="size-2.5" />
-                      </span>
-                      <span className="text-[9.5px] font-bold leading-tight">Graphic Design</span>
-                    </div>
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                   </div>
                 </div>
 
-                {/* 3. Overlapping Card Bottom-Right: Social Media Marketing */}
-                <div className="absolute bottom-0 right-0 sm:bottom-1 sm:right-1 z-20 w-[44%] max-w-[210px] overflow-hidden rounded-xl border border-white/20 bg-[#062621]/95 p-1.5 shadow-[0_12px_28px_rgba(0,0,0,0.6)] backdrop-blur-md transition-all duration-300 hover:scale-105 hover:border-primary/50">
+                {/* 3. Overlapping Satellite Visual Bottom-Right (Social Campaign Visual) */}
+                <div className="absolute -bottom-1.5 right-0 sm:bottom-0 sm:right-0 z-20 w-[44%] max-w-[205px] overflow-hidden rounded-xl border border-white/20 bg-[#041d19]/90 p-1 shadow-[0_16px_36px_rgba(0,0,0,0.65)] ring-1 ring-black/50 backdrop-blur-md transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:border-primary/50">
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
                     <Image
                       src="/images/services/social-media-management.jpeg"
-                      alt="Agurafi Social Media Marketing"
+                      alt="Agurafi Social Media Campaign Creative"
                       fill
                       sizes="190px"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-1.5 left-1.5 flex items-center gap-1.5 text-white">
-                      <span className="flex size-4.5 items-center justify-center rounded bg-accent text-[#08201b]">
-                        <Share2 className="size-2.5" />
-                      </span>
-                      <span className="text-[9.5px] font-bold leading-tight">Social Marketing</span>
-                    </div>
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
                   </div>
                 </div>
 
               </div>
 
-              {/* Verified Agency Statistics: 3+ Years of Experience, 10+ Specialists on Team, 60+ Industries Served */}
-              <div className="mt-4 grid grid-cols-3 gap-2.5">
-                {heroDisplayStats.map((stat, i) => (
+              {/* Verified Agency Statistics Strip */}
+              <div className="mt-3.5 grid grid-cols-3 gap-2 pt-3 border-t border-white/10">
+                {heroDisplayStats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex flex-col rounded-xl border border-white/5 bg-white/[0.03] p-2.5 sm:p-3 text-center sm:text-left transition-colors hover:bg-white/[0.06]"
+                    className="flex flex-col rounded-xl border border-white/5 bg-white/[0.03] p-2.5 text-center transition-all duration-200 hover:bg-white/[0.06] hover:border-white/10"
                   >
                     <span className="font-heading text-lg sm:text-xl font-extrabold text-accent">
                       {stat.value}
@@ -210,19 +199,6 @@ export function Hero() {
                       {stat.label}
                     </span>
                   </div>
-                ))}
-              </div>
-
-              {/* Bottom Agency Capabilities Pill List */}
-              <div className="mt-3.5 flex flex-wrap items-center gap-1.5 pt-3 border-t border-white/10">
-                {["Video Editing", "Graphic Design", "Social Marketing", "Software Development", "Paid Ads"].map((item) => (
-                  <span
-                    key={item}
-                    className="inline-flex items-center gap-1 rounded-md bg-white/[0.05] px-2 py-0.5 text-[10.5px] font-medium text-muted-foreground transition-colors hover:text-white"
-                  >
-                    <CheckCircle2 className="size-3 text-primary" />
-                    {item}
-                  </span>
                 ))}
               </div>
 
