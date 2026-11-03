@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef } from "react"
+import Image from "next/image"
 import { Play, Pause, Volume2, VolumeX, Clapperboard, Share2, Sparkles, CheckCircle2 } from "lucide-react"
 import { Reveal } from "@/components/reveal"
 
@@ -53,9 +54,9 @@ function VideoCard({ src, poster, tag, title, description, clientContext, icon: 
         </span>
       </div>
 
-      {/* Video Player Display (Vertical 9:16 Aspect) */}
+      {/* Video Player Display - Equal Heights */}
       <div
-        className="relative mx-auto aspect-[9/16] w-full max-w-[320px] sm:max-w-[340px] cursor-pointer overflow-hidden rounded-xl border border-white/15 bg-black/80 shadow-2xl"
+        className="relative mx-auto h-[380px] sm:h-[420px] aspect-[9/16] w-full max-w-[320px] sm:max-w-[340px] cursor-pointer overflow-hidden rounded-xl border border-white/15 bg-black/80 shadow-2xl"
         onClick={togglePlay}
       >
         <video
@@ -105,19 +106,14 @@ function VideoCard({ src, poster, tag, title, description, clientContext, icon: 
         </div>
       </div>
 
-      {/* Bottom Description & Context */}
-      <div className="mt-4 pt-3 border-t border-white/5">
-        <h3 className="font-heading text-base sm:text-[17px] font-bold text-foreground group-hover:text-accent transition-colors">
+      {/* Simplified Bottom Text - Clean, Concise, and Balanced */}
+      <div className="mt-3.5 pt-2.5 border-t border-white/5">
+        <h3 className="font-heading text-sm sm:text-base font-bold text-foreground group-hover:text-accent transition-colors line-clamp-1">
           {title}
         </h3>
-        <p className="mt-1.5 text-xs sm:text-[13px] leading-relaxed text-muted">
-          {description}
+        <p className="mt-1 text-xs text-muted line-clamp-1">
+          {clientContext}
         </p>
-
-        <div className="mt-3 flex items-center gap-1.5 text-[11px] font-medium text-accent">
-          <CheckCircle2 className="size-3.5 text-primary shrink-0" />
-          <span>{clientContext}</span>
-        </div>
       </div>
     </div>
   )
@@ -125,14 +121,35 @@ function VideoCard({ src, poster, tag, title, description, clientContext, icon: 
 
 export function VideoShowcase() {
   return (
-    <section id="work-in-action" className="relative py-20 lg:py-28 overflow-hidden bg-white/[0.01]">
-      {/* Background radial glow */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 -z-10 size-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-15 blur-[120px]"
-        style={{ background: "radial-gradient(circle, #e4ac23, transparent 70%)" }}
-      />
+    <section id="work-in-action" className="relative py-20 lg:py-28 overflow-hidden border-t border-white/5">
+      {/* Dynamic Background Image & Subtle 3D Logo Watermark */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <Image
+          src="/images/showcase/workflow-pipeline-bg.jpg"
+          alt=""
+          fill
+          unoptimized
+          className="object-cover object-center opacity-30 lg:opacity-35 scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#04201c] via-[#021310]/80 to-[#04201c]" />
+        <div className="absolute inset-0 bg-radial-[circle_at_50%_50%] from-primary/10 via-transparent to-transparent" />
+        {/* Alternative Watermark: Cinema Film Reel & Waveform Spectrum */}
+        <div className="absolute -right-12 -bottom-12 w-80 h-80 opacity-[0.06] select-none pointer-events-none text-accent">
+          <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full">
+            <circle cx="100" cy="100" r="80" strokeWidth="2" />
+            <circle cx="100" cy="100" r="28" strokeWidth="2" />
+            <circle cx="100" cy="50" r="14" strokeWidth="1.5" />
+            <circle cx="100" cy="150" r="14" strokeWidth="1.5" />
+            <circle cx="50" cy="100" r="14" strokeWidth="1.5" />
+            <circle cx="150" cy="100" r="14" strokeWidth="1.5" />
+            {/* Film sprockets & radial lines */}
+            <circle cx="100" cy="100" r="8" fill="currentColor" />
+            <line x1="20" y1="100" x2="180" y2="100" strokeWidth="0.75" strokeDasharray="3 3" />
+          </svg>
+        </div>
+      </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mx-auto mb-14 max-w-2xl text-center">
           <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[36px] font-extrabold text-foreground">
             Our Work in <span className="text-gradient-gold">Action</span>

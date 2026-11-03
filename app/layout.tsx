@@ -1,18 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Manrope, Inter } from "next/font/google"
 import "./globals.css"
-
-const manrope = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
-})
-
-const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
-})
 
 export const metadata: Metadata = {
   title: "AGURAFI Digital Marketing — Increase Your Reach. Elevate Your Brand. Drive More Sales",
@@ -35,9 +22,11 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${manrope.variable} ${inter.variable} bg-background scroll-smooth`}
+      className="bg-background scroll-smooth"
     >
-      <body className="font-sans text-foreground antialiased">{children}</body>
+      <body className="font-sans text-foreground antialiased selection:bg-primary selection:text-primary-foreground min-h-screen">
+        {children}
+      </body>
     </html>
   )
 }

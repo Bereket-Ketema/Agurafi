@@ -21,7 +21,7 @@ export function Clients() {
             {partnerLogos.map((logo) => (
               <li
                 key={logo.imageSrc}
-                className="flex h-28 w-[calc(50%-0.375rem)] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white p-3 sm:h-32 sm:w-[calc(33.333%-0.675rem)] lg:w-[calc(25%-0.75rem)]"
+                className="flex h-28 w-[calc(50%-0.375rem)] items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-md p-3 sm:h-32 sm:w-[calc(33.333%-0.675rem)] lg:w-[calc(25%-0.75rem)] hover:bg-white/[0.08] hover:border-primary/40 transition-colors"
               >
                 <Image
                   src={logo.imageSrc}

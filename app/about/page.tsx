@@ -67,12 +67,16 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="overflow-hidden pt-24 sm:pt-28 lg:pt-32">
-        {/* About Hero Section */}
-        <section className="relative pb-16 pt-8 lg:pb-24">
-          {/* Ambient Glow */}
+        {/* About Hero Section with Rich Emerald-Obsidian Gradient Background */}
+        <section className="relative pb-16 pt-10 lg:pb-24 bg-gradient-to-b from-[#021310] via-[#04201c] to-[#021310] border-b border-white/5">
+          {/* Ambient Glows */}
           <div
             className="pointer-events-none absolute left-1/2 top-0 -z-10 size-[650px] -translate-x-1/2 rounded-full"
-            style={{ background: "radial-gradient(circle, rgba(228,172,35,0.15), transparent 65%)" }}
+            style={{ background: "radial-gradient(circle, rgba(228,172,35,0.18), transparent 65%)" }}
+          />
+          <div
+            className="pointer-events-none absolute right-10 bottom-0 -z-10 size-[450px] rounded-full"
+            style={{ background: "radial-gradient(circle, rgba(16,185,129,0.12), transparent 70%)" }}
           />
 
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -118,92 +122,191 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Mission & Vision Section */}
-        <section className="relative py-16 lg:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-              <Reveal>
-                <div className="flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-card p-8 sm:p-10 transition-all duration-300 hover:border-primary/40">
-                  <div>
-                    <div className="mb-6 flex size-12 items-center justify-center rounded-2xl bg-primary/15 text-primary">
-                      <Target className="size-6" />
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-accent">Our Mission</span>
-                    <h2 className="mt-2 font-heading text-2xl font-bold sm:text-3xl">
-                      Turning Brand Potential into Predictable Growth
-                    </h2>
-                    <p className="mt-4 text-base leading-relaxed text-muted">
-                      Our mission is to help businesses eliminate marketing guesswork. We combine research-driven
-                      positioning, compelling visual content, and targeted digital acquisition to ensure every dollar
-                      spent generates measurable business traction.
-                    </p>
-                  </div>
-                  <ul className="mt-8 space-y-3 border-t border-white/5 pt-6 text-sm text-muted">
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="size-4.5 text-accent shrink-0" />
-                      Data-backed campaigns tailored to real business goals
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="size-4.5 text-accent shrink-0" />
-                      Creative excellence that elevates brand perception
-                    </li>
-                  </ul>
-                </div>
-              </Reveal>
-
-              <Reveal delay={120}>
-                <div className="flex h-full flex-col justify-between rounded-3xl border border-white/10 bg-card p-8 sm:p-10 transition-all duration-300 hover:border-primary/40">
-                  <div>
-                    <div className="mb-6 flex size-12 items-center justify-center rounded-2xl bg-primary/15 text-primary">
-                      <Compass className="size-6" />
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-accent">Our Vision</span>
-                    <h2 className="mt-2 font-heading text-2xl font-bold sm:text-3xl">
-                      The Leading Growth Partner for Modern Businesses
-                    </h2>
-                    <p className="mt-4 text-base leading-relaxed text-muted">
-                      We envision a digital landscape where growing enterprises can access tier-one creative
-                      storytelling and high-performance digital engineering without prohibitive enterprise barriers,
-                      allowing exceptional brands to thrive in local and global markets.
-                    </p>
-                  </div>
-                  <ul className="mt-8 space-y-3 border-t border-white/5 pt-6 text-sm text-muted">
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="size-4.5 text-accent shrink-0" />
-                      Scalable architectures designed for sustainable growth
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="size-4.5 text-accent shrink-0" />
-                      Long-term partnerships rooted in tangible ROI
-                    </li>
-                  </ul>
-                </div>
-              </Reveal>
+        {/* Mission & Vision Section - Dynamic, Visually Compelling & Editorial */}
+        <section className="relative py-14 lg:py-20 overflow-hidden border-t border-white/5">
+          {/* Dynamic Background Image & Alternative Strategic Compass Watermark */}
+          <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+            <Image
+              src="/images/showcase/workflow-pipeline-bg.jpg"
+              alt=""
+              fill
+              unoptimized
+              className="object-cover object-center opacity-30 lg:opacity-35 scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#04201c] via-[#021310]/80 to-[#04201c]" />
+            <div className="absolute inset-0 bg-radial-[circle_at_50%_50%] from-primary/10 via-transparent to-transparent" />
+            {/* Alternative Watermark: Strategic Compass & Horizon Orbit */}
+            <div className="absolute -left-12 -bottom-12 w-80 h-80 opacity-[0.06] select-none pointer-events-none text-primary">
+              <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full">
+                <circle cx="100" cy="100" r="85" strokeWidth="1" strokeDasharray="4 4" />
+                <circle cx="100" cy="100" r="65" strokeWidth="1.5" />
+                <circle cx="100" cy="100" r="45" strokeWidth="0.75" />
+                <path d="M 100,5 L 100,195 M 5,100 L 195,100" strokeWidth="0.75" />
+                <polygon points="100,20 115,85 180,100 115,115 100,180 85,115 20,100 85,85" strokeWidth="1" />
+              </svg>
             </div>
           </div>
-        </section>
 
-        {/* Core Values Section */}
-        <section className="relative py-16 lg:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-              <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px]">
-                Core Values &amp; Working Philosophy
+          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-10 items-stretch">
+              {/* Mission Card with Brand Identity Element */}
+              <Reveal>
+                <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#062923] via-[#041c18] to-black/80 p-7 sm:p-9 backdrop-blur-md shadow-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)]">
+                  {/* Subtle Brand Background Accent */}
+                  <div className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-primary/10 blur-3xl transition-opacity group-hover:opacity-100 opacity-60" />
+
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex size-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/15 text-accent shadow-inner">
+                        <Target className="size-6" />
+                      </div>
+                      <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-accent">
+                        Our Mission
+                      </span>
+                    </div>
+
+                    <h2 className="font-heading text-2xl font-extrabold sm:text-3xl text-foreground leading-snug">
+                      Turning Brand Potential Into <span className="text-gradient-gold">Predictable Market Dominance</span>
+                    </h2>
+
+                    <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted">
+                      Our mission is to eliminate marketing guesswork for ambitious Ethiopian and regional enterprises.
+                      We engineer full-funnel digital systems that connect high-retention video storytelling, conversion design,
+                      and targeted paid acquisition to drive quantifiable revenue growth.
+                    </p>
+                  </div>
+
+                  <div className="mt-8 border-t border-white/10 pt-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                      <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3.5">
+                        <span className="text-xs font-bold text-accent block">Data-Driven Strategy</span>
+                        <p className="text-[12px] text-muted mt-1">Every Birr invested mapped to measurable KPIs & conversion ROI.</p>
+                      </div>
+                      <div className="rounded-xl border border-white/5 bg-white/[0.03] p-3.5">
+                        <span className="text-xs font-bold text-accent block">Creative Excellence</span>
+                        <p className="text-[12px] text-muted mt-1">Cinema-grade production and bespoke visual identities that command authority.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Reveal>
+
+              {/* Vision Card with Real Team & Summit Presence Graphic */}
+              <Reveal delay={120}>
+                <div className="group relative flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#062923] via-[#041c18] to-black/80 p-7 sm:p-9 backdrop-blur-md shadow-2xl transition-all duration-300 hover:border-primary/50 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)]">
+                  {/* Subtle Glow Accent */}
+                  <div className="pointer-events-none absolute -left-16 -bottom-16 size-64 rounded-full bg-primary/10 blur-3xl transition-opacity group-hover:opacity-100 opacity-60" />
+
+                  <div>
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex size-12 items-center justify-center rounded-xl border border-primary/30 bg-primary/15 text-accent shadow-inner">
+                        <Compass className="size-6" />
+                      </div>
+                      <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-widest text-accent">
+                        Our Vision
+                      </span>
+                    </div>
+
+                    <h2 className="font-heading text-2xl font-extrabold sm:text-3xl text-foreground leading-snug">
+                      The Definitive <span className="text-gradient-gold">Digital Transformation Catalyst</span>
+                    </h2>
+
+                    <p className="mt-4 text-sm sm:text-base leading-relaxed text-muted">
+                      We envision a thriving African digital ecosystem where high-growth brands command world-class
+                      digital presence. Agurafi bridges international-standard production with deep local audience
+                      insights, setting the benchmark for brand authority and technological performance.
+                    </p>
+                  </div>
+
+                    {/* Vision Studio & Strategic Presence Graphic */}
+                    <div className="mt-8 border-t border-white/10 pt-6">
+                      <div className="relative h-28 w-full overflow-hidden rounded-xl border border-white/10 shadow-lg group-hover:border-primary/40 transition-colors">
+                        <Image
+                          src="/images/about/agurafi-digital-vision.jpg"
+                          alt="Agurafi Digital Creative Headquarters & Strategy Hub"
+                          fill
+                          unoptimized
+                          className="object-cover object-center brightness-95 group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                        <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white">
+                          <div className="flex items-center gap-1.5 text-xs font-semibold">
+                            <span className="size-2 rounded-full bg-accent animate-pulse" />
+                            <span>Agurafi Digital Strategy Hub</span>
+                          </div>
+                          <span className="text-[10px] font-mono text-white/90 bg-black/70 px-2 py-0.5 rounded border border-white/15">
+                            Addis Ababa &bull; Global
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Reveal>
+              </div>
+            </div>
+          </section>
+
+          {/* Core Values Section - Enhanced with Cinematic Background & Value Prism Watermark */}
+          <section className="relative py-16 lg:py-24 overflow-hidden border-t border-white/10">
+            {/* Dynamic Background Image with Depth & Obsidian-Emerald Overlay */}
+            <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+              <Image
+                src="/images/showcase/workflow-pipeline-bg.jpg"
+                alt="Agurafi Studio Workflow"
+                fill
+                unoptimized
+                className="object-cover object-center opacity-30 scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#04201c] via-[#021310]/85 to-[#04201c]" />
+              <div className="absolute inset-0 bg-radial-[circle_at_50%_40%] from-primary/10 via-transparent to-transparent" />
+              
+              {/* Alternative Watermark: Architectural Diamond Value Prism */}
+              <div className="absolute -right-12 top-1/2 -translate-y-1/2 w-80 h-80 opacity-[0.07] pointer-events-none select-none text-primary">
+                <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full">
+                  <polygon points="100,15 185,100 100,185 15,100" strokeWidth="1.5" />
+                  <polygon points="100,45 155,100 100,155 45,100" strokeWidth="1" strokeDasharray="3 3" />
+                  <polygon points="100,70 130,100 100,130 70,100" strokeWidth="1.5" />
+                  <line x1="100" y1="15" x2="100" y2="185" strokeWidth="0.75" />
+                  <line x1="15" y1="100" x2="185" y2="100" strokeWidth="0.75" />
+                </svg>
+              </div>
+            </div>
+
+          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal className="mx-auto mb-12 max-w-2xl text-center">
+              <span className="text-xs font-bold uppercase tracking-widest text-accent">Our Philosophy</span>
+              <h2 className="mt-2 text-balance font-heading text-2xl sm:text-3xl lg:text-[38px] font-extrabold">
+                Core Values &amp; Guiding Principles
               </h2>
-              <p className="mt-4 text-pretty text-base leading-relaxed text-muted">
-                These principles guide every design review, ad optimization, and technical architecture we produce.
+              <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted">
+                These non-negotiable principles govern every creative sprint, ad dollar spent, and software system we deploy.
               </p>
             </Reveal>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {coreValues.map((value, index) => (
                 <Reveal key={value.title} delay={index * 80}>
-                  <div className="flex h-full flex-col justify-start rounded-2xl border border-white/10 bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40">
-                    <div className="mb-5 flex size-11 items-center justify-center rounded-xl bg-primary/15 text-primary">
-                      <value.icon className="size-5.5" />
+                  <div className="group relative flex h-full flex-col justify-between rounded-xl border border-white/10 bg-gradient-to-b from-white/[0.05] to-black/40 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-white/[0.08]">
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex size-11 items-center justify-center rounded-xl bg-primary/15 text-accent border border-primary/20 transition-transform group-hover:scale-105">
+                          <value.icon className="size-5" />
+                        </div>
+                        <span className="font-mono text-sm font-bold text-accent/60 group-hover:text-accent transition-colors">
+                          0{index + 1}
+                        </span>
+                      </div>
+                      <h3 className="mb-2 font-heading text-base sm:text-lg font-bold text-foreground group-hover:text-accent transition-colors">
+                        {value.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm leading-relaxed text-muted">
+                        {value.description}
+                      </p>
                     </div>
-                    <h3 className="mb-2.5 font-heading text-lg font-bold">{value.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted">{value.description}</p>
+                    <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-medium text-accent/80">
+                      <CheckCircle2 className="size-3 text-primary" />
+                      <span>Agurafi Standard</span>
+                    </div>
                   </div>
                 </Reveal>
               ))}
@@ -211,49 +314,96 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* How We Approach Client Challenges */}
-        <section className="relative py-16 lg:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-surface to-surface-2 p-8 sm:p-12 lg:p-16">
-              <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+        {/* How We Approach Client Challenges - Optimized Spacing & Full Depth */}
+        <section className="relative py-12 lg:py-16 overflow-hidden border-t border-white/5">
+          {/* Dynamic Background Image & Subtle 3D Logo Watermark */}
+          <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+            <Image
+              src="/images/showcase/workflow-pipeline-bg.jpg"
+              alt=""
+              fill
+              unoptimized
+              className="object-cover object-center opacity-30 lg:opacity-35 scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#04201c] via-[#021310]/80 to-[#04201c]" />
+            <div className="absolute inset-0 bg-radial-[circle_at_50%_50%] from-primary/10 via-transparent to-transparent" />
+            {/* Alternative Watermark: Strategic Flow Pipeline */}
+            <div className="absolute -right-12 -top-12 w-80 h-80 opacity-[0.06] select-none pointer-events-none text-accent">
+              <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full">
+                <path d="M 20,40 Q 70,40 100,100 T 180,160" strokeWidth="2" strokeDasharray="6 4" />
+                <path d="M 20,80 Q 70,80 100,120 T 180,120" strokeWidth="1.5" />
+                <path d="M 20,120 Q 70,120 100,140 T 180,80" strokeWidth="1" />
+                <circle cx="100" cy="100" r="12" strokeWidth="1.5" />
+                <circle cx="20" cy="40" r="5" fill="currentColor" />
+                <circle cx="180" cy="160" r="6" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#062a24]/90 via-[#031c18]/95 to-black/95 p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-md">
+              <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-7">
-                  <h2 className="font-heading text-3xl font-extrabold sm:text-4xl">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-accent mb-3">
+                    <span className="size-1.5 rounded-full bg-accent" />
+                    Strategic Framework
+                  </div>
+                  <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight">
                     How We Approach Client Challenges
                   </h2>
-                  <p className="mt-4 text-base leading-relaxed text-muted">
-                    We start by dissecting your market positioning and sales funnel before writing a single headline or
-                    allocating ad spend. By aligning creative messaging directly with customer intent, we engineer
-                    solutions that convert attention into sustainable revenue.
+                  <p className="mt-3 text-sm sm:text-base leading-relaxed text-muted">
+                    We start by dissecting your market positioning, customer economics, and sales friction before writing a single headline or
+                    allocating ad budget. By aligning creative messaging directly with buying intent, we transform raw attention into recurring client revenue.
                   </p>
-                  <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+
+                  <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 border-y border-white/10 py-5">
+                    <div>
+                      <span className="font-mono text-xs font-bold text-accent">01. Audit</span>
+                      <p className="text-[12px] text-muted mt-0.5">Deep funnel diagnosis</p>
+                    </div>
+                    <div>
+                      <span className="font-mono text-xs font-bold text-accent">02. Design</span>
+                      <p className="text-[12px] text-muted mt-0.5">High-retention assets</p>
+                    </div>
+                    <div>
+                      <span className="font-mono text-xs font-bold text-accent">03. Launch</span>
+                      <p className="text-[12px] text-muted mt-0.5">Multi-channel rollout</p>
+                    </div>
+                    <div>
+                      <span className="font-mono text-xs font-bold text-accent">04. Scale</span>
+                      <p className="text-[12px] text-muted mt-0.5">Algorithmic iteration</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 flex flex-wrap gap-4">
                     <Link
                       href="/services"
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:-translate-y-0.5"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-6 py-3 text-xs sm:text-sm font-semibold text-primary-foreground shadow-lg transition-all hover:-translate-y-0.5"
                     >
                       Explore Our Services
                       <ArrowRight className="size-4" />
                     </Link>
                     <Link
                       href="/contact"
-                      className="glass inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all hover:bg-white/10"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.05] px-6 py-3 text-xs sm:text-sm font-semibold text-foreground transition-all hover:bg-white/10"
                     >
                       Talk With Our Team
                     </Link>
                   </div>
                 </div>
 
-                <div className="space-y-4 lg:col-span-5">
+                <div className="space-y-3 lg:col-span-5">
                   {aboutHighlights.map((highlight) => (
                     <div
                       key={highlight.title}
-                      className="flex items-start gap-4 rounded-xl border border-white/10 bg-black/20 p-4.5 backdrop-blur-sm"
+                      className="flex items-start gap-3.5 rounded-xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur-sm transition-all hover:border-primary/40 hover:bg-white/[0.06]"
                     >
-                      <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary">
-                        <highlight.icon className="size-5" />
+                      <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-accent">
+                        <highlight.icon className="size-4.5" />
                       </div>
                       <div>
-                        <h4 className="font-heading text-base font-bold">{highlight.title}</h4>
-                        <p className="mt-1 text-xs leading-relaxed text-muted">{highlight.description}</p>
+                        <h4 className="font-heading text-sm sm:text-base font-bold">{highlight.title}</h4>
+                        <p className="mt-0.5 text-xs leading-relaxed text-muted">{highlight.description}</p>
                       </div>
                     </div>
                   ))}
@@ -267,15 +417,37 @@ export default function AboutPage() {
         <VideoShowcase />
 
         {/* Team Showcase */}
-        <section className="relative py-16 lg:py-24">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <Reveal className="mx-auto mb-16 max-w-2xl text-center">
-              <h2 className="text-balance font-heading text-3xl font-extrabold sm:text-4xl lg:text-[42px]">
+        <section className="relative py-14 lg:py-20 overflow-hidden border-t border-white/5">
+          {/* Dynamic Background Image & Subtle 3D Logo Watermark */}
+          <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+            <Image
+              src="/images/showcase/workflow-pipeline-bg.jpg"
+              alt=""
+              fill
+              unoptimized
+              className="object-cover object-center opacity-30 lg:opacity-35 scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#04201c] via-[#021310]/80 to-[#04201c]" />
+            <div className="absolute inset-0 bg-radial-[circle_at_50%_50%] from-primary/10 via-transparent to-transparent" />
+            {/* Alternative Watermark: Creative Studio Aperture */}
+            <div className="absolute -left-12 -bottom-12 w-80 h-80 opacity-[0.06] select-none pointer-events-none text-primary">
+              <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full">
+                <circle cx="100" cy="100" r="85" strokeWidth="1.5" />
+                <polygon points="100,20 160,55 180,120 140,175 70,180 25,130 35,65" strokeWidth="1" strokeDasharray="4 4" />
+                <path d="M 100,15 L 145,85 L 85,155 L 35,100 Z" strokeWidth="1" />
+                <circle cx="100" cy="100" r="28" strokeWidth="1.5" />
+              </svg>
+            </div>
+          </div>
+
+          <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <Reveal className="mx-auto mb-14 max-w-2xl text-center">
+              <span className="text-xs font-bold uppercase tracking-widest text-accent">Our Talent</span>
+              <h2 className="mt-2 text-balance font-heading text-2xl sm:text-3xl lg:text-[38px] font-extrabold">
                 Meet The Specialists Behind Agurafi
               </h2>
-              <p className="mt-4 text-pretty text-base leading-relaxed text-muted">
-                A dedicated team of creative directors, developers, videographers, and growth strategists committed to
-                your success.
+              <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted">
+                A dedicated multidisciplinary team of creative directors, developers, videographers, and growth strategists committed to your success.
               </p>
             </Reveal>
 
@@ -305,26 +477,48 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Final CTA Banner */}
-        <section className="pb-24 pt-8 lg:pb-32">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="rounded-[32px] border border-white/10 bg-gradient-to-br from-[#062a25] via-[#0b4238] to-[#0a4d3c] px-6 py-14 text-center sm:px-12 sm:py-20">
-              <h2 className="font-heading text-3xl font-extrabold sm:text-4xl">
-                Ready to Discuss Your Brand&apos;s Next Chapter?
+        {/* Ready to Discuss - Open Editorial Studio Aesthetic (No Enclosed Box) */}
+        <section className="relative py-20 lg:py-28 overflow-hidden border-t border-white/10">
+          {/* Studio Ambient Background Image with Dark Emerald/Obsidian Overlay */}
+          <div className="absolute inset-0 -z-10">
+            <Image
+              src="/images/about/about-studio-bg.jpg"
+              alt="Creative Agency Studio Aesthetic"
+              fill
+              unoptimized
+              className="object-cover object-center opacity-30 brightness-75 filter blur-[1px]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/85 to-background" />
+            <div
+              className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] rounded-full opacity-20 blur-[120px]"
+              style={{ background: "radial-gradient(circle, #e4ac23, transparent 70%)" }}
+            />
+          </div>
+
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+            <Reveal>
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-extrabold tracking-tight text-foreground">
+                Ready to Discuss Your Brand&apos;s <span className="text-gradient-gold">Next Chapter?</span>
               </h2>
-              <p className="mx-auto mt-4 max-w-xl text-base text-muted sm:text-lg">
-                Schedule a consultation to see how our strategy and creative execution can accelerate your growth.
+              <p className="mx-auto mt-3 max-w-2xl text-sm sm:text-base text-muted leading-relaxed">
+                Schedule a consultation to see how our brand strategy, cinematic production, and targeted digital engineering can accelerate your enterprise.
               </p>
-              <div className="mt-8">
+              <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg transition-transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-7 py-3.5 text-xs sm:text-sm font-semibold text-primary-foreground shadow-[0_10px_30px_rgba(228,172,35,0.35)] transition-all hover:-translate-y-0.5"
                 >
-                  Contact Us
+                  Contact Our Team
                   <ArrowRight className="size-4" />
                 </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-7 py-3.5 text-xs sm:text-sm font-semibold text-foreground backdrop-blur-md transition-all hover:bg-white/12 hover:border-white/40"
+                >
+                  View Services
+                </Link>
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

@@ -18,7 +18,11 @@ interface FormErrors {
   message?: string
 }
 
-export function ContactForm() {
+interface ContactFormProps {
+  variant?: "dark" | "white"
+}
+
+export function ContactForm({ variant = "white" }: ContactFormProps) {
   const [formData, setFormData] = useState<FormState>({
     name: "",
     email: "",
@@ -107,7 +111,6 @@ export function ContactForm() {
 
       if (response.ok && data.success) {
         setSubmitStatus("success")
-        // Reset form only on confirmed success
         setFormData({
           name: "",
           email: "",
@@ -128,17 +131,25 @@ export function ContactForm() {
     }
   }
 
+  const isWhite = variant === "white"
+
   return (
-    <div className="relative rounded-3xl border border-white/10 bg-card p-6 sm:p-10 backdrop-blur-md shadow-[0_24px_50px_rgba(0,0,0,0.35)]">
+    <div
+      className={`relative rounded-3xl p-6 sm:p-9 shadow-[0_24px_50px_rgba(0,0,0,0.45)] transition-all ${
+        isWhite
+          ? "border border-white/60 bg-gradient-to-b from-[#ffffff] via-[#fbfcfd] to-[#f4f7f6] text-slate-900"
+          : "border border-white/10 bg-card text-foreground backdrop-blur-md"
+      }`}
+    >
       {/* Success Notification */}
       {submitStatus === "success" && (
-        <div className="mb-8 flex items-start gap-3.5 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 text-emerald-300">
-          <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-emerald-400" />
+        <div className="mb-8 flex items-start gap-3.5 rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5 text-emerald-800">
+          <CheckCircle2 className="mt-0.5 size-5 shrink-0 text-emerald-600" />
           <div>
-            <h4 className="font-heading text-base font-bold text-emerald-200">
+            <h4 className="font-heading text-base font-bold text-emerald-950">
               Message Sent Successfully!
             </h4>
-            <p className="mt-1 text-sm text-emerald-300/90 leading-relaxed">
+            <p className="mt-1 text-sm text-emerald-800/90 leading-relaxed">
               Thank you for reaching out. We have received your inquiry and our team will get back to you within 24
               hours.
             </p>
@@ -148,21 +159,21 @@ export function ContactForm() {
 
       {/* Error Notification */}
       {submitStatus === "error" && (
-        <div className="mb-8 flex items-start gap-3.5 rounded-2xl border border-red-500/30 bg-red-500/10 p-5 text-red-300">
-          <AlertCircle className="mt-0.5 size-5 shrink-0 text-red-400" />
+        <div className="mb-8 flex items-start gap-3.5 rounded-2xl border border-red-500/30 bg-red-500/10 p-5 text-red-800">
+          <AlertCircle className="mt-0.5 size-5 shrink-0 text-red-600" />
           <div>
-            <h4 className="font-heading text-base font-bold text-red-200">
+            <h4 className="font-heading text-base font-bold text-red-950">
               Unable to Send Message
             </h4>
-            <p className="mt-1 text-sm text-red-300/90 leading-relaxed">
+            <p className="mt-1 text-sm text-red-800/90 leading-relaxed">
               {errorMessage}
             </p>
           </div>
         </div>
       )}
 
-      <form onSubmit={handleSubmit} noValidate className="space-y-6">
-        {/* Web3Forms Honeypot Spam Protection (Hidden from legitimate users) */}
+      <form onSubmit={handleSubmit} noValidate className="space-y-5">
+        {/* Web3Forms Honeypot Spam Protection */}
         <input
           type="checkbox"
           name="botcheck"
@@ -176,8 +187,13 @@ export function ContactForm() {
 
         {/* Full Name Field */}
         <div>
-          <label htmlFor="fullName" className="mb-2 block text-xs font-bold uppercase tracking-wider text-accent">
-            Full Name <span className="text-red-400">*</span>
+          <label
+            htmlFor="fullName"
+            className={`mb-2 block text-xs font-bold uppercase tracking-wider ${
+              isWhite ? "text-slate-800" : "text-accent"
+            }`}
+          >
+            Full Name <span className="text-red-500">*</span>
           </label>
           <input
             id="fullName"
@@ -190,19 +206,24 @@ export function ContactForm() {
             }}
             placeholder="e.g. Abebe Bikila"
             disabled={isSubmitting}
-            className={`w-full rounded-xl border bg-black/25 px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 transition-colors focus:outline-none focus:ring-2 ${
-              errors.name
-                ? "border-red-500/60 focus:ring-red-500/40"
-                : "border-white/10 focus:border-primary/50 focus:ring-primary/20"
-            }`}
+            className={`w-full rounded-xl border px-4 py-3.5 text-sm transition-colors focus:outline-none focus:ring-2 ${
+              isWhite
+                ? "border-slate-300 bg-slate-50/90 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-amber-600 focus:ring-amber-500/20"
+                : "border-white/10 bg-black/25 text-foreground placeholder:text-muted/60 focus:border-primary/50 focus:ring-primary/20"
+            } ${errors.name ? "border-red-500 focus:ring-red-400" : ""}`}
           />
-          {errors.name && <p className="mt-1.5 text-xs text-red-400">{errors.name}</p>}
+          {errors.name && <p className="mt-1.5 text-xs text-red-500 font-medium">{errors.name}</p>}
         </div>
 
         {/* Email Field */}
         <div>
-          <label htmlFor="emailAddress" className="mb-2 block text-xs font-bold uppercase tracking-wider text-accent">
-            Email Address <span className="text-red-400">*</span>
+          <label
+            htmlFor="emailAddress"
+            className={`mb-2 block text-xs font-bold uppercase tracking-wider ${
+              isWhite ? "text-slate-800" : "text-accent"
+            }`}
+          >
+            Email Address <span className="text-red-500">*</span>
           </label>
           <input
             id="emailAddress"
@@ -215,19 +236,24 @@ export function ContactForm() {
             }}
             placeholder="e.g. name@company.com"
             disabled={isSubmitting}
-            className={`w-full rounded-xl border bg-black/25 px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 transition-colors focus:outline-none focus:ring-2 ${
-              errors.email
-                ? "border-red-500/60 focus:ring-red-500/40"
-                : "border-white/10 focus:border-primary/50 focus:ring-primary/20"
-            }`}
+            className={`w-full rounded-xl border px-4 py-3.5 text-sm transition-colors focus:outline-none focus:ring-2 ${
+              isWhite
+                ? "border-slate-300 bg-slate-50/90 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-amber-600 focus:ring-amber-500/20"
+                : "border-white/10 bg-black/25 text-foreground placeholder:text-muted/60 focus:border-primary/50 focus:ring-primary/20"
+            } ${errors.email ? "border-red-500 focus:ring-red-400" : ""}`}
           />
-          {errors.email && <p className="mt-1.5 text-xs text-red-400">{errors.email}</p>}
+          {errors.email && <p className="mt-1.5 text-xs text-red-500 font-medium">{errors.email}</p>}
         </div>
 
         {/* Subject Field */}
         <div>
-          <label htmlFor="subject" className="mb-2 block text-xs font-bold uppercase tracking-wider text-accent">
-            Subject <span className="text-red-400">*</span>
+          <label
+            htmlFor="subject"
+            className={`mb-2 block text-xs font-bold uppercase tracking-wider ${
+              isWhite ? "text-slate-800" : "text-accent"
+            }`}
+          >
+            Subject <span className="text-red-500">*</span>
           </label>
           <input
             id="subject"
@@ -240,19 +266,24 @@ export function ContactForm() {
             }}
             placeholder="e.g. Growth Marketing & Paid Ads Inquiry"
             disabled={isSubmitting}
-            className={`w-full rounded-xl border bg-black/25 px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 transition-colors focus:outline-none focus:ring-2 ${
-              errors.subject
-                ? "border-red-500/60 focus:ring-red-500/40"
-                : "border-white/10 focus:border-primary/50 focus:ring-primary/20"
-            }`}
+            className={`w-full rounded-xl border px-4 py-3.5 text-sm transition-colors focus:outline-none focus:ring-2 ${
+              isWhite
+                ? "border-slate-300 bg-slate-50/90 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-amber-600 focus:ring-amber-500/20"
+                : "border-white/10 bg-black/25 text-foreground placeholder:text-muted/60 focus:border-primary/50 focus:ring-primary/20"
+            } ${errors.subject ? "border-red-500 focus:ring-red-400" : ""}`}
           />
-          {errors.subject && <p className="mt-1.5 text-xs text-red-400">{errors.subject}</p>}
+          {errors.subject && <p className="mt-1.5 text-xs text-red-500 font-medium">{errors.subject}</p>}
         </div>
 
         {/* Message Field */}
         <div>
-          <label htmlFor="message" className="mb-2 block text-xs font-bold uppercase tracking-wider text-accent">
-            Your Message <span className="text-red-400">*</span>
+          <label
+            htmlFor="message"
+            className={`mb-2 block text-xs font-bold uppercase tracking-wider ${
+              isWhite ? "text-slate-800" : "text-accent"
+            }`}
+          >
+            Your Message <span className="text-red-500">*</span>
           </label>
           <textarea
             id="message"
@@ -265,13 +296,13 @@ export function ContactForm() {
             }}
             placeholder="Tell us about your brand, current challenges, and what you aim to achieve..."
             disabled={isSubmitting}
-            className={`w-full resize-y rounded-xl border bg-black/25 px-4 py-3.5 text-sm text-foreground placeholder:text-muted/60 transition-colors focus:outline-none focus:ring-2 ${
-              errors.message
-                ? "border-red-500/60 focus:ring-red-500/40"
-                : "border-white/10 focus:border-primary/50 focus:ring-primary/20"
-            }`}
+            className={`w-full resize-y rounded-xl border px-4 py-3.5 text-sm transition-colors focus:outline-none focus:ring-2 ${
+              isWhite
+                ? "border-slate-300 bg-slate-50/90 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-amber-600 focus:ring-amber-500/20"
+                : "border-white/10 bg-black/25 text-foreground placeholder:text-muted/60 focus:border-primary/50 focus:ring-primary/20"
+            } ${errors.message ? "border-red-500 focus:ring-red-400" : ""}`}
           />
-          {errors.message && <p className="mt-1.5 text-xs text-red-400">{errors.message}</p>}
+          {errors.message && <p className="mt-1.5 text-xs text-red-500 font-medium">{errors.message}</p>}
         </div>
 
         {/* Submit Button */}

@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { ArrowRight, Search, Palette, Code2, Rocket } from "lucide-react"
 import { Reveal } from "@/components/reveal"
@@ -52,13 +53,29 @@ const capabilities = [
 export function Solutions() {
   return (
     <section id="solutions" className="relative py-20 lg:py-28 overflow-hidden">
-      {/* Ambient background glow */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/3 -z-10 size-[600px] -translate-x-1/2 rounded-full opacity-15 blur-[120px]"
-        style={{ background: "radial-gradient(circle, #e4ac23, transparent 70%)" }}
-      />
+      {/* Dynamic Background Image & Subtle 3D Logo Watermark */}
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <Image
+          src="/images/showcase/workflow-pipeline-bg.jpg"
+          alt=""
+          fill
+          unoptimized
+          className="object-cover object-center opacity-30 lg:opacity-35 scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#04201c] via-[#021310]/80 to-[#04201c]" />
+        <div className="absolute inset-0 bg-radial-[circle_at_50%_50%] from-primary/10 via-transparent to-transparent" />
+        {/* Alternative Watermark: Stepped Growth Hexagon & Strategy Compass */}
+        <div className="absolute -left-12 -top-12 w-80 h-80 opacity-[0.06] select-none pointer-events-none text-accent">
+          <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full">
+            <polygon points="100,15 180,55 180,145 100,185 20,145 20,55" strokeWidth="1.5" />
+            <polygon points="100,45 155,72 155,128 100,155 45,128 45,72" strokeWidth="1" strokeDasharray="3 3" />
+            <circle cx="100" cy="100" r="18" strokeWidth="1.5" />
+            <path d="M 100,15 L 100,185 M 20,55 L 180,145 M 20,145 L 180,55" strokeWidth="0.75" />
+          </svg>
+        </div>
+      </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal className="mb-14 max-w-2xl text-left">
           <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[38px] font-extrabold text-foreground leading-tight">
             Solutions Designed for <span className="text-gradient-gold">Your Business</span>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { Mail, Phone, MapPin, Clock, ShieldCheck, ExternalLink } from "lucide-react"
 import { FaInstagram, FaTiktok } from "react-icons/fa6"
 import { Header } from "@/components/header"
@@ -61,22 +62,48 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <main className="overflow-hidden pt-24 sm:pt-28 lg:pt-32">
-        {/* Contact Page Hero */}
-        <section className="relative pb-10 pt-8 lg:pb-14">
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 -z-10 size-[650px] -translate-x-1/2 rounded-full"
-            style={{ background: "radial-gradient(circle, rgba(228,172,35,0.15), transparent 65%)" }}
+      <main className="relative overflow-hidden pt-24 sm:pt-28 lg:pt-32">
+        {/* Rich Ambient Background Elements (Cinematic Depth, Mesh, and Subtle Logo Watermark) */}
+        <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <Image
+            src="/images/showcase/workflow-pipeline-bg.jpg"
+            alt="Agurafi Digital Studio Background"
+            fill
+            unoptimized
+            className="object-cover object-center opacity-30 scale-105"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#04201c] via-[#021310]/85 to-[#04201c]" />
+          <div className="absolute -top-32 left-1/2 -translate-x-1/2 size-[850px] rounded-full bg-gradient-to-b from-primary/25 via-emerald-700/20 to-transparent blur-[140px]" />
+          <div className="absolute top-[28%] -left-32 size-[650px] rounded-full bg-[#0a5241]/35 blur-[130px]" />
+          <div className="absolute top-[55%] -right-32 size-[600px] rounded-full bg-primary/20 blur-[130px]" />
+          <div className="absolute bottom-10 left-1/3 size-[500px] rounded-full bg-emerald-900/30 blur-[140px]" />
+          
+          {/* Alternative Watermark: Global Communication Beacon & Signal Matrix */}
+          <div className="absolute -right-16 top-1/3 w-96 h-96 opacity-[0.06] pointer-events-none select-none text-accent">
+            <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" className="w-full h-full">
+              <circle cx="100" cy="100" r="80" strokeWidth="1" strokeDasharray="4 4" />
+              <circle cx="100" cy="100" r="55" strokeWidth="1.5" />
+              <circle cx="100" cy="100" r="30" strokeWidth="1" />
+              <circle cx="100" cy="100" r="8" fill="currentColor" />
+              <path d="M 30,100 L 170,100 M 100,30 L 100,170" strokeWidth="0.75" />
+              <path d="M 50,50 L 150,150 M 50,150 L 150,50" strokeWidth="0.75" strokeDasharray="2 2" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:28px_28px]" />
+        </div>
 
+        {/* Contact Page Hero with Rich Emerald-Obsidian Gradient Background */}
+        <section className="relative pb-16 pt-10 lg:pb-20 bg-gradient-to-b from-[#021310] via-[#04201c] to-[#021310] border-b border-white/5">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <h1 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[40px] font-extrabold leading-tight">
+              <span className="inline-block text-xs font-mono uppercase tracking-widest text-accent mb-2">
+                // Direct Inquiries &amp; Consultations
+              </span>
+              <h1 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[42px] font-extrabold leading-tight">
                 Let&apos;s Build Your Brand&apos;s <span className="text-gradient-gold">Growth Engine</span>
               </h1>
-              <p className="mt-3 text-pretty text-xs sm:text-sm text-muted">
-                Whether you need performance advertising, a brand overhaul, video production, or a modern website, we
-                are ready to discuss your goals.
+              <p className="mt-3 text-pretty text-xs sm:text-sm text-muted max-w-xl mx-auto">
+                Whether you need performance advertising, a brand overhaul, video production, or a modern website, our specialists are ready to discuss your goals.
               </p>
             </Reveal>
           </div>
@@ -85,16 +112,19 @@ export default function ContactPage() {
         {/* Form and Contact Information Section */}
         <section className="relative pb-12 lg:pb-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+            <div className="grid gap-10 lg:grid-cols-12 lg:gap-12 items-start">
               {/* Left Column: Direct Info & What to Expect */}
               <div className="space-y-6 lg:col-span-5">
                 <Reveal>
                   <div className="space-y-2">
-                    <h2 className="font-heading text-xl font-bold sm:text-2xl">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
+                      Reach Out Directly
+                    </span>
+                    <h2 className="font-heading text-xl font-bold sm:text-2xl text-foreground">
                       Direct Channels
                     </h2>
                     <p className="text-xs text-muted sm:text-sm">
-                      Submit the inquiry form or reach out through phone, email, or our active social media channels.
+                      Submit the inquiry form on the right or reach out through phone, email, or our active social media channels.
                     </p>
                   </div>
 
@@ -102,9 +132,9 @@ export default function ContactPage() {
                     {contactChannels.map((item) => (
                       <div
                         key={item.title}
-                        className="flex items-start gap-3.5 rounded-xl border border-white/10 bg-card p-4 transition-all duration-200 hover:border-primary/40"
+                        className="group flex items-start gap-3.5 rounded-xl border border-white/10 bg-gradient-to-r from-card/90 to-surface/90 p-4 backdrop-blur-md transition-all duration-200 hover:border-primary/50 hover:bg-white/[0.08] hover:-translate-y-0.5"
                       >
-                        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                        <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/20 text-accent transition-transform group-hover:scale-105">
                           <item.icon className="size-4.5" />
                         </div>
                         <div>
@@ -130,9 +160,9 @@ export default function ContactPage() {
                   </div>
 
                   {/* Verified Social Channels */}
-                  <div className="mt-6 rounded-xl border border-white/10 bg-card p-4">
+                  <div className="mt-6 rounded-xl border border-white/10 bg-card/90 p-4 backdrop-blur-md">
                     <h3 className="font-heading text-xs font-bold text-foreground">
-                      Active Channels
+                      Active Creator Channels
                     </h3>
                     <div className="mt-3 flex items-center gap-2.5">
                       <a
@@ -159,7 +189,7 @@ export default function ContactPage() {
 
                 {/* What Happens Next Card */}
                 <Reveal delay={100}>
-                  <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-surface to-surface-2 p-5 sm:p-6">
+                  <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-[#06241f] via-[#041c18] to-black/80 p-5 sm:p-6 shadow-xl backdrop-blur-md">
                     <div className="flex items-center gap-2 mb-4">
                       <Clock className="size-4 text-accent" />
                       <h3 className="font-heading text-sm font-bold text-foreground">
@@ -170,7 +200,7 @@ export default function ContactPage() {
                     <div className="space-y-3">
                       {expectations.map((step) => (
                         <div key={step.step} className="flex items-start gap-2.5">
-                          <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-primary/20 font-heading text-[11px] font-bold text-accent">
+                          <span className="flex size-6 shrink-0 items-center justify-center rounded-md bg-primary/25 font-heading text-[11px] font-bold text-accent">
                             {step.step}
                           </span>
                           <div>
@@ -181,26 +211,26 @@ export default function ContactPage() {
                       ))}
                     </div>
 
-                    <div className="mt-4 flex items-center gap-2 border-t border-white/5 pt-3 text-[11px] text-muted">
+                    <div className="mt-4 flex items-center gap-2 border-t border-white/10 pt-3 text-[11px] text-muted">
                       <ShieldCheck className="size-3.5 text-accent shrink-0" />
-                      <span>Strict confidentiality guaranteed.</span>
+                      <span>Strict confidentiality guaranteed for all submissions.</span>
                     </div>
                   </div>
                 </Reveal>
               </div>
 
-              {/* Right Column: Web3Forms Contact Form */}
+              {/* Right Column: Web3Forms Contact Form on a Crisp White-Like Luxury Card */}
               <div className="lg:col-span-7">
                 <Reveal delay={60}>
                   <div className="mb-3">
                     <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
-                      Inquiry Form
+                      Consultation Request
                     </span>
-                    <h2 className="mt-1 font-heading text-xl font-bold sm:text-2xl">
+                    <h2 className="mt-1 font-heading text-xl font-bold sm:text-2xl text-foreground">
                       Send Us a Message
                     </h2>
                   </div>
-                  <ContactForm />
+                  <ContactForm variant="white" />
                 </Reveal>
               </div>
             </div>
