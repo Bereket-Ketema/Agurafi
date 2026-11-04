@@ -3,7 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 import {
   ArrowRight,
-  CheckCircle2,
   Clock,
   Sparkles,
   Layers,
@@ -16,6 +15,8 @@ import {
   Code2,
   Clapperboard,
   Search,
+  Video,
+  Camera,
 } from "lucide-react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -24,7 +25,7 @@ import { Reveal } from "@/components/reveal"
 export const metadata: Metadata = {
   title: "Products & Packages | AGURAFI Digital Marketing",
   description:
-    "Explore Agurafi's turnkey digital products—pre-packaged brand systems, social acquisition engines, performance ad launchpads, and web builds deployed for leading Ethiopian brands.",
+    "Explore Agurafi's specialized digital products—pre-packaged brand systems, video production suites, social acquisition engines, performance ad launchpads, and web applications.",
 }
 
 interface ProductItem {
@@ -32,122 +33,132 @@ interface ProductItem {
   title: string
   category: string
   description: string
-  badge: string
   turnaround: string
   icon: typeof Palette
   imageSrc: string
-  deliverablesHighlight: string
-  features: string[]
+  tags: string[]
 }
 
 const turnkeyProducts: ProductItem[] = [
   {
-    id: "social-audience-engine",
-    title: "360° Social Audience Acquisition Engine",
-    category: "Turnkey Social Growth",
-    description: "A complete turnkey social media acquisition ecosystem engineered to turn feeds into customer conversion funnels.",
-    badge: "Flagship System",
-    turnaround: "7-10 Days Deployment",
-    icon: Share2,
-    imageSrc: "/images/branding/agurafi-audience-social.png",
-    deliverablesHighlight: "30-Day Campaign Blueprint + 12 High-Retention Vertical Videos",
-    features: [
-      "Platform-native TikTok, Instagram & Facebook format adaptation",
-      "12 viral short-form videos with kinetic captions & audio design",
-      "Full month content schedule with hook angles and CTA mapping",
-      "Audience conversion workflows (DM automation & lead capture)",
-      "Weekly algorithmic performance reviews and trend-jacking alerts",
-    ],
-  },
-  {
-    id: "brand-identity-suite",
-    title: "Enterprise Brand Identity System",
-    category: "Brand Architecture",
-    description: "An authoritative 2D/3D visual identity system that positions your company as an indisputable market leader.",
-    badge: "Most Requested",
-    turnaround: "5-7 Business Days",
-    icon: Palette,
-    imageSrc: "/images/branding/agurafi-vertical-emerald.png",
-    deliverablesHighlight: "Vector Logo Suite + 3D Render System + Brand Manual",
-    features: [
-      "Primary, secondary, and badge logo variants in all vector formats",
-      "Photorealistic 3D embossed logo renders for signage & packaging",
-      "Typography styling, color tokens, and accessibility contrast guide",
-      "Complete brand manual covering digital, print, and corporate assets",
-      "Print-ready stationery: business cards, envelopes & letterheads",
-    ],
-  },
-  {
-    id: "performance-ad-launchpad",
-    title: "Omnichannel Performance Ad Launchpad",
-    category: "Paid Acquisition",
-    description: "Stop burning ad budgets on guesswork. Pre-tested direct-response ad creative bundles engineered to maximize ROAS.",
-    badge: "High ROAS",
+    id: "short-form-video-suite",
+    title: "Short-Form Video & Viral Reels Suite",
+    category: "Video & Motion",
+    description: "High-retention 9:16 vertical videos for TikTok, Reels, and Shorts designed to capture attention and convert viewers into followers.",
     turnaround: "3-5 Business Days",
-    icon: Megaphone,
-    imageSrc: "/images/services/paid.jpeg",
-    deliverablesHighlight: "10 High-Converting Creatives + Headline Matrix + Pixel Setup",
-    features: [
-      "10 bespoke visual ad creatives formatted for Meta, TikTok & Google",
-      "Multi-angle direct-response copy matrix tested for Ethiopian buyers",
-      "Campaign funnel setup (Top, Middle, Bottom-of-Funnel architecture)",
-      "Conversion tracking pixel installation and custom event verification",
-      "Targeting blueprints tailored to local high-purchasing demographics",
-    ],
-  },
-  {
-    id: "nextjs-web-engine",
-    title: "High-Velocity Next.js Web Engine",
-    category: "Digital Platform",
-    description: "A custom-engineered, sub-second web application built to convert organic & paid visitors into signed contracts.",
-    badge: "Custom Build",
-    turnaround: "1-2 Weeks",
-    icon: Code2,
-    imageSrc: "/images/products/nextjs-engine.jpg",
-    deliverablesHighlight: "Next.js App + 95+ Lighthouse Score + Direct Lead Funnel",
-    features: [
-      "Sub-second load times engineered with modern Next.js and React",
-      "Ultra-fluid mobile-first UI with dark luxury aesthetic",
-      "Automated lead capture form delivered directly to your email/phone",
-      "On-page technical SEO, schema structured data & OpenGraph tags",
-      "Zero-downtime deployment setup with automatic SSL security",
-    ],
+    icon: Video,
+    imageSrc: "/images/services/video-editing.jpeg",
+    tags: ["12 Vertical 4K Reels", "Kinetic Motion & Sound FX", "Trend-Tested Hooks"],
   },
   {
     id: "cinematic-production-pack",
     title: "Cinematic Commercial Production Suite",
     category: "Commercial Film",
-    description: "Broadcast-quality commercial video production combining on-location camera crew, drone capture, and sound engineering.",
-    badge: "Cinema Grade",
+    description: "Broadcast-quality corporate commercial video production featuring on-location 4K camera crew, drone capture, and DaVinci color grading.",
     turnaround: "5-8 Business Days",
     icon: Clapperboard,
     imageSrc: "/images/products/cinema-rig.jpg",
-    deliverablesHighlight: "On-Location Shoot + Master Commercial + 3 Vertical Cutdowns",
-    features: [
-      "Dedicated Agurafi production crew with cinema 4K camera gear",
-      "Scriptwriting, storyboard direction & professional voiceover",
-      "Hollywood-standard DaVinci color grading & dynamic sound mix",
-      "1 master widescreen commercial + 3 platform-optimized vertical cutdowns",
-      "Commercial broadcast and digital streaming licensing rights",
-    ],
+    tags: ["4K Cinema Crew", "Drone Aerials", "Master Commercial + Teasers"],
+  },
+  {
+    id: "social-growth-management",
+    title: "360° Social Growth & Account Management",
+    category: "Social Marketing",
+    description: "Turnkey monthly organic growth ecosystem managing your TikTok, Instagram, and Telegram channels with daily content and community care.",
+    turnaround: "Monthly Retainer",
+    icon: Share2,
+    imageSrc: "/images/services/social-media-management.jpeg",
+    tags: ["Daily Content Calendar", "Community Engagement", "Trend Adaptation"],
+  },
+  {
+    id: "performance-ad-launchpad",
+    title: "Omnichannel Performance Ad Launchpad",
+    category: "Paid Acquisition",
+    description: "Direct-response ad creative bundles engineered to maximize ROAS across Meta Ads, TikTok Ads, and Google Search campaigns.",
+    turnaround: "3-5 Business Days",
+    icon: Megaphone,
+    imageSrc: "/images/services/paid.jpeg",
+    tags: ["10 Ad Variations", "Direct-Response Copy", "Pixel & Event Tracking"],
+  },
+  {
+    id: "brand-identity-suite",
+    title: "Enterprise Brand Identity System",
+    category: "Brand Architecture",
+    description: "Complete visual language guidelines, vector logo variants, photorealistic 3D mockups, typography standards, and brand style manual.",
+    turnaround: "5-7 Business Days",
+    icon: Palette,
+    imageSrc: "/images/services/branding.jpeg",
+    tags: ["Vector & 3D Logo Suite", "Color System", "Corporate Brand Guidelines"],
+  },
+  {
+    id: "nextjs-web-engine",
+    title: "High-Velocity Next.js Web Engine",
+    category: "Web Engineering",
+    description: "Sub-second React web application engineered with modern Next.js, fluid animations, automated lead capture, and technical SEO.",
+    turnaround: "1-2 Weeks",
+    icon: Code2,
+    imageSrc: "/images/products/nextjs-engine.jpg",
+    tags: ["Next.js React App", "95+ Lighthouse Score", "Lead Generation Funnel"],
+  },
+  {
+    id: "custom-software-platform",
+    title: "Custom Software & Web Application Suite",
+    category: "Software Dev",
+    description: "Scalable full-stack software platforms, client portals, and administrative dashboards tailored to streamline your business operations.",
+    turnaround: "2-3 Weeks",
+    icon: Layers,
+    imageSrc: "/images/services/web-dev.jpeg",
+    tags: ["Custom Web Portal", "Admin Dashboard", "Database & API Integration"],
+  },
+  {
+    id: "graphic-design-collateral",
+    title: "Creative Graphic Design & Marketing Collateral",
+    category: "Visual Design",
+    description: "High-impact promotional graphics, corporate billboards, trade exhibition rollups, packaging, and digital display assets.",
+    turnaround: "2-4 Business Days",
+    icon: Sparkles,
+    imageSrc: "/images/services/graphics-design.jpeg",
+    tags: ["Billboard & Rollup Graphics", "Social Banners", "Print-Ready Collateral"],
   },
   {
     id: "local-seo-dominance",
     title: "Local Search & Authority Dominance Blueprint",
-    category: "Organic Visibility",
-    description: "Own Google search for your target industry. We optimize your local profiles and organic ranking so buyers call you first.",
-    badge: "Long-Term ROI",
-    turnaround: "7 Business Days",
+    category: "Search Optimization",
+    description: "Full Google Business Profile optimization and localized technical search positioning so customers find your brand first on Google.",
+    turnaround: "5-7 Business Days",
     icon: Search,
     imageSrc: "/images/services/seo.jpeg",
-    deliverablesHighlight: "Google Maps Domination + Keyword Authority Mapping",
-    features: [
-      "Full technical audit and remediation of website search bottlenecks",
-      "Google Business Profile optimization to capture top 'near me' queries",
-      "High-intent commercial keyword mapping with localized search intent",
-      "Schema structured metadata for rich Google search snippets",
-      "3-month actionable organic content and citation roadmap",
-    ],
+    tags: ["Google Maps Top 3", "Local Citation Building", "Schema Metadata"],
+  },
+  {
+    id: "event-media-coverage",
+    title: "Live Event Media Coverage & Multi-Camera Suite",
+    category: "Event Production",
+    description: "Full-scale corporate summit, conference, and launch event media capture with multi-camera setups and fast same-day social highlights.",
+    turnaround: "Event Day Delivery",
+    icon: Camera,
+    imageSrc: "/images/branding/agurafi-team-polo.png",
+    tags: ["Multi-Camera 4K Capture", "Same-Day Teaser", "Full Event Archive"],
+  },
+  {
+    id: "influencer-creator-suite",
+    title: "Creator & Influencer Campaign Suite",
+    category: "Influencer Marketing",
+    description: "End-to-end creator partnerships and viral user-generated content (UGC) campaigns connecting your brand with trusted local voices.",
+    turnaround: "7-10 Business Days",
+    icon: Sparkles,
+    imageSrc: "/images/branding/agurafi-audience-social.png",
+    tags: ["Vetted Creator Network", "Script Direction", "Full Usage Rights"],
+  },
+  {
+    id: "brand-rebrand-overhaul",
+    title: "Comprehensive Rebrand & Market Repositioning",
+    category: "Brand Strategy",
+    description: "Complete brand modernization for established companies seeking fresh authority, new customer acquisition, and market leadership.",
+    turnaround: "2-3 Weeks",
+    icon: Zap,
+    imageSrc: "/images/services/strategy.jpeg",
+    tags: ["Market Repositioning", "Visual Overhaul", "Launch Campaign Assets"],
   },
 ]
 
@@ -264,7 +275,7 @@ export default function ProductsPage() {
                     <div>
                       <h2 className="text-xs font-bold uppercase tracking-wider text-accent">Agurafi Products</h2>
                       <p className="mt-1 text-xs text-foreground/90 leading-relaxed">
-                        Ready-to-deploy turnkey systems. Fixed deliverables, guaranteed turnaround, battle-tested templates, and zero guesswork.
+                        Specialized, fixed-scope digital products. Guaranteed turnaround timelines, transparent deliverables, and proven ROI.
                       </p>
                     </div>
                   </div>
@@ -301,22 +312,25 @@ export default function ProductsPage() {
           </div>
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <Reveal className="mb-10 text-center max-w-xl mx-auto">
-              <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-foreground">
-                Select Your Turnkey Product Suite
+            <Reveal className="mb-10 text-center max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-foreground">
+                Agurafi Digital Products
               </h2>
-              <p className="mt-1.5 text-xs sm:text-sm text-muted">
-                Each product is engineered from real campaign data and packaged for fast execution.
+              <p className="mt-2 text-xs sm:text-sm text-muted">
+                Pre-engineered creative, media, and technology products designed for high performance and fast turnaround.
               </p>
             </Reveal>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {turnkeyProducts.map((product, index) => (
-                <Reveal key={product.id} delay={index * 60}>
-                  <div className="group relative flex h-full flex-col justify-between rounded-2xl border border-white/10 bg-card p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_20px_45px_rgba(0,0,0,0.45)]">
+                <Reveal key={product.id} delay={(index % 6) * 50}>
+                  <Link
+                    href={`/contact?product=${product.id}`}
+                    className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-[#06241f]/90 to-[#031815]/95 p-4 sm:p-5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-white/[0.04] hover:shadow-[0_16px_36px_rgba(0,0,0,0.4)]"
+                  >
                     <div>
-                      {/* Product Visual Container - Centered to ensure full visual accuracy */}
-                      <div className="relative mb-4 h-48 w-full overflow-hidden rounded-xl bg-black/60 border border-white/10">
+                      {/* Compact Product Visual Thumbnail */}
+                      <div className="relative mb-3.5 h-36 w-full overflow-hidden rounded-lg bg-black/60 border border-white/10">
                         <Image
                           src={product.imageSrc}
                           alt={product.title}
@@ -325,68 +339,49 @@ export default function ProductsPage() {
                           sizes="(min-width: 1024px) 350px, (min-width: 640px) 50vw, 100vw"
                           className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-card via-black/30 to-transparent" />
-                        
-                        <div className="absolute top-2.5 left-2.5 flex size-8 items-center justify-center rounded-lg bg-black/75 backdrop-blur-md border border-white/20 text-accent">
-                          <product.icon className="size-4" />
-                        </div>
-                        <span className="absolute top-2.5 right-2.5 flex items-center gap-1 rounded-full border border-primary/30 bg-black/80 px-2.5 py-0.5 text-[10px] font-bold text-accent backdrop-blur-md">
-                          <Sparkles className="size-2.5" />
-                          {product.badge}
-                        </span>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-                        <div className="absolute bottom-2 left-2.5 right-2.5">
-                          <span className="inline-block rounded-md bg-black/75 px-2 py-0.5 text-[10px] font-semibold text-accent border border-white/10 backdrop-blur-md">
-                            {product.deliverablesHighlight}
+                        <div className="absolute top-2.5 left-2.5 flex size-7 items-center justify-center rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-accent">
+                          <product.icon className="size-3.5" />
+                        </div>
+
+                        <div className="absolute bottom-2 left-2.5 right-2.5 flex items-center justify-between text-[10px]">
+                          <span className="rounded bg-black/80 px-2 py-0.5 font-semibold text-accent border border-white/10 backdrop-blur-md">
+                            {product.category}
+                          </span>
+                          <span className="flex items-center gap-1 rounded bg-black/80 px-2 py-0.5 text-white/80 border border-white/10 backdrop-blur-md">
+                            <Clock className="size-2.5 text-accent" />
+                            {product.turnaround}
                           </span>
                         </div>
                       </div>
 
-                      {/* Category & Turnaround */}
-                      <div className="mb-2 flex items-center justify-between">
-                        <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[10px] font-semibold text-muted uppercase tracking-wider">
-                          {product.category}
-                        </span>
-                        <div className="flex items-center gap-1 text-[11px] font-medium text-muted/80">
-                          <Clock className="size-3 text-accent" />
-                          <span>{product.turnaround}</span>
-                        </div>
-                      </div>
-
-                      <h3 className="font-heading text-lg font-bold text-foreground transition-colors group-hover:text-accent">
+                      <h3 className="font-heading text-base font-bold text-foreground transition-colors group-hover:text-accent">
                         {product.title}
                       </h3>
-                      <p className="mt-1.5 text-xs leading-relaxed text-muted">
+                      <p className="mt-1.5 text-xs text-muted leading-relaxed line-clamp-2">
                         {product.description}
                       </p>
 
-                      {/* Included Deliverables */}
-                      <div className="mt-4 space-y-2 border-t border-white/5 pt-3.5">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-accent/80 block">
-                          Included In This Suite
-                        </span>
-                        <ul className="space-y-1.5">
-                          {product.features.map((feat) => (
-                            <li key={feat} className="flex items-start gap-2 text-xs text-foreground/85">
-                              <CheckCircle2 className="mt-0.5 size-3 shrink-0 text-accent" />
-                              <span>{feat}</span>
-                            </li>
-                          ))}
-                        </ul>
+                      {/* Key Deliverables Tag Chips */}
+                      <div className="mt-3 flex flex-wrap gap-1.5">
+                        {product.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="inline-flex items-center rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10.5px] font-medium text-foreground/80 group-hover:border-primary/30"
+                          >
+                            {tag}
+                          </span>
+                        ))}
                       </div>
                     </div>
 
-                    {/* Bottom CTA */}
-                    <div className="mt-6 pt-4 border-t border-white/5">
-                      <Link
-                        href={`/contact?product=${product.id}`}
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-primary to-[#c68c12] px-4 py-2.5 text-xs font-semibold text-primary-foreground shadow-sm transition-transform hover:-translate-y-0.5 active:scale-95"
-                      >
-                        Deploy This Package
-                        <ArrowRight className="size-3.5" />
-                      </Link>
+                    {/* Subtle Elegant Action Link (Eliminates the clunky "Deploy This Package" button) */}
+                    <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-accent group-hover:text-primary">
+                      <span>Inquire About Product</span>
+                      <ArrowRight className="size-3.5 transition-transform duration-200 group-hover:translate-x-1" />
                     </div>
-                  </div>
+                  </Link>
                 </Reveal>
               ))}
             </div>
@@ -518,17 +513,17 @@ export default function ProductsPage() {
           <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
             <Reveal>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-extrabold tracking-tight text-foreground">
-                Ready to Deploy Your <span className="text-gradient-gold">Growth Suite?</span>
+                Ready to Accelerate Your <span className="text-gradient-gold">Growth?</span>
               </h2>
               <p className="mx-auto mt-3 max-w-2xl text-sm sm:text-base text-muted leading-relaxed">
-                Connect directly with our creative directors and technical leads to launch your customized brand, social, or digital package in days.
+                Connect directly with our creative directors and technical leads to launch your customized brand, social, or digital solution in days.
               </p>
               <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-primary to-[#c68c12] px-7 py-3.5 text-xs sm:text-sm font-semibold text-primary-foreground shadow-[0_10px_30px_rgba(228,172,35,0.35)] transition-transform hover:-translate-y-0.5"
                 >
-                  Order a Package
+                  Start a Project
                   <ArrowRight className="size-4" />
                 </Link>
                 <Link
