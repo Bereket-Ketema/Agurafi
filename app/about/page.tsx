@@ -231,7 +231,7 @@ export default function AboutPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                         <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-white">
                           <div className="flex items-center gap-1.5 text-xs font-semibold">
-                            <span className="size-2 rounded-full bg-accent animate-pulse" />
+                            <span className="size-1.5 rounded-full bg-accent" />
                             <span>Agurafi Digital Strategy Hub</span>
                           </div>
                           <span className="text-[10px] font-mono text-white/90 bg-black/70 px-2 py-0.5 rounded border border-white/15">
@@ -274,8 +274,7 @@ export default function AboutPage() {
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto mb-12 max-w-2xl text-center">
-              <span className="text-xs font-bold uppercase tracking-widest text-accent">Our Philosophy</span>
-              <h2 className="mt-2 text-balance font-heading text-2xl sm:text-3xl lg:text-[38px] font-extrabold">
+              <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[38px] font-extrabold">
                 Core Values &amp; Guiding Principles
               </h2>
               <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted">
@@ -344,10 +343,6 @@ export default function AboutPage() {
             <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#062a24]/90 via-[#031c18]/95 to-black/95 p-6 sm:p-10 lg:p-12 shadow-2xl backdrop-blur-md">
               <div className="grid gap-8 lg:grid-cols-12 lg:items-center">
                 <div className="lg:col-span-7">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-accent mb-3">
-                    <span className="size-1.5 rounded-full bg-accent" />
-                    Strategic Framework
-                  </div>
                   <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold leading-tight">
                     How We Approach Client Challenges
                   </h2>
@@ -442,7 +437,6 @@ export default function AboutPage() {
 
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto mb-14 max-w-2xl text-center">
-              <span className="text-xs font-bold uppercase tracking-widest text-accent">Our Talent</span>
               <h2 className="mt-2 text-balance font-heading text-2xl sm:text-3xl lg:text-[38px] font-extrabold">
                 Meet The Specialists Behind Agurafi
               </h2>

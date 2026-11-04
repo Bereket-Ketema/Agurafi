@@ -237,7 +237,7 @@ export default function ServicesPage() {
                                 <span className="rounded-md border border-white/10 bg-black/40 px-2 py-0.5 text-foreground/90">
                                   24-48h Sprinted Turnaround
                                 </span>
-                                <span className="rounded-md border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 text-emerald-400 font-medium">
+                                <span className="rounded-md border border-primary/30 bg-primary/10 px-2 py-0.5 text-accent font-medium">
                                   9:16 Mobile Native
                                 </span>
                               </div>

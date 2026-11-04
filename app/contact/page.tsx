@@ -93,12 +93,15 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Page Hero with Rich Emerald-Obsidian Gradient Background */}
-        <section className="relative pb-16 pt-10 lg:pb-20 bg-gradient-to-b from-[#021310] via-[#04201c] to-[#021310] border-b border-white/5">
+        <section className="relative pb-16 pt-12 lg:pb-20 bg-gradient-to-b from-[#021310] via-[#04201c] to-[#021310] border-b border-white/5 overflow-hidden">
+          {/* Subtle Ambient Glows and Circuit Geometry in Hero */}
+          <div className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[600px] rounded-full bg-primary/10 blur-[130px]" />
+            <div className="absolute top-0 right-1/4 size-[400px] rounded-full bg-emerald-600/10 blur-[120px]" />
+          </div>
+
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Reveal className="mx-auto max-w-3xl text-center">
-              <span className="inline-block text-xs font-mono uppercase tracking-widest text-accent mb-2">
-                // Direct Inquiries &amp; Consultations
-              </span>
               <h1 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[42px] font-extrabold leading-tight">
                 Let&apos;s Build Your Brand&apos;s <span className="text-gradient-gold">Growth Engine</span>
               </h1>
@@ -109,17 +112,23 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* Form and Contact Information Section */}
-        <section className="relative pb-12 lg:pb-16">
+        {/* Form and Contact Information Section with Dedicated Atmospheric Background */}
+        <section className="relative pt-12 sm:pt-16 lg:pt-20 pb-16 lg:pb-24 overflow-hidden">
+          {/* Dedicated Section Background Orbs & Tech Geometry */}
+          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute top-1/4 -left-20 size-[500px] rounded-full bg-emerald-600/15 blur-[120px]" />
+            <div className="absolute top-1/3 -right-20 size-[550px] rounded-full bg-primary/15 blur-[130px]" />
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 size-[650px] rounded-full bg-[#031d19]/80 blur-[140px]" />
+            {/* Fine Decorative Grid & Rings */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_75%)]" />
+          </div>
+
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:gap-12 items-start">
               {/* Left Column: Direct Info & What to Expect */}
-              <div className="space-y-6 lg:col-span-5">
+              <div className="space-y-6 lg:col-span-5 mt-2 sm:mt-4">
                 <Reveal>
                   <div className="space-y-2">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
-                      Reach Out Directly
-                    </span>
                     <h2 className="font-heading text-xl font-bold sm:text-2xl text-foreground">
                       Direct Channels
                     </h2>
@@ -220,13 +229,10 @@ export default function ContactPage() {
               </div>
 
               {/* Right Column: Web3Forms Contact Form on a Crisp White-Like Luxury Card */}
-              <div className="lg:col-span-7">
+              <div className="lg:col-span-7 mt-2 sm:mt-4">
                 <Reveal delay={60}>
-                  <div className="mb-3">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
-                      Consultation Request
-                    </span>
-                    <h2 className="mt-1 font-heading text-xl font-bold sm:text-2xl text-foreground">
+                  <div className="mb-4">
+                    <h2 className="font-heading text-xl font-bold sm:text-2xl text-foreground">
                       Send Us a Message
                     </h2>
                   </div>

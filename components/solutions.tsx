@@ -46,7 +46,7 @@ const capabilities = [
     icon: Rocket,
     href: "/services#marketing-strategy-growth",
     elevationClass: "lg:translate-y-0",
-    highlight: true,
+    highlight: false,
   },
 ]
 
@@ -94,11 +94,7 @@ export function Solutions() {
             {capabilities.map((item, index) => (
               <Reveal key={item.step} delay={index * 90} className={`w-full ${item.elevationClass}`}>
                 <div
-                  className={`group relative flex flex-col justify-between overflow-hidden rounded-xl p-5 sm:p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 ${
-                    item.highlight
-                      ? "border border-primary/60 bg-gradient-to-b from-[#0e483e] to-[#072d26] shadow-[0_20px_50px_rgba(228,172,35,0.2)]"
-                      : "border border-white/10 bg-gradient-to-b from-[#0a352f]/90 to-[#052621]/95 shadow-[0_16px_36px_rgba(0,0,0,0.35)] hover:border-primary/50"
-                  }`}
+                  className="group relative flex flex-col justify-between overflow-hidden rounded-xl p-5 sm:p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 border border-white/10 bg-gradient-to-b from-[#0a352f]/90 to-[#052621]/95 shadow-[0_16px_36px_rgba(0,0,0,0.35)] hover:border-primary/50 hover:shadow-[0_20px_50px_rgba(228,172,35,0.18)]"
                   style={{ minHeight: "360px" }}
                 >
                   {/* Subtle Corner HUD Marks */}
@@ -118,19 +114,13 @@ export function Solutions() {
                       <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-muted/80">
                         {item.step}
                       </span>
-                      <div
-                        className={`flex size-9 items-center justify-center rounded-lg border transition-all duration-300 ${
-                          item.highlight
-                            ? "border-primary/50 bg-primary/20 text-accent shadow-[0_0_16px_rgba(228,172,35,0.25)]"
-                            : "border-white/15 bg-white/5 text-accent group-hover:border-primary/40 group-hover:bg-primary/10"
-                        }`}
-                      >
+                      <div className="flex size-9 items-center justify-center rounded-lg border border-white/15 bg-white/5 text-muted transition-all duration-300 group-hover:border-primary/40 group-hover:bg-primary/15 group-hover:text-accent">
                         <item.icon className="size-4" />
                       </div>
                     </div>
 
-                    {/* Big Bold Number */}
-                    <div className="mt-4 font-heading text-3xl font-extrabold tracking-tight text-primary transition-colors group-hover:text-accent">
+                    {/* Big Bold Number - White by default, yellow ONLY on hover */}
+                    <div className="mt-4 font-heading text-3xl font-extrabold tracking-tight text-white/90 transition-colors group-hover:text-primary">
                       {item.num}
                     </div>
 

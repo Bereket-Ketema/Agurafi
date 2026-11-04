@@ -7,53 +7,53 @@ import { workStepsData } from "@/lib/data"
 import { Reveal } from "@/components/reveal"
 import { ArrowRight, CheckCircle2, Sparkles, Activity, ShieldCheck, Zap } from "lucide-react"
 
-// Rich stage telemetry details for animated interactive display
+// Rich stage telemetry details featuring Agurafi's real services & deliverables
 const stageDetails = [
   {
     step: "01",
-    tag: "DISCOVERY & AUDIT",
-    title: "Deep-Dive Discovery & Strategy Architecture",
-    description: "We audit your complete digital footprint, dissect competitor positioning, and engineer a high-yield growth roadmap tailored to your target audience.",
+    tag: "DISCOVERY & STRATEGY",
+    title: "Market Audit, Positioning & Multi-Channel Strategy",
+    description: "We audit your complete digital presence, study competitor dynamics, and engineer a custom growth blueprint across creative production, paid media, and software platforms.",
     kpi: "360° Diagnostic",
     metricLabel: "Audit Depth",
-    statusText: "Analysis Protocol Ready",
+    statusText: "Strategic Roadmap",
     deliverables: [
-      "Comprehensive Digital Footprint & Competitor Audit",
-      "Ideal Customer Profile (ICP) & Intent Funnel Mapping",
-      "Full Conversion Tracking & Analytics Infrastructure Setup",
-      "Custom 90-Day Execution & Channel Prioritization Roadmap",
+      "Brand & Competitor Market Analysis",
+      "Video Content Strategy & Script Frameworks",
+      "Paid Ads Funnel Mapping (TikTok, Meta, Google)",
+      "Technical Web & Software Architecture Plan",
     ],
     accentColor: "from-amber-400 to-primary",
   },
   {
     step: "02",
-    tag: "CREATIVE & DEPLOYMENT",
-    title: "Precision Design, Production & Funnel Delivery",
-    description: "Our in-house creative directors, video editors, and full-stack developers build your cinematic video assets, brand identity, and high-converting web apps.",
+    tag: "PRODUCTION & DEPLOYMENT",
+    title: "Cinematic Video, Graphic Design, Web Apps & Paid Ads",
+    description: "Our in-house creative directors, videographers, graphic designers, and full-stack software developers execute your brand vision across all key channels.",
     kpi: "100% Bespoke",
     metricLabel: "Production Quality",
-    statusText: "Deployment Sprint Engaged",
+    statusText: "Production Sprint",
     deliverables: [
-      "High-Retention Cinematic Video Ads & Motion Graphics",
-      "Conversion-Engineered UX/UI Web & Mobile Funnels",
-      "Omnichannel Targeted Ad Campaigns (TikTok, Meta, Google)",
-      "Cohesive Brand Identity Guidelines & Asset Library",
+      "Cinematic Video Commercials, Reels & TikTok Production",
+      "Brand Identity, Logo Systems & High-Impact Graphic Design",
+      "High-Performance Next.js Websites & Software Platforms",
+      "Multi-Channel Targeted Paid Ad Campaign Launch",
     ],
     accentColor: "from-emerald-400 to-teal-400",
   },
   {
     step: "03",
-    tag: "OPTIMIZATION & SCALE",
-    title: "Continuous Telemetry, Optimization & Compounding Scale",
-    description: "We monitor live campaign performance, execute aggressive conversion-rate optimization (CRO), and scale budget allocation to multiply revenue.",
+    tag: "MANAGEMENT & SCALE",
+    title: "Social Media Growth, Ad Optimization & Revenue Scaling",
+    description: "We handle ongoing social media management, algorithmic ad budget optimization, and continuous asset iteration to build long-term brand equity and customer revenue.",
     kpi: "4.8x Avg ROAS",
     metricLabel: "Target Momentum",
-    statusText: "Scaling Engine Active",
+    statusText: "Scaling Engine",
     deliverables: [
-      "Real-Time Data Telemetry & KPI Attribution Reporting",
-      "A/B Creative & Landing Page Variant Split Testing",
-      "Algorithmic Bid Optimization & Budget Reallocation",
-      "Ongoing Dedicated Account Management & Growth Advisory",
+      "Ongoing Social Media Management & Content Publishing",
+      "Paid Ad Performance Optimization & ROAS Maximization",
+      "A/B Split-Testing for Ad Creatives & Conversion Pages",
+      "Continuous Brand Growth Advisory & Executive Reporting",
     ],
     accentColor: "from-primary to-accent",
   },
@@ -139,10 +139,6 @@ export function HowWeWork() {
         
         {/* Section Header */}
         <Reveal className="mx-auto mb-12 lg:mb-16 max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1 text-xs font-mono font-semibold text-accent mb-4">
-            <Activity className="size-3.5 text-primary animate-pulse" />
-            <span>INTERACTIVE EXECUTION FRAMEWORK</span>
-          </div>
           <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[42px] font-extrabold text-foreground leading-[1.18]">
             How We Work With <span className="text-gradient-gold">You</span>
           </h2>
@@ -181,12 +177,6 @@ export function HowWeWork() {
                       <span className="font-mono text-xs font-bold uppercase tracking-wider text-accent">
                         PHASE {item.step}
                       </span>
-                      {isActive && (
-                        <span className="inline-flex items-center gap-1 rounded bg-emerald-500/15 border border-emerald-500/30 px-1.5 py-0.5 text-[9.5px] font-mono text-emerald-400">
-                          <span className="size-1.5 rounded-full bg-emerald-400 animate-ping" />
-                          ACTIVE
-                        </span>
-                      )}
                     </div>
                     <span className="font-mono text-xs text-muted/70">
                       STAGE 0{index + 1}
@@ -217,10 +207,10 @@ export function HowWeWork() {
                     </div>
                   </div>
 
-                  {/* Animated Progress Bar under Active Item */}
+                  {/* Progress Indicator under Active Item */}
                   {isActive && (
                     <div className="mt-3.5 h-1 w-full rounded-full bg-white/10 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-primary to-accent animate-[pulse_2s_infinite]" />
+                      <div className="h-full bg-gradient-to-r from-primary to-accent" />
                     </div>
                   )}
                 </button>
@@ -249,8 +239,7 @@ export function HowWeWork() {
                     PROTOCOL // {currentStage.tag}
                   </span>
                 </div>
-                <div className="flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-1 text-[11px] font-mono text-emerald-300">
-                  <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <div className="flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-2.5 py-1 text-[11px] font-mono text-accent">
                   <span>{currentStage.statusText}</span>
                 </div>
               </div>

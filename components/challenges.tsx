@@ -44,13 +44,13 @@ export function Challenges() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header (No 'problem diagnosis and strategic solution' badge) */}
+        {/* Section Header */}
         <Reveal className="mb-12 lg:mb-16 max-w-2xl text-left">
           <h2 className="text-balance font-heading text-2xl sm:text-3xl lg:text-[40px] font-extrabold text-foreground leading-[1.18]">
             Client Challenges &amp; <span className="text-gradient-gold">Strategic Solutions</span>
           </h2>
           <p className="mt-3 text-pretty text-sm sm:text-base leading-relaxed text-muted max-w-xl">
-            How we eliminate common digital bottlenecks and turn market friction into predictable, compounding momentum.
+            How we solve common digital hurdles and turn business friction into predictable, compounding growth.
           </p>
         </Reveal>
 
@@ -63,22 +63,21 @@ export function Challenges() {
                 {/* COMPACT COMPUTER CARD */}
                 <div className="group relative flex flex-col justify-between rounded-xl sm:rounded-2xl border border-white/15 bg-gradient-to-b from-[#0a352f] via-[#062621] to-[#041d19] p-2.5 sm:p-3 shadow-[0_12px_36px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-300 hover:border-primary/50 hover:-translate-y-0.5 hover:shadow-[0_18px_45px_rgba(228,172,35,0.14)]">
                   
-                  {/* Clean Minimalist Tech Window Top Bar (No red/yellow/green Mac dots) */}
+                  {/* Clean Minimalist Tech Window Top Bar */}
                   <div className="mb-2.5 flex items-center justify-between border-b border-white/10 pb-2 px-1">
                     
                     {/* Clean Minimalist Header */}
                     <div className="flex items-center gap-1.5 text-accent">
                       <span className="font-mono text-xs font-bold">&gt;_</span>
                       <span className="text-[11px] font-semibold tracking-wide text-foreground/85">
-                        Strategic Diagnosis
+                        Common Growth Hurdle
                       </span>
                     </div>
 
-                    {/* Clean Status Indicator */}
-                    <div className="flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/10 px-2 py-0.5 text-[10px] font-mono font-medium text-accent">
-                      <span className="size-1.5 rounded-full bg-accent" />
-                      <span>OPTIMIZED</span>
-                    </div>
+                    {/* Step Marker */}
+                    <span className="text-[10px] font-mono font-medium text-muted/70">
+                      Case 0{index + 1}
+                    </span>
                   </div>
 
                   {/* COMPUTER SCREEN DISPLAY (COMPACT FORMATTED TEXT) */}
@@ -100,14 +99,10 @@ export function Challenges() {
                           <span className="font-mono text-[11px] font-bold text-accent">
                             0{index + 1}
                           </span>
-                          <span className="inline-flex items-center gap-1 rounded bg-rose-500/15 border border-rose-500/25 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-rose-300">
-                            <ShieldAlert className="size-2.5 text-rose-400" />
-                            <span>Bottleneck</span>
+                          <span className="inline-flex items-center gap-1 rounded bg-amber-500/15 border border-amber-500/25 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-amber-300">
+                            <span>The Challenge</span>
                           </span>
                         </div>
-                        <span className="text-[9.5px] font-mono text-muted/60">
-                          DIAGNOSTIC
-                        </span>
                       </div>
 
                       {/* Challenge Title & Context */}
@@ -125,16 +120,16 @@ export function Challenges() {
                         <div className="h-px flex-1 bg-white/10 group-hover:bg-primary/30 transition-colors" />
                         <span className="text-[9.5px] font-mono uppercase tracking-widest text-primary/80 flex items-center gap-1 font-semibold">
                           <ArrowRight className="size-2.5 text-primary" />
-                          <span>Resolution</span>
+                          <span>How We Fix It</span>
                         </span>
                         <div className="h-px flex-1 bg-white/10 group-hover:bg-primary/30 transition-colors" />
                       </div>
 
-                      {/* Strategic Solution */}
+                      {/* Agurafi Solution */}
                       <div className="rounded-md border border-primary/25 bg-primary/[0.04] p-2.5 sm:p-3 transition-colors group-hover:border-primary/40 group-hover:bg-primary/[0.06]">
                         <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider text-accent mb-1">
                           <CheckCircle2 className="size-3 text-primary" />
-                          <span>Strategic Solution</span>
+                          <span>Agurafi Solution</span>
                         </div>
                         <h4 className="font-heading text-sm sm:text-[15px] font-bold text-white">
                           {item.solution}

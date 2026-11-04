@@ -154,14 +154,14 @@ const turnkeyProducts: ProductItem[] = [
 // Real Brand Implementations using the actual client logos
 const brandCaseStudies = [
   {
-    name: "Awash Bank & Financial Summits",
-    logo: "/images/branding/agurafi-team-polo.png",
-    industry: "Banking & Financial Services",
-    deployedProduct: "Commercial Video Production & Live Event Media",
-    tagline: "Corporate Brand Authority at Major Ethiopian Summits",
+    name: "Prime Real Estate & Luxury Living",
+    logo: "/logo/IMG_2278.PNG",
+    industry: "Luxury Real Estate & Property Development",
+    deployedProduct: "Commercial Video Production & High-Impact Ad Campaigns",
+    tagline: "High-Ticket Property Showcases Driving Direct Buyer Inquiries",
     description:
-      "Agurafi's on-site production team deployed cinema-grade event capture and multi-camera broadcasting at prime corporate summits sponsored by Awash Bank. High-fidelity video assets elevated the event's digital reach across regional media channels.",
-    results: "98% Broadcast Retention &bull; Premium Institutional Trust",
+      "Prime Real Estate develops premier residential and commercial properties in Addis Ababa. Agurafi produced cinematic 4K architectural video walkthroughs and targeted luxury buyer ad campaigns that accelerated property unit sales.",
+    results: "+280% Qualified Buyer Leads &bull; 100% Sold-Out Phase I",
   },
   {
     name: "Rotech Information Technology",

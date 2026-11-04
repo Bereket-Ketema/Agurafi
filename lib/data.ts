@@ -300,21 +300,21 @@ export const whyChooseUsData: WhyChooseUsItem[] = [
 export const workStepsData: WorkStepItem[] = [
   {
     step: "01",
-    title: "Discover",
-    description: "Understand your needs, business goals, audience, and challenges.",
-    details: "We audit your digital footprint and map target milestones.",
+    title: "Discovery & Strategy",
+    description: "Auditing your brand, analyzing market opportunities, and mapping your full-funnel growth plan.",
+    details: "We define creative angles, ad architectures, and technical requirements.",
   },
   {
     step: "02",
-    title: "Design and Deliver",
-    description: "Develop and implement a suitable solution based on agreed requirements.",
-    details: "Our specialists craft custom creative assets and deploy systems.",
+    title: "Creative Production & Engineering",
+    description: "Producing cinematic videos, custom graphic design, modern websites, and targeted paid ads.",
+    details: "Our multidisciplinary team deploys brand assets built for conversion.",
   },
   {
     step: "03",
-    title: "Improve and Grow",
-    description: "Review outcomes, identify opportunities for improvement, and support future growth.",
-    details: "We optimize performance metrics and support continuous scaling.",
+    title: "Social Growth & Scale",
+    description: "Managing social channels, optimizing ad spend, and scaling measurable business revenue.",
+    details: "Ongoing creative testing, performance optimization, and account support.",
   },
 ]
 

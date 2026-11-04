@@ -97,7 +97,7 @@ function VideoCard({ src, poster, tag, title, description, clientContext, icon: 
         {/* Playback Badge on Video */}
         <div className="absolute bottom-3 left-3 right-3 z-10 flex items-center justify-between text-white">
           <div className="flex items-center gap-1.5 rounded-md bg-black/60 px-2 py-0.5 backdrop-blur-md border border-white/10 text-[10.5px]">
-            <span className={`size-1.5 rounded-full ${isPlaying ? "bg-emerald-400 animate-pulse" : "bg-amber-400"}`} />
+            <span className="size-1.5 rounded-full bg-primary" />
             <span className="font-medium text-white/90">{isPlaying ? "Playing" : "Click to Play"}</span>
           </div>
           <span className="text-[10px] text-white/70 bg-black/50 px-2 py-0.5 rounded backdrop-blur-md">
