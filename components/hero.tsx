@@ -12,6 +12,7 @@ const heroTrustedLogos = [
   partnerLogos[6], // Gedion Advertising
   partnerLogos[9], // Prime Real Estate
   partnerLogos[11], // Rotech
+  partnerLogos[2], // mela express delivery
 ]
 
 // Agency stats
